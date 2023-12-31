@@ -8,20 +8,29 @@ using System.Drawing;
 namespace unchained{
     public static class Program{
         public static void Main(String [] args){
-            String gameStatement = "Building Game Engine";
-            Console.WriteLine(gameStatement);
             Form window = new Form();
             Label text = new Label();
+            Button button = new Button();
+
+            button.Text = "Enter";
+            button.Location = new Point(400, 150);
+            button.Click += new EventHandler(testClick);
+            
+            text.Text = "Unchained";
+            //The location is (Width,hieght)
+            text.Location = new Point(400,100);
+            
             window.Width = 800;
             window.Height = 600;
-            window.Name = "Unchained v0.1";
-
-            text.Text = "Test";
-            //The location is (Width,hieght)
-            text.Location = new Point(100,300);
+            window.Text = "Unchained v2.1.3";
 
             window.Controls.Add(text);
+            window.Controls.Add(button);
             Application.Run(window);
+        }
+
+        public static void testClick(Object sender, EventArgs e){
+            Console.WriteLine("Test");
         }
     }
 }
