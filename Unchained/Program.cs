@@ -10,6 +10,7 @@ namespace unchained{
         public static void Main(String [] args){
             Form window = new Form();
             Panel main = new Panel();
+            Panel char = new Panel();
             Label text = new Label();
             Button button = new Button();
 
