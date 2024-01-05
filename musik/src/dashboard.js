@@ -15,25 +15,29 @@ function Dashboard (){
     }
 
     return (
-        <div >
-            <p>Currently under development</p>
-            <div style={{display: "flex",justifyContent: "center"}}>
+        <div>
+            <div >
+                <p>Currently under development</p>
                 <div style={{display: "flex",justifyContent: "center"}}>
-                    <button>UTS</button>
-                </div>
-                <div style={{display: "flex",justifyContent: "center"}}>
-                    <button> Knowledge</button>
-                </div>
-                <div style={{display: "flex",justifyContent: "center"}}>
-                    <button>Support</button>
+                    <div style={{display: "flex",justifyContent: "center"}}>
+                        <button onClick={() => {setSectionActive("UTS")}}>UTS</button>
+                    </div>
+                    <div style={{display: "flex",justifyContent: "center"}}>
+                       <button onClick={() => {setSectionActive("Knowledge")}}> Knowledge</button>
+                    </div>
+                    <div style={{display: "flex",justifyContent: "center"}}>
+                        <button onClick={() => {setSectionActive("Support")}}>Support</button>
+                    </div>
                 </div>
             </div>
-            { sectionActive == "UTS" && < UTS />}
-            { sectionActive == "UTS" && < Knowledge />}
-            { sectionActive == "UTS" && < Support />}
-            <p>
-                <button class='invertButton' onClick={RedirectTo}>Exit</button> 
-            </p>   
+            <div>
+                { sectionActive === "UTS" && < UTS />}
+                { sectionActive === "Knowledge" && < Knowledge />}
+                { sectionActive === "Support" && < Support />}
+                <p>
+                    <button class='invertButton' onClick={RedirectTo}>Exit</button> 
+                </p> 
+            </div>  
         </div>  
     );
 }
