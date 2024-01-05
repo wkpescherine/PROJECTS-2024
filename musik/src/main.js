@@ -20,10 +20,6 @@ function Main() {
         navigate('./dashboard')
     }
 
-    //function altCheckInForTesting(){
-    //    RedirectTo()
-    //}
-
     //Test codethat I can switch in
     //<button onClick={checkLogInCred}>Login</button> 
 
@@ -33,11 +29,12 @@ function Main() {
                 <input type="text" placeholder="Enter username" onChange={handleLogInUsernameChange}></input>
             </p>
             <p>
-                <input type="text" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
+                <input type="password" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
             </p>
             <p>
-                <button onClick={RedirectTo}>Login</button> 
+                <button class='invertButton' onClick={RedirectTo}>Login</button> 
             </p>
+            <p>version 0.3.1 </p>
         </div>
     ); 
 }
