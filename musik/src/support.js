@@ -22,7 +22,7 @@ export default function Support (){
                 <input type="text" placeholder="Enter title here" onChange={handleSupportTitle} style={{width:360}}></input>
             </p>
             <p>
-                <textarea placeholder="Enter your description of issue here" rows="20" cols="47"/>
+                <textarea placeholder="Enter your description of issue here" onChange={handleSupportDesc} rows="20" cols="47"/>
             </p>
             <p>
                 <input type="text" placeholder="Upload file here" style={{width:300}}></input>

@@ -17,7 +17,6 @@ function Dashboard (){
     return (
         <div>
             <div >
-                <p>Currently under development</p>
                 <div style={{display: "flex",justifyContent: "center"}}>
                     <div style={{display: "flex",justifyContent: "center"}}>
                         <button onClick={() => {setSectionActive("UTS")}}>UTS</button>
