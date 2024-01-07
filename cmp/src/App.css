@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+p , h1 {
+  color: #fff;
+}
+
+body {
+  background-color: #000;
+}
