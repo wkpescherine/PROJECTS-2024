@@ -30,9 +30,9 @@ function Main() {
                 <input type="password" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
             </p>
             <p>
-                <button class='invertButton' onClick={RedirectTo}>Login</button> 
+                <button onClick={RedirectTo}>Login</button> 
             </p>
-            <p>version 0.1.1 </p>
+            <p>version 0.2.1 </p>
         </div>
     ); 
 }
