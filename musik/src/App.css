@@ -14,3 +14,9 @@ body {
   background-color: #fff;
   color:#4d4dff;
 }
+
+.invertButtonSidebar {
+  background-color: #fff;
+  color:#4d4dff;
+  width: 100px;
+}
