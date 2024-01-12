@@ -20,3 +20,8 @@ body {
   color:#4d4dff;
   width: 100px;
 }
+
+.baseText {
+  padding: 10px;
+  color: #fff;
+}
