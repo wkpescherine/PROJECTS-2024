@@ -26,13 +26,28 @@ namespace unchained{
             selectStart.Click += newGame;
             
             selectExit.Text = "Exit Select";
-            selectExit.Location = new Point(395, 150);
+            selectExit.Location = new Point(395, 450);
             selectExit.BackColor = Color.FromArgb(255, 255, 255);
             selectExit.Click += backToMain;
 
             Button holy = new();
+            holy.Text = "Holy";
+            holy.Location = new Point(25, 25);
+            holy.BackColor = Color.FromArgb(255, 255, 255);
+            holy.Click += (sender, e) => roleSelected(sender, e,"Holy");
             Button human = new();
+            human.Text = "Human";
+            human.Location = new Point(25, 125);
+            human.BackColor = Color.FromArgb(255, 255, 255);
             Button paladin = new();
+            paladin.Text = "Paladin";
+            paladin.Location = new Point(25, 225);
+            paladin.BackColor = Color.FromArgb(255, 255, 255);
+            Label selectStyle = new();
+            selectStyle.Text = charSheet.style;
+            //selectStyle.Text = charSheet.role;
+            selectStyle.Location = new Point(25,325);
+            selectStyle.ForeColor = Color.FromArgb(255, 255, 255);
             select.Width = 800;
             select.Height = 600;
             select.Visible = false;
@@ -40,6 +55,7 @@ namespace unchained{
             select.Controls.Add(human);
             select.Controls.Add(paladin);
             select.Controls.Add(selectExit);
+            select.Controls.Add(selectStyle);
             select.BackColor = Color.FromArgb(0,0,0);
 
             savedStart.Text = "Saved Game";
@@ -73,7 +89,7 @@ namespace unchained{
             
             window.Width = 800;
             window.Height = 600;
-            window.Text = "Unchained v2.5.1";
+            window.Text = "Unchained v2.5.5";
             //window.BackColor = Color.FromArgb(0, 0, 0);
             //window.Controls.Add(text);
             //window.Controls.Add(button);
@@ -81,6 +97,10 @@ namespace unchained{
             window.Controls.Add(select);
             window.Controls.Add(saved);
             Application.Run(window);
+
+            void roleSelected(Object sender, EventArgs e, String value){
+                charSheet.style = value;
+            }
 
             void newGame(Object sender, EventArgs e){
                 main.Visible = false;
