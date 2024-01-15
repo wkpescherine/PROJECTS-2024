@@ -30,9 +30,15 @@ namespace unchained{
             selectExit.BackColor = Color.FromArgb(255, 255, 255);
             selectExit.Click += backToMain;
 
+            Button holy = new();
+            Button human = new();
+            Button paladin = new();
             select.Width = 800;
             select.Height = 600;
             select.Visible = false;
+            select.Controls.Add(holy);
+            select.Controls.Add(human);
+            select.Controls.Add(paladin);
             select.Controls.Add(selectExit);
             select.BackColor = Color.FromArgb(0,0,0);
 
@@ -67,7 +73,7 @@ namespace unchained{
             
             window.Width = 800;
             window.Height = 600;
-            window.Text = "Unchained v2.4.2";
+            window.Text = "Unchained v2.5.1";
             //window.BackColor = Color.FromArgb(0, 0, 0);
             //window.Controls.Add(text);
             //window.Controls.Add(button);
