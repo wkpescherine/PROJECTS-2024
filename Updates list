@@ -1,16 +1,15 @@
-1/12/24
-<<<<<<< HEAD
+1/15/24
+    musik:
+        0.7:
+            Added BSC sectio
+            Added Admin section
+            Added Admin Sidbar
+            Addee Admin Display
+            Added Planning section
+1/13/24
     Unchained:
         2.5.5:
             Added selections for character building
-=======
-    System Issues
->>>>>>> ad9b640a41f055816747b7c8751a1116deb95bed
-1/11/24
-    musik:
-        0.6:
-            Added Basic Employee section
-            Updated Sidebar
 1/8/24
     Zero:
         6.1.0:
@@ -20,13 +19,4 @@
         0.3.1:
             Added Profile Section
             Added Marketplace Section
-<<<<<<< HEAD
             Added Home Section
-=======
-            Added Home Section
-1/1/24
-    Unchained:
-        2.3.2:
-            Resolved logic for screen switching
-            Minor UI updates
->>>>>>> ad9b640a41f055816747b7c8751a1116deb95bed
