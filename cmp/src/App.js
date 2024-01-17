@@ -3,6 +3,7 @@ import './App.css';
 
 import Main from "./main"
 import Dashboard from "./dashboard"
+import Create from "./create"
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route exct path="/" element={ <Main />} />
           <Route exct path="/dashboard" element={ <Dashboard />} />
+          <Route exct path="/create" element={ <Create />} />
         </Routes>
       </div>
     </Router>

@@ -5,6 +5,7 @@ import {useState} from 'react'
 import HOME from "./home"
 import PROFILE from "./profile"
 import MARKETPLACE from "./marketplace"
+import PORTFOLIO from "./portfolio"
 
 function Dashboard (){
     const[section,setSection] = useState ("");
@@ -21,14 +22,16 @@ function Dashboard (){
                 <p>
                     <button onClick={() => {setSection("Home")}}>Home</button>
                     <button onClick={() => {setSection("Profile")}}>Profile</button>
+                    <button onClick={() => {setSection("Portfolio")}}>Portfolio</button>
                     <button onClick={() => {setSection("Marketplace")}}>Marketplace</button> 
                     <button onClick={RedirectTo}>Exit</button> 
                 </p> 
             </div>
             <div>
-                { sectionActive === "Home" && < HOME />}
-                { sectionActive === "Profile" && < PROFILE />}
-                { sectionActive === "Marketplace" && < MARKETPLACE />}   
+                { section === "Home" && < HOME />}
+                { section === "Profile" && < PROFILE />}
+                { section === "Marketplace" && < MARKETPLACE />}
+                { section === "Portfolio" && < PORTFOLIO />}
             </div>
         </div>
     );

@@ -1,3 +1,12 @@
+1/16/24
+    CMP:
+        0.3:
+            Fixed minor rendering issue
+            Added Portfolio Section
+            Updated Marketplace
+            Added categories to the Marketplace
+            Added market to one of the categories
+            Added a create account section
 1/15/24
     musik:
         0.7:
@@ -6,18 +15,12 @@
             Added Admin Sidbar
             Addee Admin Display
             Added Planning section
-1/13/24
-    Unchained:
-        2.5.5:
-            Added selections for character building
 1/15/24
     Zero:
         6.2
             Transferred into 2024 files
             Project working again
-1/8/24
-    CMP:
-        0.3.1:
-            Added Profile Section
-            Added Marketplace Section
-            Added Home Section
+1/13/24
+    Unchained:
+        2.5.5:
+            Added selections for character building

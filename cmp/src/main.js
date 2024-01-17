@@ -20,6 +20,10 @@ function Main() {
         navigate('./dashboard')
     }
 
+    function RedirectTo2(){
+        navigate('./create')
+    }
+
     return (
         <div>
             <h1>Collector Marketplace</h1>
@@ -31,8 +35,9 @@ function Main() {
             </p>
             <p>
                 <button onClick={RedirectTo}>Login</button> 
+                <button onClick={RedirectTo2}> Create Account</button>
             </p>
-            <p>version 0.2.1 </p>
+            <p>version 0.3</p>
         </div>
     ); 
 }
