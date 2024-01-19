@@ -1,9 +1,11 @@
 import './App.css';
 
-export default function Display (){
+import Support from "./support"
+
+export default function Display (props){
     return (
-        <div>
-            <p>Display area under development</p> 
+        <div class="displayArea">
+            { props.sendData === "Support" && < Support/>}
         </div>  
     );
 }

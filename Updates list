@@ -1,8 +1,10 @@
 1/17/24
     MUSK:
-        0.1
-            Added New concept on previous app
-            Adding logic on passing data between components
+        0.2
+            Improved state managemnet across components
+            Added Support section
+            Added Admin section
+            Added Admin sub categories
 1/16/24
     CMP:
         0.3:

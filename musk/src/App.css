@@ -18,10 +18,26 @@ body {
 .invertButtonSidebar {
   background-color: #fff;
   color:#4d4dff;
-  width: 100px;
+  width: 120px;
+  padding: 3px;
+  margin: 3px;
+  font-size: 16px;
 }
 
 .baseText {
   padding: 10px;
   color: #fff;
+}
+
+.subCategoryButton {
+  background-color: #fff;
+  color:#4d4dff;
+  width: 120px;
+  padding: 1px;
+  margin: 1px;
+  font-size: 10pt;
+}
+
+.displayArea {
+  width: 400px;
 }

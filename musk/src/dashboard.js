@@ -2,14 +2,14 @@ import './App.css';
 import {useNavigate} from 'react-router-dom'
 import { useState } from 'react';
 
-import DashboardSidebar from './dashboard_sidebar';
+import DashboardSideBar from './dashboard_sidebar'
 import Display from "./display"
 
 function Dashboard (){
     const [ category, setCategory] = useState("None")
 
-    const handleCategorySelection = (event) => {
-        setCategory(event.target.value)
+    const handleCategorySelection = (data) => {
+        setCategory(data)
     }
 
     return (
@@ -21,8 +21,8 @@ function Dashboard (){
                 <p>Knowledge</p>
             </div>
             <div style={{display: "flex",justifyContent: "center"}}>
-                < DashboardSidebar passData={handleCategorySelection}/>
-                < Display />
+                < DashboardSideBar passData={handleCategorySelection} sendCat={category}/>
+                < Display sendData={category}/>
             </div>
         </div>  
     );
