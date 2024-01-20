@@ -1,6 +1,8 @@
 using System;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Security.Cryptography.X509Certificates;
+using System.CodeDom;
 
 //Most of the following code works and does produce the window
 //Having to work on converting from the Java coud that works to C#
@@ -34,7 +36,12 @@ namespace unchained{
             holy.Text = "Holy";
             holy.Location = new Point(25, 25);
             holy.BackColor = Color.FromArgb(255, 255, 255);
-            holy.Click += (sender, e) => roleSelected(sender, e,"Holy");
+            holy.Click += (sender, e) => roleSelected(sender, e, "Holy");
+            Button stout = new();
+            stout.Text = "Stout";
+            stout.Location = new Point(125, 25);
+            stout.BackColor = Color.FromArgb(255, 255, 255);
+            stout.Click += (sender, e) => roleSelected(sender, e);
             Button human = new();
             human.Text = "Human";
             human.Location = new Point(25, 125);
@@ -45,13 +52,13 @@ namespace unchained{
             paladin.BackColor = Color.FromArgb(255, 255, 255);
             Label selectStyle = new();
             selectStyle.Text = charSheet.style;
-            //selectStyle.Text = charSheet.role;
             selectStyle.Location = new Point(25,325);
             selectStyle.ForeColor = Color.FromArgb(255, 255, 255);
             select.Width = 800;
             select.Height = 600;
             select.Visible = false;
             select.Controls.Add(holy);
+            select.Controls.Add(stout);
             select.Controls.Add(human);
             select.Controls.Add(paladin);
             select.Controls.Add(selectExit);
@@ -98,8 +105,8 @@ namespace unchained{
             window.Controls.Add(saved);
             Application.Run(window);
 
-            void roleSelected(Object sender, EventArgs e, String value){
-                charSheet.style = value;
+            void roleSelected(object sender, EventArgs e, string value){
+                    
             }
 
             void newGame(Object sender, EventArgs e){
