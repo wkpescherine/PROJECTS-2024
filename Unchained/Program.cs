@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Security.Cryptography.X509Certificates;
 using System.CodeDom;
+using System.Drawing.Text;
 
 //Most of the following code works and does produce the window
 //Having to work on converting from the Java coud that works to C#
@@ -36,12 +37,13 @@ namespace unchained{
             holy.Text = "Holy";
             holy.Location = new Point(25, 25);
             holy.BackColor = Color.FromArgb(255, 255, 255);
-            holy.Click += (sender, e) => roleSelected(sender, e, "Holy");
+            //holy.Click += new EventHandler(roleSelected);
+            //holy.Click += (sender, e) => roleSelected(sender, e) { selectStyle.Text = "Holdy";};
             Button stout = new();
             stout.Text = "Stout";
             stout.Location = new Point(125, 25);
             stout.BackColor = Color.FromArgb(255, 255, 255);
-            stout.Click += (sender, e) => roleSelected(sender, e);
+            //stout.Click += (sender, e) => roleSelected(sender, e);
             Button human = new();
             human.Text = "Human";
             human.Location = new Point(25, 125);
@@ -54,6 +56,7 @@ namespace unchained{
             selectStyle.Text = charSheet.style;
             selectStyle.Location = new Point(25,325);
             selectStyle.ForeColor = Color.FromArgb(255, 255, 255);
+            holy.Click += (sender, e) => roleSelected(sender, e);
             select.Width = 800;
             select.Height = 600;
             select.Visible = false;
@@ -105,22 +108,22 @@ namespace unchained{
             window.Controls.Add(saved);
             Application.Run(window);
 
-            void roleSelected(object sender, EventArgs e, string value){
-                    
+             void roleSelected(object ? sender, EventArgs e){
+                    selectStyle.Text = "Holdy";
             }
 
-            void newGame(Object sender, EventArgs e){
+            void newGame(Object ? sender, EventArgs e){
                 main.Visible = false;
                 select.Visible = true;
             }
             
-            void backToMain(Object sender, EventArgs e){
+            void backToMain(Object ? sender, EventArgs e){
                 main.Visible = true;
                 select.Visible = false;
                 saved.Visible = false;
             }
 
-            void savedGame(Object sender, EventArgs e){
+            void savedGame(Object ? sender, EventArgs e){
                 main.Visible = false;
                 saved.Visible = true;
             }
