@@ -33,21 +33,31 @@ namespace unchained{
             selectExit.BackColor = Color.FromArgb(255, 255, 255);
             selectExit.Click += backToMain;
 
+            
             Button holy = new();
             holy.Text = "Holy";
             holy.Location = new Point(25, 25);
             holy.BackColor = Color.FromArgb(255, 255, 255);
-            //holy.Click += new EventHandler(roleSelected);
-            //holy.Click += (sender, e) => roleSelected(sender, e) { selectStyle.Text = "Holdy";};
             Button stout = new();
             stout.Text = "Stout";
             stout.Location = new Point(125, 25);
             stout.BackColor = Color.FromArgb(255, 255, 255);
-            //stout.Click += (sender, e) => roleSelected(sender, e);
+            Button wise = new();
+            wise.Text = "Wise";
+            wise.Location = new Point(25, 75);
+            wise.BackColor = Color.FromArgb(255, 255, 255);
+            Button nimble = new();
+            nimble.Text = "Nimble";
+            nimble.Location = new Point(225, 25);
+            nimble.BackColor = Color.FromArgb(255, 255, 255);
             Button human = new();
             human.Text = "Human";
             human.Location = new Point(25, 125);
             human.BackColor = Color.FromArgb(255, 255, 255);
+            Button dwarf = new();
+            dwarf.Text = "Dwarven";
+            dwarf.Location = new Point(125, 125);
+            dwarf.BackColor = Color.FromArgb(255, 255, 255);
             Button paladin = new();
             paladin.Text = "Paladin";
             paladin.Location = new Point(25, 225);
@@ -56,16 +66,29 @@ namespace unchained{
             selectStyle.Text = charSheet.style;
             selectStyle.Location = new Point(25,325);
             selectStyle.ForeColor = Color.FromArgb(255, 255, 255);
-            holy.Click += (sender, e) => roleSelected(sender, e);
+            Label selectRace = new();
+            selectRace.Text = charSheet.style;
+            selectRace.Location = new Point(125,325);
+            selectRace.ForeColor = Color.FromArgb(255, 255, 255);
+            holy.Click += (sender, e) => styleSelect(sender, e);
+            stout.Click += (sender, e) => styleSelect(sender, e);
+            wise.Click += (sender, e) => styleSelect(sender, e);
+            nimble.Click += (Sender, e) => styleSelect(Sender,e);
+            human.Click += (Sender, e) => raceSelect(Sender,e);
+            dwarf.Click += (Sender, e) => raceSelect(Sender,e);
             select.Width = 800;
             select.Height = 600;
             select.Visible = false;
             select.Controls.Add(holy);
             select.Controls.Add(stout);
+            select.Controls.Add(wise);
+            select.Controls.Add(nimble);
             select.Controls.Add(human);
+            select.Controls.Add(dwarf);
             select.Controls.Add(paladin);
             select.Controls.Add(selectExit);
             select.Controls.Add(selectStyle);
+            select.Controls.Add(selectRace);
             select.BackColor = Color.FromArgb(0,0,0);
 
             savedStart.Text = "Saved Game";
@@ -99,17 +122,26 @@ namespace unchained{
             
             window.Width = 800;
             window.Height = 600;
-            window.Text = "Unchained v2.5.5";
+            window.Text = "Unchained v2.7.3";
             //window.BackColor = Color.FromArgb(0, 0, 0);
-            //window.Controls.Add(text);
             //window.Controls.Add(button);
             window.Controls.Add(main);
             window.Controls.Add(select);
             window.Controls.Add(saved);
             Application.Run(window);
 
-             void roleSelected(object ? sender, EventArgs e){
-                    selectStyle.Text = "Holdy";
+            void styleSelect(object ? sender, EventArgs e){
+                Button btn = sender as Button;
+                string s = btn.Text;
+                charSheet.style = s;
+                selectStyle.Text = charSheet.style;
+            }
+
+            void raceSelect(object ? sender, EventArgs e){
+                Button btn2 = sender as Button;
+                string r = btn2.Text;
+                charSheet.race = r;
+                selectRace.Text = charSheet.race;
             }
 
             void newGame(Object ? sender, EventArgs e){
