@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {useNavigate} from 'react-router-dom'
+//import MTA_Logo_1 from "./mta_logo_1.png"
 
 function Main() {
     const[logInUsername,setLogInUsername] = useState ("");
@@ -25,10 +26,8 @@ function Main() {
 
     return (
         <div>
-            <p>Mta</p>
-            <p>Uts</p>
-            <p>Support</p>
-            <p>Knowledge</p>
+            <img src={require("./mta_logo_1.png")}/>
+            <p>UTS SUpport & Knowledge</p>
             <p>
                 <input type="text" placeholder="Enter username" onChange={handleLogInUsernameChange}></input>
             </p>
@@ -38,7 +37,7 @@ function Main() {
             <p>
                 <button class='invertButton' onClick={RedirectTo}>Login</button> 
             </p>
-            <p>version 0.2 </p>
+            <p>version 0.3 </p>
         </div>
     ); 
 }

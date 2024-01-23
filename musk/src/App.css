@@ -7,17 +7,21 @@ p {
 }
 
 body {
-  background-color: #4d4dff;
+  background-color: #205cc9;
+}
+
+.titleText{
+  color: #fff;
 }
 
 .invertButton {
   background-color: #fff;
-  color:#4d4dff;
+  color:#205cc9;
 }
 
 .invertButtonSidebar {
   background-color: #fff;
-  color:#4d4dff;
+  color:#205cc9;
   width: 120px;
   padding: 3px;
   margin: 3px;
@@ -31,7 +35,7 @@ body {
 
 .subCategoryButton {
   background-color: #fff;
-  color:#4d4dff;
+  color:#205cc9;
   width: 120px;
   padding: 1px;
   margin: 1px;
