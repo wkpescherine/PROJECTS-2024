@@ -1,9 +1,9 @@
 import './App.css';
 
-export default function Know_Sub (){
+export default function Know_Sub (props){
     return (
         <div> 
-            <button class="subCategoryButton">Pick</button>
+            <button class="subCategoryButton" onClick={() => props.getSubSelect("Pick")}>Pick</button>
             <br></br>
             <button class="subCategoryButton">Crew</button>
             <br></br>

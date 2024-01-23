@@ -1,14 +1,22 @@
 import './App.css';
 import {useNavigate} from 'react-router-dom'
+import { useState } from 'react';
 
 import AdminSub from "./admin_sub"
 import KnowSub from "./know_sub"
 
 function Dashboard_Sidebar (props){
+    const [ fromSub, setFromSub] = useState("")
+
     let navigate = useNavigate();
 
     function RedirectTo(){
         navigate('/')
+    }
+
+    const handleSubCategorySelection = (data2) => {
+        setFromSub(data2)
+        props.getSubCat(fromSub)
     }
 
     return (
@@ -19,7 +27,7 @@ function Dashboard_Sidebar (props){
             <button class="invertButtonSidebar" onClick={() => props.getData("Home")}>Home</button>
             <br></br>
             <button class="invertButtonSidebar" onClick={() => props.getData("Knowledge")}>Knowledge</button>
-            {props.sendCat ==="Knowledge" && <KnowSub />} 
+            {props.sendCat ==="Knowledge" && <KnowSub getSubSelect={handleSubCategorySelection}/>} 
             <br></br>
             <button class="invertButtonSidebar" onClick={() => props.getData("Support")}>Support</button>
             <br></br>
