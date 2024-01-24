@@ -1,15 +1,8 @@
-1/22/24
+1/23/24
     MUSK:
-        0.3
-            Added Home screen
-            Added Message Screen
-            Added Logo
-            Updated UI color
-        0.3.1
-            Added Knowledge Sub Category
-            Begining to work on handling cat 2 steps down
-        0.3.2
-            Added handling from child of child
+        0.4
+            Added Admin case display section
+            Added Admin basic layout for cases
 1/21/24
     Unchained:
         2.7.3:
@@ -25,10 +18,10 @@
             Added categories to the Marketplace
             Added market to one of the categories
             Added a create account section
-1/15/24
+1/15/24 (Currently on Hold)
     musik:
         0.7:
-            Added BSC sectio
+            Added BSC section
             Added Admin section
             Added Admin Sidbar
             Addee Admin Display
