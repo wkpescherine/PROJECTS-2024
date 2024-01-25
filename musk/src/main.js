@@ -27,7 +27,7 @@ function Main() {
     return (
         <div>
             <img src={require("./mta_logo_1.png")}/>
-            <p>UTS SUpport & Knowledge</p>
+            <p>UTS Support & Knowledge</p>
             <p>
                 <input type="text" placeholder="Enter username" onChange={handleLogInUsernameChange}></input>
             </p>
@@ -37,7 +37,7 @@ function Main() {
             <p>
                 <button class='invertButton' onClick={RedirectTo}>Login</button> 
             </p>
-            <p>version 0.4 </p>
+            <p>version 0.5 </p>
         </div>
     ); 
 }

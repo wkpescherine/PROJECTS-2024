@@ -5,7 +5,7 @@ export default function Know_Sub (props){
         <div> 
             <button class="subCategoryButton" onClick={() => props.getSubSelect("Pick")}>Pick</button>
             <br></br>
-            <button class="subCategoryButton">Crew</button>
+            <button class="subCategoryButton" onClick={() => props.getSubSelect("Crew")}>Crew</button>
             <br></br>
             <button class="subCategoryButton">Timekeeping</button>
             <br></br>

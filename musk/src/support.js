@@ -17,6 +17,7 @@ export default function Support (){
     }
     return (
         <div>
+            <p>Submit question to DOB rep</p>
             <p>
                 <input type="text" placeholder="Enter title here" onChange={handleSupportTitle} style={{width:360}}></input>
             </p>

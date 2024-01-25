@@ -12,6 +12,7 @@ function Dashboard (){
 
     const handleCategorySelection = (data) => {
         setCategory(data)
+        //setSubCategory("")
     }
 
     const handleSubCategorySelection = (subData) =>{
@@ -26,7 +27,7 @@ function Dashboard (){
                     sendCat={category} 
                     getSubCat={handleSubCategorySelection}
                 />
-                < Display sendData={category}/>
+                < Display sendData={category} sendSubCat={subCategory}/>
             </div>
         </div>  
     );
