@@ -29,10 +29,21 @@ namespace unchained{
             selectStart.Click += newGame;
             
             selectExit.Text = "Exit Select";
-            selectExit.Location = new Point(395, 450);
+            selectExit.Location = new Point(395, 525);
             selectExit.BackColor = Color.FromArgb(255, 255, 255);
             selectExit.Click += backToMain;
 
+            //Char Building components
+            Panel charChoices = new();
+            charChoices.Location = new Point(0,0);
+            charChoices.Width = 400;
+            charChoices.Height = 500;
+            charChoices.BackColor = Color.FromArgb(0, 0, 0);
+            Panel charStats = new();
+            charStats.Location = new Point(400,0);
+            charStats.Width = 400;
+            charStats.Height = 500;
+            charStats.BackColor = Color.FromArgb(0, 0, 0);
             //Style handling section
             Label styleHeader = new();
             styleHeader.Text = "Select your Style";
@@ -105,12 +116,16 @@ namespace unchained{
             //Results section
             Label selectStyle = new();
             selectStyle.Text = charSheet.style;
-            selectStyle.Location = new Point(25, 520);
+            selectStyle.Location = new Point( 25, 25 );
             selectStyle.ForeColor = Color.FromArgb(255, 255, 255);
             Label selectRace = new();
             selectRace.Text = charSheet.style;
-            selectRace.Location = new Point(125, 520);
+            selectRace.Location = new Point( 125, 25);
             selectRace.ForeColor = Color.FromArgb(255, 255, 255);
+            Label strString = new();
+            strString.Text = "Str: "+charSheet.str;
+            strString.Location = new Point( 25, 75);
+            strString.ForeColor = Color.FromArgb(255, 255, 255);
             //Event handling section
             holy.Click += (sender, e) => styleSelect(sender, e);
             wise.Click += (sender, e) => styleSelect(sender, e);
@@ -130,25 +145,28 @@ namespace unchained{
             select.Width = 800;
             select.Height = 600;
             select.Visible = false;
-            select.Controls.Add(styleHeader);
-            select.Controls.Add(spacer1);
-            select.Controls.Add(holy);
-            select.Controls.Add(wise);
-            select.Controls.Add(psychtic);
-            select.Controls.Add(stout);
-            select.Controls.Add(veteran);
-            select.Controls.Add(brutal);
-            select.Controls.Add(nimble);
-            select.Controls.Add(balanced);
-            select.Controls.Add(speedy);
-            select.Controls.Add(raceHeader);
-            select.Controls.Add(spacer2);            
-            select.Controls.Add(human);
-            select.Controls.Add(dwarf);
-            select.Controls.Add(paladin);
+            select.Controls.Add(charChoices);
+            select.Controls.Add(charStats);
+            charChoices.Controls.Add(styleHeader);
+            charChoices.Controls.Add(spacer1);
+            charChoices.Controls.Add(holy);
+            charChoices.Controls.Add(wise);
+            charChoices.Controls.Add(psychtic);
+            charChoices.Controls.Add(stout);
+            charChoices.Controls.Add(veteran);
+            charChoices.Controls.Add(brutal);
+            charChoices.Controls.Add(nimble);
+            charChoices.Controls.Add(balanced);
+            charChoices.Controls.Add(speedy);
+            charChoices.Controls.Add(raceHeader);
+            charChoices.Controls.Add(spacer2);            
+            charChoices.Controls.Add(human);
+            charChoices.Controls.Add(dwarf);
+            charChoices.Controls.Add(paladin);
             select.Controls.Add(selectExit);
-            select.Controls.Add(selectStyle);
-            select.Controls.Add(selectRace);
+            charStats.Controls.Add(selectStyle);
+            charStats.Controls.Add(selectRace);
+            charStats.Controls.Add(strString);
             select.BackColor = Color.FromArgb(0,0,0);
 
             savedStart.Text = "Saved Game";
@@ -182,7 +200,7 @@ namespace unchained{
             
             window.Width = 800;
             window.Height = 600;
-            window.Text = "Unchained v0.2.8.2";
+            window.Text = "Unchained v0.2.8.3";
             //window.BackColor = Color.FromArgb(0, 0, 0);
             //window.Controls.Add(button);
             window.Controls.Add(main);
