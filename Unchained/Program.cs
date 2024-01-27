@@ -104,27 +104,76 @@ namespace unchained{
             human.Text = "Human";
             human.Location = new Point(25, 245);
             human.BackColor = Color.FromArgb(255, 255, 255);
+            Button elven = new();
+            elven.Text = "Elven";
+            elven.Location = new Point(25, 275);
+            elven.BackColor = Color.FromArgb(255, 255, 255);
+            Button kobold = new();
+            kobold.Text = "Kobold";
+            kobold.Location = new Point(25, 305);
+            kobold.BackColor = Color.FromArgb(255, 255, 255);
             Button dwarf = new();
             dwarf.Text = "Dwarven";
             dwarf.Location = new Point(125, 245);
             dwarf.BackColor = Color.FromArgb(255, 255, 255);
+            Button orc = new();
+            orc.Text = "Orc";
+            orc.Location = new Point(125, 275);
+            orc.BackColor = Color.FromArgb(255, 255, 255);
+            Button draco = new();
+            draco.Text = "Draco";
+            draco.Location = new Point(125, 305);
+            draco.BackColor = Color.FromArgb(255, 255, 255); 
+            Button atlantean = new();
+            atlantean.Text = "Atlantean";
+            atlantean.Location = new Point(225, 245);
+            atlantean.BackColor = Color.FromArgb(255, 255, 255);
+            Button undead = new();
+            undead.Text = "Undead";
+            undead.Location = new Point(225, 275);
+            undead.BackColor = Color.FromArgb(255, 255, 255);
+            Button grim = new();
+            grim.Text = "Grim";
+            grim.Location = new Point(225, 305);
+            grim.BackColor = Color.FromArgb(255, 255, 255);            
             //Role handling section
+            Label roleHeader = new();
+            roleHeader.Text = "Select your Role";
+            roleHeader.ForeColor = Color.FromArgb(255, 255, 255);
+            roleHeader.Location = new Point(25,350);
+            Panel spacer3 = new();
+            spacer3.Width = 350;
+            spacer3.Height = 3;
+            spacer3.Location = new Point(25, 380);
+            spacer3.BackColor = Color.FromArgb(255, 255, 255);
             Button paladin = new();
             paladin.Text = "Paladin";
-            paladin.Location = new Point(25, 420);
+            paladin.Location = new Point(25, 400);
             paladin.BackColor = Color.FromArgb(255, 255, 255);
             //Results section
+            Label nameString = new();
+            nameString.Text = charSheet.charname;
+            nameString.Location = new Point( 25, 25);
+            nameString.ForeColor = Color.FromArgb(255, 255, 255);
             Label selectStyle = new();
             selectStyle.Text = charSheet.style;
-            selectStyle.Location = new Point( 25, 25 );
+            selectStyle.Location = new Point( 25, 55 );
             selectStyle.ForeColor = Color.FromArgb(255, 255, 255);
             Label selectRace = new();
-            selectRace.Text = charSheet.style;
-            selectRace.Location = new Point( 125, 25);
+            selectRace.Text = charSheet.race;
+            selectRace.Location = new Point( 125, 55);
             selectRace.ForeColor = Color.FromArgb(255, 255, 255);
+            Label selectRole = new();
+            selectRole.Text = charSheet.role;
+            selectRole.Location = new Point( 225, 55);
+            selectRole.ForeColor = Color.FromArgb(255, 255, 255);
+            Label lvlString = new();
+            lvlString.Text = "lvl: "+charSheet.level;
+            lvlString.Location = new Point( 25, 85);
+            lvlString.ForeColor = Color.FromArgb(255, 255, 255);
             Label strString = new();
             strString.Text = "Str: "+charSheet.str;
-            strString.Location = new Point( 25, 75);
+            strString.Location = new Point( 25, 115);
             strString.ForeColor = Color.FromArgb(255, 255, 255);
             //Event handling section
             holy.Click += (sender, e) => styleSelect(sender, e);
@@ -139,7 +188,15 @@ namespace unchained{
             balanced.Click += (Sender, e) => styleSelect(Sender,e);
             speedy.Click += (Sender, e) => styleSelect(Sender,e);
             human.Click += (Sender, e) => raceSelect(Sender,e);
+            elven.Click += (Sender, e) => raceSelect(Sender,e);
+            kobold.Click += (Sender, e) => raceSelect(Sender,e);
             dwarf.Click += (Sender, e) => raceSelect(Sender,e);
+            orc.Click += (Sender, e) => raceSelect(Sender,e);
+            draco.Click += (Sender, e) => raceSelect(Sender,e);
+            dwarf.Click += (Sender, e) => raceSelect(Sender,e);
+            atlantean.Click += (Sender, e) => raceSelect(Sender,e);
+            undead.Click += (Sender, e) => raceSelect(Sender,e);
+            grim.Click += (Sender, e) => roleSelect(Sender,e);
             paladin.Click += (Sender, e) => roleSelect(Sender,e);
             //UI section
             select.Width = 800;
@@ -161,11 +218,23 @@ namespace unchained{
             charChoices.Controls.Add(raceHeader);
             charChoices.Controls.Add(spacer2);            
             charChoices.Controls.Add(human);
+            charChoices.Controls.Add(elven);
+            charChoices.Controls.Add(kobold);
             charChoices.Controls.Add(dwarf);
+            charChoices.Controls.Add(orc);
+            charChoices.Controls.Add(draco);
+            charChoices.Controls.Add(undead);
+            charChoices.Controls.Add(atlantean);
+            charChoices.Controls.Add(grim);
+            charChoices.Controls.Add(roleHeader);
+            charChoices.Controls.Add(spacer3); 
             charChoices.Controls.Add(paladin);
             select.Controls.Add(selectExit);
+            charStats.Controls.Add(nameString);            
+            charStats.Controls.Add(lvlString);            
             charStats.Controls.Add(selectStyle);
             charStats.Controls.Add(selectRace);
+            charStats.Controls.Add(selectRole);
             charStats.Controls.Add(strString);
             select.BackColor = Color.FromArgb(0,0,0);
 
@@ -200,7 +269,7 @@ namespace unchained{
             
             window.Width = 800;
             window.Height = 600;
-            window.Text = "Unchained v0.2.8.3";
+            window.Text = "Unchained v0.2.9.3";
             //window.BackColor = Color.FromArgb(0, 0, 0);
             //window.Controls.Add(button);
             window.Controls.Add(main);
@@ -223,10 +292,10 @@ namespace unchained{
             }
             
             void roleSelect(object ? sender, EventArgs e){
-                Button btn2 = sender as Button;
-                string r = btn2.Text;
-                charSheet.race = r;
-                selectRace.Text = charSheet.race;
+                Button btn3 = sender as Button;
+                string r2 = btn3.Text;
+                charSheet.role = r2;
+                selectRole.Text = charSheet.role;
             }
 
             void newGame(Object ? sender, EventArgs e){

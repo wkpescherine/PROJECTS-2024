@@ -1,11 +1,9 @@
-1/25/24
+1/26/24
     Unchained:
-        0.2.8.2:
+        0.2.9.3:
             Added more options to character creation screen
-        0.2.8.3
-            Added moreoptions to char screen
-            Added 2 pabnels to char screen to be more organized
-            Added Base char data sheet for future data building
+            Added more options to the character choices
+            Added in some basic CHaracter sheet elements
 1/24/24
     MUSK:
         0.5

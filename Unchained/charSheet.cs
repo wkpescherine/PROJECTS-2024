@@ -1,10 +1,10 @@
 namespace unchained{
     public static class charSheet{
-        public static String charname = "";
+        public static String charname = "None";
         public static int level = 1;
-        public static String style = "";
-        public static String race = "";
-        public static String role = "";
+        public static String style = "Style";
+        public static String race = "Race";
+        public static String role = "Role";
         public static int str = 0;
         public static int con = 0;
         public static int dex = 0;
