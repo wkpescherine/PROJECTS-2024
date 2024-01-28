@@ -1,9 +1,10 @@
 1/26/24
     Unchained:
-        0.2.9.3:
-            Added more options to character creation screen
-            Added more options to the character choices
-            Added in some basic CHaracter sheet elements
+        0.2.10.2:
+            Added all char creation choices
+            Added more UI for char sheet
+            Adjusted char creation exit button
+            Added in game starting button
 1/24/24
     MUSK:
         0.5

@@ -18,20 +18,26 @@ namespace unchained{
             Panel saved = new();
             Label text = new();
             Label text2 = new();
-            Button selectStart = new();
+            Button selectNew = new();
             Button selectExit = new();
             Button savedStart = new();
             Button savedExit = new();
 
-            selectStart.Text = "New Game";
-            selectStart.Location = new Point(395, 150);
-            selectStart.BackColor = Color.FromArgb(255, 255, 255);
-            selectStart.Click += newGame;
+            selectNew.Text = "New Game";
+            selectNew.Location = new Point(395, 150);
+            selectNew.BackColor = Color.FromArgb(255, 255, 255);
+            selectNew.Click += newGame;
             
             selectExit.Text = "Exit Select";
-            selectExit.Location = new Point(395, 525);
+            selectExit.Location = new Point(350, 525);
             selectExit.BackColor = Color.FromArgb(255, 255, 255);
             selectExit.Click += backToMain;
+
+            Button startGame = new();
+            startGame.Text = "Start Game";
+            startGame.Location = new Point(450, 525);
+            startGame.BackColor = Color.FromArgb(255, 255, 255);
+            //startGame.Click += backToMain;
 
             //Char Building components
             Panel charChoices = new();
@@ -150,6 +156,38 @@ namespace unchained{
             paladin.Text = "Paladin";
             paladin.Location = new Point(25, 400);
             paladin.BackColor = Color.FromArgb(255, 255, 255);
+            Button warrior = new();
+            warrior.Text = "Warrior";
+            warrior.Location = new Point(25, 430);
+            warrior.BackColor = Color.FromArgb(255, 255, 255);
+            Button ravager = new();
+            ravager.Text = "Ravager";
+            ravager.Location = new Point(25, 460);
+            ravager.BackColor = Color.FromArgb(255, 255, 255);
+            Button magi = new();
+            magi.Text = "Magi";
+            magi.Location = new Point(125, 400);
+            magi.BackColor = Color.FromArgb(255, 255, 255);
+            Button cleric = new();
+            cleric.Text = "Cleric";
+            cleric.Location = new Point(125, 430);
+            cleric.BackColor = Color.FromArgb(255, 255, 255);
+            Button seer = new();
+            seer.Text = "Seer";
+            seer.Location = new Point(125, 460);
+            seer.BackColor = Color.FromArgb(255, 255, 255);
+            Button justicar = new();
+            justicar.Text = "Justicar";
+            justicar.Location = new Point(225, 400);
+            justicar.BackColor = Color.FromArgb(255, 255, 255);
+            Button ranger = new();
+            ranger.Text = "Ranger";
+            ranger.Location = new Point(225, 430);
+            ranger.BackColor = Color.FromArgb(255, 255, 255);
+            Button shadow = new();
+            shadow.Text = "Shadow";
+            shadow.Location = new Point(225, 460);
+            shadow.BackColor = Color.FromArgb(255, 255, 255);
             //Results section
             Label nameString = new();
             nameString.Text = charSheet.charname;
@@ -175,6 +213,18 @@ namespace unchained{
             strString.Text = "Str: "+charSheet.str;
             strString.Location = new Point( 25, 115);
             strString.ForeColor = Color.FromArgb(255, 255, 255);
+            Label conString = new();
+            conString.Text = "Con: "+charSheet.con;
+            conString.Location = new Point( 25, 145);
+            conString.ForeColor = Color.FromArgb(255, 255, 255);
+            Label dexString = new();
+            dexString.Text = "Dex: "+charSheet.str;
+            dexString.Location = new Point( 25, 175);
+            dexString.ForeColor = Color.FromArgb(255, 255, 255);
+            Label quiString = new();
+            quiString.Text = "Qui: "+charSheet.str;
+            quiString.Location = new Point( 25, 205);
+            quiString.ForeColor = Color.FromArgb(255, 255, 255);
             //Event handling section
             holy.Click += (sender, e) => styleSelect(sender, e);
             wise.Click += (sender, e) => styleSelect(sender, e);
@@ -198,6 +248,14 @@ namespace unchained{
             undead.Click += (Sender, e) => raceSelect(Sender,e);
             grim.Click += (Sender, e) => roleSelect(Sender,e);
             paladin.Click += (Sender, e) => roleSelect(Sender,e);
+            warrior.Click += (Sender, e) => roleSelect(Sender,e);
+            ravager.Click += (Sender, e) => roleSelect(Sender,e);
+            magi.Click += (Sender, e) => roleSelect(Sender,e);
+            seer.Click += (Sender, e) => roleSelect(Sender,e);
+            cleric.Click += (Sender, e) => roleSelect(Sender,e);
+            justicar.Click += (Sender, e) => roleSelect(Sender,e);
+            ranger.Click += (Sender, e) => roleSelect(Sender,e);
+            shadow.Click += (Sender, e) => roleSelect(Sender,e);
             //UI section
             select.Width = 800;
             select.Height = 600;
@@ -229,7 +287,16 @@ namespace unchained{
             charChoices.Controls.Add(roleHeader);
             charChoices.Controls.Add(spacer3); 
             charChoices.Controls.Add(paladin);
+            charChoices.Controls.Add(warrior);
+            charChoices.Controls.Add(ravager);
+            charChoices.Controls.Add(magi);
+            charChoices.Controls.Add(seer);
+            charChoices.Controls.Add(cleric);
+            charChoices.Controls.Add(justicar);
+            charChoices.Controls.Add(ranger);
+            charChoices.Controls.Add(shadow);
             select.Controls.Add(selectExit);
+            select.Controls.Add(startGame);
             charStats.Controls.Add(nameString);            
             charStats.Controls.Add(lvlString);            
             charStats.Controls.Add(selectStyle);
@@ -263,13 +330,13 @@ namespace unchained{
             main.Height = 600;
             main.Visible = true;
             main.Controls.Add(text);
-            main.Controls.Add(selectStart);
+            main.Controls.Add(selectNew);
             main.Controls.Add(savedStart);
             main.BackColor = Color.FromArgb(0, 0, 0);
             
             window.Width = 800;
             window.Height = 600;
-            window.Text = "Unchained v0.2.9.3";
+            window.Text = "Unchained v0.2.10.2";
             //window.BackColor = Color.FromArgb(0, 0, 0);
             //window.Controls.Add(button);
             window.Controls.Add(main);
