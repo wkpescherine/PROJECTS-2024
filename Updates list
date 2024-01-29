@@ -1,10 +1,7 @@
-1/26/24
+1/27/24
     Unchained:
-        0.2.10.2:
-            Added all char creation choices
-            Added more UI for char sheet
-            Adjusted char creation exit button
-            Added in game starting button
+        0.2.11:
+            Trying to figure out better structure of code
 1/24/24
     MUSK:
         0.5

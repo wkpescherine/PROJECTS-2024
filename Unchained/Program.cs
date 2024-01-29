@@ -37,7 +37,7 @@ namespace unchained{
             startGame.Text = "Start Game";
             startGame.Location = new Point(450, 525);
             startGame.BackColor = Color.FromArgb(255, 255, 255);
-            //startGame.Click += backToMain;
+            startGame.Click += startNewGame;
 
             //Char Building components
             Panel charChoices = new();
@@ -336,12 +336,13 @@ namespace unchained{
             
             window.Width = 800;
             window.Height = 600;
-            window.Text = "Unchained v0.2.10.2";
+            window.Text = "Unchained v0.2.11";
             //window.BackColor = Color.FromArgb(0, 0, 0);
             //window.Controls.Add(button);
             window.Controls.Add(main);
             window.Controls.Add(select);
             window.Controls.Add(saved);
+            //window.Controls.Add(gamePanel);
             Application.Run(window);
 
             void styleSelect(object ? sender, EventArgs e){
@@ -379,6 +380,11 @@ namespace unchained{
             void savedGame(Object ? sender, EventArgs e){
                 main.Visible = false;
                 saved.Visible = true;
+            }
+
+            void startNewGame(Object ? sener, EventArgs e){
+                select.Visible = false;
+                //dungeon.Game().gamePanel.Visible = true;
             }
         }
     }
