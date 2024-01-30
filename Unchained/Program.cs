@@ -336,13 +336,14 @@ namespace unchained{
             
             window.Width = 800;
             window.Height = 600;
-            window.Text = "Unchained v0.2.11";
+            window.Text = "Unchained v0.2.12";
             //window.BackColor = Color.FromArgb(0, 0, 0);
             //window.Controls.Add(button);
             window.Controls.Add(main);
             window.Controls.Add(select);
             window.Controls.Add(saved);
-            //window.Controls.Add(gamePanel);
+            Dungeon newDungeon = new Dungeon();
+            window.Controls.Add(newDungeon.gamePanel);
             Application.Run(window);
 
             void styleSelect(object ? sender, EventArgs e){
