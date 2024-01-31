@@ -336,14 +336,14 @@ namespace unchained{
             
             window.Width = 800;
             window.Height = 600;
-            window.Text = "Unchained v0.2.12";
+            window.Text = "Unchained v0.2.13";
             //window.BackColor = Color.FromArgb(0, 0, 0);
             //window.Controls.Add(button);
             window.Controls.Add(main);
             window.Controls.Add(select);
             window.Controls.Add(saved);
-            Dungeon newDungeon = new Dungeon();
-            window.Controls.Add(newDungeon.gamePanel);
+            //Dungeon newDungeon = new Dungeon();
+            //window.Controls.Add(newDungeon.gamePanel);
             Application.Run(window);
 
             void styleSelect(object ? sender, EventArgs e){
@@ -383,9 +383,11 @@ namespace unchained{
                 saved.Visible = true;
             }
 
-            void startNewGame(Object ? sener, EventArgs e){
+            void startNewGame(Object ? sender, EventArgs e){
                 select.Visible = false;
-                //dungeon.Game().gamePanel.Visible = true;
+                Dungeon dungeon = new Dungeon();
+                Panel game = dungeon.dungeon();
+                window.Controls.Add(game);
             }
         }
     }

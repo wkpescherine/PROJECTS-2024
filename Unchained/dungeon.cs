@@ -5,14 +5,14 @@ using System.Security.Cryptography.X509Certificates;
 using System.CodeDom;
 using System.Drawing.Text;
 
-namespace unchained{
-    public static class Dungeon{ 
-        public static void dungeon(){
-            Panel gamePanel = new();
+public class Dungeon{ 
+    public Panel dungeon(){
+        Panel gamePanel = new();
+        Label test = new();
+        test.Text = "Test";
 
-            gamePanel.Width = 800;
-            gamePanel.Height = 600;
-            gamePanel.Visible = false;   
-        }
+        gamePanel.Width = 800;
+        gamePanel.Height = 600;
+        gamePanel.Controls.Add(test); 
     }
 }
