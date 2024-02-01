@@ -19,29 +19,20 @@ namespace unchained{
             Panel saved = new();
             //Label text = new();
             //Label text2 = new();
-            Button selectNew = new();
+            //Button selectNew = new();
             Button selectExit = new();
             //Button savedStart = new();
             Button savedExit = new();
 
             Main main = new Main();
             Panel mainScreen = main.MainPanel();
-            window.Controls.Add(mainScreen);
+            //mainScreen.Controls.Add(savedStart);
+            //window.Controls.Add(mainScreen);
 
-            if(ScreenManager.screen == "Main"){
-                mainScreen.Visible = true;
-                Console.Write("Reached");
-            }
-
-            if(ScreenManager.screen == "Saved"){
-                mainScreen.Visible = false;
-                saved.Visible = true;
-            }
-
-            selectNew.Text = "New Game";
-            selectNew.Location = new Point(395, 150);
-            selectNew.BackColor = Color.FromArgb(255, 255, 255);
-            selectNew.Click += newGame;
+            //selectNew.Text = "New Game";
+            //selectNew.Location = new Point(395, 150);
+            //selectNew.BackColor = Color.FromArgb(255, 255, 255);
+            //selectNew.Click += newGame;
             
             selectExit.Text = "Exit Select";
             selectExit.Location = new Point(350, 525);
@@ -356,7 +347,23 @@ namespace unchained{
             //window.Controls.Add(button);
             //window.Controls.Add(main);
             window.Controls.Add(select);
+
+            if(ScreenManager.screen == "Main"){
+                mainScreen.Visible = true;
+                Console.Write("Reached Main");
+            } else if (ScreenManager.screen == "Saved"){
+                mainScreen.Visible = false;
+                saved.Visible = true;
+                Console.Write("Reached Saved");
+            }else if (ScreenManager.screen == "New"){
+                mainScreen.Visible = false;
+                saved.Visible = false;
+                select.Visible = true;
+            }
+
+            window.Controls.Add(mainScreen);
             window.Controls.Add(saved);
+
             Application.Run(window);
 
             void styleSelect(object ? sender, EventArgs e){
@@ -380,10 +387,10 @@ namespace unchained{
                 selectRole.Text = charSheet.role;
             }
 
-            void newGame(Object ? sender, EventArgs e){
-                //main.Visible = false;
-                select.Visible = true;
-            }
+            //void newGame(Object ? sender, EventArgs e){
+            //    //main.Visible = false;
+            //    select.Visible = true;
+            //}
             
             void backToMain(Object ? sender, EventArgs e){
                 //main.Visible = true;
@@ -392,7 +399,7 @@ namespace unchained{
             }
 
             //void savedGame(Object ? sender, EventArgs e){
-            //    //main.Visible = false;
+            //    mainScreen.Visible = false;
             //    saved.Visible = true;
             //}
 
