@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Security.Cryptography.X509Certificates;
 using System.CodeDom;
 using System.Drawing.Text;
+using System.Windows.Media.Imaging;
 
 //Most of the following code works and does produce the window
 //Having to work on converting from the Java coud that works to C#
@@ -13,15 +14,29 @@ namespace unchained{
     public static class Program{
         public static void Main(String [] args){
             Form window = new();
-            Panel main = new();
+            //Panel main = new();
             Panel select = new();
             Panel saved = new();
-            Label text = new();
-            Label text2 = new();
+            //Label text = new();
+            //Label text2 = new();
             Button selectNew = new();
             Button selectExit = new();
-            Button savedStart = new();
+            //Button savedStart = new();
             Button savedExit = new();
+
+            Main main = new Main();
+            Panel mainScreen = main.MainPanel();
+            window.Controls.Add(mainScreen);
+
+            if(ScreenManager.screen == "Main"){
+                mainScreen.Visible = true;
+                Console.Write("Reached");
+            }
+
+            if(ScreenManager.screen == "Saved"){
+                mainScreen.Visible = false;
+                saved.Visible = true;
+            }
 
             selectNew.Text = "New Game";
             selectNew.Location = new Point(395, 150);
@@ -305,10 +320,10 @@ namespace unchained{
             charStats.Controls.Add(strString);
             select.BackColor = Color.FromArgb(0,0,0);
 
-            savedStart.Text = "Saved Game";
-            savedStart.Location = new Point(395, 250);
-            savedStart.BackColor = Color.FromArgb(255, 255, 255);
-            savedStart.Click += savedGame;
+            //savedStart.Text = "Saved Game";
+            //savedStart.Location = new Point(395, 250);
+            //savedStart.BackColor = Color.FromArgb(255, 255, 255);
+            //savedStart.Click += savedGame;
 
             savedExit.Text = "Exit Saved";
             savedExit.Location = new Point(395, 150);
@@ -321,29 +336,27 @@ namespace unchained{
             saved.Controls.Add(savedExit);
             saved.BackColor = Color.FromArgb(0,0,0);
 
-            text.Text = "Unchained";
+            //text.Text = "Unchained";
             //The location is (Width,hieght)
-            text.Location = new Point(400,100);
-            text.ForeColor = Color.FromArgb(255, 255, 255);
+            //text.Location = new Point(400,100);
+            //text.ForeColor = Color.FromArgb(255, 255, 255);
 
-            main.Width = 800;
-            main.Height = 600;
-            main.Visible = true;
-            main.Controls.Add(text);
-            main.Controls.Add(selectNew);
-            main.Controls.Add(savedStart);
-            main.BackColor = Color.FromArgb(0, 0, 0);
+            //main.Width = 800;
+            //main.Height = 600;
+            //main.Visible = true;
+            //main.Controls.Add(text);
+            //main.Controls.Add(selectNew);
+            //main.Controls.Add(savedStart);
+            //main.BackColor = Color.FromArgb(0, 0, 0);
             
             window.Width = 800;
             window.Height = 600;
-            window.Text = "Unchained v0.2.13";
+            window.Text = "Unchained v0.2.14.1";
             //window.BackColor = Color.FromArgb(0, 0, 0);
             //window.Controls.Add(button);
-            window.Controls.Add(main);
+            //window.Controls.Add(main);
             window.Controls.Add(select);
             window.Controls.Add(saved);
-            //Dungeon newDungeon = new Dungeon();
-            //window.Controls.Add(newDungeon.gamePanel);
             Application.Run(window);
 
             void styleSelect(object ? sender, EventArgs e){
@@ -368,25 +381,26 @@ namespace unchained{
             }
 
             void newGame(Object ? sender, EventArgs e){
-                main.Visible = false;
+                //main.Visible = false;
                 select.Visible = true;
             }
             
             void backToMain(Object ? sender, EventArgs e){
-                main.Visible = true;
+                //main.Visible = true;
                 select.Visible = false;
                 saved.Visible = false;
             }
 
-            void savedGame(Object ? sender, EventArgs e){
-                main.Visible = false;
-                saved.Visible = true;
-            }
+            //void savedGame(Object ? sender, EventArgs e){
+            //    //main.Visible = false;
+            //    saved.Visible = true;
+            //}
 
             void startNewGame(Object ? sender, EventArgs e){
                 select.Visible = false;
+                //dungeon.Visible = true;
                 Dungeon dungeon = new Dungeon();
-                Panel game = dungeon.dungeon();
+                Panel game = dungeon.DungeonPanel();
                 window.Controls.Add(game);
             }
         }
