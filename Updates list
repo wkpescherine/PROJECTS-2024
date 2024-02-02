@@ -1,9 +1,7 @@
-1/31/24
+2/1/24
     Unchained:
-        0.2.14.1:
-            Begun decouplking code from main Program.cs
-        0.2.14.2:
-            Begun decouplking code from main Program.cs
+        0.2.15:
+            Continue to pull out more sections from Main file.
 1/24/24
     MUSK:
         0.5

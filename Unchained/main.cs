@@ -12,7 +12,7 @@ namespace unchained{
             Panel mainPanel = new();
 
             Label titleText = new();
-            titleText.Text = "Unchained";
+            titleText.Text = "Unchained" + " " + ScreenManager.screen;
             //The location is (Width,hieght)
             titleText.Location = new System.Drawing.Point(400,100);
             titleText.ForeColor = Color.FromArgb(255, 255, 255);

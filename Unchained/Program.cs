@@ -16,7 +16,7 @@ namespace unchained{
             Form window = new();
             //Panel main = new();
             Panel select = new();
-            Panel saved = new();
+            //Panel saved = new();
             //Label text = new();
             //Label text2 = new();
             //Button selectNew = new();
@@ -28,6 +28,20 @@ namespace unchained{
             Panel mainScreen = main.MainPanel();
             //mainScreen.Controls.Add(savedStart);
             //window.Controls.Add(mainScreen);
+            if(ScreenManager.screen == "Main"){
+                mainScreen.Visible = true;
+                Console.Write("Reached Main");
+            }
+            if (ScreenManager.screen == "Saved"){
+                mainScreen.Visible = false;
+                saved.Visible = true;
+                Console.Write("Reached Saved");
+            }
+            if (ScreenManager.screen == "New"){
+                mainScreen.Visible = false;
+                saved.Visible = false;
+                select.Visible = true;
+            }
 
             //selectNew.Text = "New Game";
             //selectNew.Location = new Point(395, 150);
@@ -316,16 +330,16 @@ namespace unchained{
             //savedStart.BackColor = Color.FromArgb(255, 255, 255);
             //savedStart.Click += savedGame;
 
-            savedExit.Text = "Exit Saved";
-            savedExit.Location = new Point(395, 150);
-            savedExit.BackColor = Color.FromArgb(255, 255, 255);
-            savedExit.Click += backToMain;
+            //savedExit.Text = "Exit Saved";
+            //savedExit.Location = new Point(395, 150);
+            //savedExit.BackColor = Color.FromArgb(255, 255, 255);
+            //savedExit.Click += backToMain;
 
-            saved.Width = 800;
-            saved.Height = 600;
-            saved.Visible = false;
-            saved.Controls.Add(savedExit);
-            saved.BackColor = Color.FromArgb(0,0,0);
+            //saved.Width = 800;
+            //saved.Height = 600;
+            //saved.Visible = false;
+            //saved.Controls.Add(savedExit);
+            //saved.BackColor = Color.FromArgb(0,0,0);
 
             //text.Text = "Unchained";
             //The location is (Width,hieght)
@@ -342,25 +356,11 @@ namespace unchained{
             
             window.Width = 800;
             window.Height = 600;
-            window.Text = "Unchained v0.2.14.1";
+            window.Text = "Unchained v0.2.15";
             //window.BackColor = Color.FromArgb(0, 0, 0);
             //window.Controls.Add(button);
             //window.Controls.Add(main);
             window.Controls.Add(select);
-
-            if(ScreenManager.screen == "Main"){
-                mainScreen.Visible = true;
-                Console.Write("Reached Main");
-            } else if (ScreenManager.screen == "Saved"){
-                mainScreen.Visible = false;
-                saved.Visible = true;
-                Console.Write("Reached Saved");
-            }else if (ScreenManager.screen == "New"){
-                mainScreen.Visible = false;
-                saved.Visible = false;
-                select.Visible = true;
-            }
-
             window.Controls.Add(mainScreen);
             window.Controls.Add(saved);
 
@@ -392,11 +392,11 @@ namespace unchained{
             //    select.Visible = true;
             //}
             
-            void backToMain(Object ? sender, EventArgs e){
-                //main.Visible = true;
-                select.Visible = false;
-                saved.Visible = false;
-            }
+            //void backToMain(Object ? sender, EventArgs e){
+            //    //main.Visible = true;
+            //    select.Visible = false;
+            //    saved.Visible = false;
+            //}
 
             //void savedGame(Object ? sender, EventArgs e){
             //    mainScreen.Visible = false;
