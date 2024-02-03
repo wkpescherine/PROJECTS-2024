@@ -14,43 +14,29 @@ namespace unchained{
     public static class Program{
         public static void Main(String [] args){
             Form window = new();
-            //Panel main = new();
             Panel select = new();
-            //Panel saved = new();
-            //Label text = new();
-            //Label text2 = new();
-            //Button selectNew = new();
             Button selectExit = new();
-            //Button savedStart = new();
             Button savedExit = new();
 
             Main main = new Main();
             Panel mainScreen = main.MainPanel();
-            //mainScreen.Controls.Add(savedStart);
-            //window.Controls.Add(mainScreen);
+            SavedGames saved = new SavedGames();
+            Panel savedScreen = saved.SavedGamesPanel();
             if(ScreenManager.screen == "Main"){
                 mainScreen.Visible = true;
                 Console.Write("Reached Main");
             }
             if (ScreenManager.screen == "Saved"){
                 mainScreen.Visible = false;
-                saved.Visible = true;
+                savedScreen.Visible = true;
                 Console.Write("Reached Saved");
             }
             if (ScreenManager.screen == "New"){
                 mainScreen.Visible = false;
-                saved.Visible = false;
+                savedScreen.Visible = false;
                 select.Visible = true;
             }
-
-            //selectNew.Text = "New Game";
-            //selectNew.Location = new Point(395, 150);
-            //selectNew.BackColor = Color.FromArgb(255, 255, 255);
-            //selectNew.Click += newGame;
             
-            selectExit.Text = "Exit Select";
-            selectExit.Location = new Point(350, 525);
-            selectExit.BackColor = Color.FromArgb(255, 255, 255);
             selectExit.Click += backToMain;
 
             Button startGame = new();
@@ -360,10 +346,12 @@ namespace unchained{
             //window.BackColor = Color.FromArgb(0, 0, 0);
             //window.Controls.Add(button);
             //window.Controls.Add(main);
-            window.Controls.Add(select);
             window.Controls.Add(mainScreen);
-            window.Controls.Add(saved);
-
+            window.Controls.Add(savedScreen);
+            window.Controls.Add(select);
+            //window.Controls.Add(gameLoop);
+            //window.Controls.Add(savedScreen);
+            window.Update();
             Application.Run(window);
 
             void styleSelect(object ? sender, EventArgs e){
@@ -392,11 +380,11 @@ namespace unchained{
             //    select.Visible = true;
             //}
             
-            //void backToMain(Object ? sender, EventArgs e){
-            //    //main.Visible = true;
-            //    select.Visible = false;
-            //    saved.Visible = false;
-            //}
+            void backToMain(Object ? sender, EventArgs e){
+                //main.Visible = true;
+                select.Visible = false;
+                savedScreen.Visible = false;
+            }
 
             //void savedGame(Object ? sender, EventArgs e){
             //    mainScreen.Visible = false;

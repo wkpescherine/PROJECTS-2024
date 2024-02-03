@@ -11,44 +11,30 @@ namespace unchained{
         public Panel SavedGamesPanel(){
             Panel savedPanel = new();
 
-            Button savedExit = new();
-
-            //Label savedText = new();
-            //savedText.Text = "Unchained" + " " + ScreenManager.screen;
+            Label savedText = new();
+            savedText.Text = "Unchained Saved Games";
             //The location is (Width,hieght)
             savedText.Location = new System.Drawing.Point(400,100);
             savedText.ForeColor = Color.FromArgb(255, 255, 255);
 
+            Button savedExit = new();
             savedExit.Text = "Exit Saved";
             savedExit.Location = new Point(395, 150);
             savedExit.BackColor = Color.FromArgb(255, 255, 255);
             savedExit.Click += backToMain;
 
-            saved.Width = 800;
-            saved.Height = 600;
-            saved.Visible = false;
-            saved.Controls.Add(savedExit);
-            saved.BackColor = Color.FromArgb(0,0,0);
-
-            mainPanel.Width = 800;
-            mainPanel.Height = 600;
-            mainPanel.Visible = false;
-            mainPanel.Controls.Add(titleText);
-            mainPanel.Controls.Add(savedStart);
-            mainPanel.Controls.Add(selectNew);
-            mainPanel.BackColor = Color.FromArgb(0, 0, 0);
+            savedPanel.Width = 800;
+            savedPanel.Height = 600;
+            savedPanel.Visible = false;
+            savedPanel.Controls.Add(savedText);
+            savedPanel.Controls.Add(savedExit);
+            savedPanel.BackColor = Color.FromArgb(0,0,0);
 
             void backToMain(Object ? sender, EventArgs e){
-                //main.Visible = true;
-                select.Visible = false;
-                saved.Visible = false;
+                ScreenManager.screen = "Saved";
             }
 
-            //void newGame(Object ? sender, EventArgs e){
-            //    ScreenManager.screen = "New";
-            //}
-
-            return mainPanel;
+            return savedPanel;
         }
     }
 }

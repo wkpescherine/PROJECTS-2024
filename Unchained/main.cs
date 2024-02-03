@@ -39,8 +39,8 @@ namespace unchained{
             mainPanel.BackColor = Color.FromArgb(0, 0, 0);
 
             void savedGame(Object ? sender, EventArgs e){
+                //mainPanel.Visible = false;
                 ScreenManager.screen = "Saved";
-                Console.Write(ScreenManager.screen);
             }
 
             //void newGame(Object ? sender, EventArgs e){
