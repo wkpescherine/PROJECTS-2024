@@ -27,8 +27,8 @@ namespace unchained{
             selectNew.Text = "New Game";
             selectNew.Location = new System.Drawing.Point(395, 150);
             selectNew.BackColor = Color.FromArgb(255, 255, 255);
-            //selectNew.Click += newGame;
-            //selectNew.Click += (Sender, e) => newGame(Sender,e);
+            selectNew.Click += newGame;
+            selectNew.Click += (Sender, e) => newGame(Sender,e);
 
             mainPanel.Width = 800;
             mainPanel.Height = 600;
@@ -43,9 +43,9 @@ namespace unchained{
                 ScreenManager.screen = "Saved";
             }
 
-            //void newGame(Object ? sender, EventArgs e){
-            //    ScreenManager.screen = "New";
-            //}
+            void newGame(Object ? sender, EventArgs e){
+                ScreenManager.screen = "New";
+            }
 
             return mainPanel;
         }
