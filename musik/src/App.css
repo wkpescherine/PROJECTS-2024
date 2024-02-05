@@ -25,3 +25,7 @@ body {
   padding: 10px;
   color: #fff;
 }
+
+.displayArea {
+  width: 400px;
+}

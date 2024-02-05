@@ -2,13 +2,13 @@ import './App.css';
 import {useNavigate} from 'react-router-dom'
 import { useState } from 'react';
 
-function Home_Sidebar (){
+function Support_Sidebar (){
     const [ category, setCategory] = useState("")
 
     let navigate = useNavigate();
 
-    function RedirectToSupport(){
-        navigate('/support')
+    function RedirectToHome(){
+        navigate('/home')
     }
 
     function RedirectTo(){
@@ -20,11 +20,11 @@ function Home_Sidebar (){
             <img src={require("./mta_logo_1.png")}/>  
             <p>UTS Support </p>
             <p>& Knowledge</p>
-            <button class="invertButtonSidebar">Home</button>
+            <button class="invertButtonSidebar" onClick={RedirectToHome}>Home</button>
             <br></br>
             <button class="invertButtonSidebar" onClick={() => setCategory("Knowledge")}>Knowledge</button>
             <br></br>
-            <button class="invertButtonSidebar" onClick={RedirectToSupport}>Support</button>
+            <button class="invertButtonSidebar">Support</button>
             <br></br>
             <button class="invertButtonSidebar" onClick={() => setCategory("Message")}>Message</button>
             <br></br>
@@ -38,4 +38,4 @@ function Home_Sidebar (){
 
 }
 
-export default Home_Sidebar;
+export default Support_Sidebar;
