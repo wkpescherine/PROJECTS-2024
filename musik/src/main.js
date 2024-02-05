@@ -17,7 +17,7 @@ function Main() {
     }
     
     function RedirectTo(){
-        navigate('./dashboard')
+        navigate('./home')
     }
 
     //Test codethat I can switch in
@@ -25,6 +25,7 @@ function Main() {
 
     return (
         <div>
+            <img src={require("./mta_logo_1.png")}/>
             <p>
                 <input type="text" placeholder="Enter username" onChange={handleLogInUsernameChange}></input>
             </p>
@@ -34,7 +35,7 @@ function Main() {
             <p>
                 <button class='invertButton' onClick={RedirectTo}>Login</button> 
             </p>
-            <p>version 0.7 </p>
+            <p>version 0.8 </p>
         </div>
     ); 
 }

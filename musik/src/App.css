@@ -7,17 +7,17 @@ p {
 }
 
 body {
-  background-color: #4d4dff;
+  background-color: #205cc9;
 }
 
 .invertButton {
   background-color: #fff;
-  color:#4d4dff;
+  color:#205cc9;
 }
 
 .invertButtonSidebar {
   background-color: #fff;
-  color:#4d4dff;
+  color:#205cc9;
   width: 100px;
 }
 

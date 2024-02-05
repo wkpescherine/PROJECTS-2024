@@ -9,7 +9,7 @@ import Support from './support';
 import Planning from "./planning";
 import Admin from './admin';
 
-function Dashboard (){
+function Home (){
     const [ sectionActive, setSectionActive] = useState("None")
     let navigate = useNavigate();
 
@@ -56,4 +56,4 @@ function Dashboard (){
     );
 }
 
-export default Dashboard;
+export default Home;
