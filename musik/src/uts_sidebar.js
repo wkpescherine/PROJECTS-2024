@@ -2,13 +2,13 @@ import './App.css';
 import {useNavigate} from 'react-router-dom'
 import { useState } from 'react';
 
-function Home_Sidebar (){
+export default function UTSSidebar (){
     const [ category, setCategory] = useState("")
 
     let navigate = useNavigate();
 
-    function RedirectToUTS(){
-        navigate('/uts')
+    function RedirectToHome(){
+        navigate('/home')
     }
 
     function RedirectToSupport(){
@@ -18,15 +18,14 @@ function Home_Sidebar (){
     function RedirectTo(){
         navigate('/')
     }
-
     return (
         <div>
             <img src={require("./mta_logo_1.png")}/>  
             <p>UTS Support </p>
             <p>& Knowledge</p>
-            <button class="invertButtonSidebar">Home</button>
+            <button class="invertButtonSidebar" onClick={RedirectToHome}>Home</button>
             <br></br>
-            <button class="invertButtonSidebar" onClick={RedirectToUTS}>UTS</button>
+            <button class="invertButtonSidebar">UTS</button>
             <br></br>
             <button class="invertButtonSidebar">BSC</button>
             <br></br>
@@ -43,9 +42,6 @@ function Home_Sidebar (){
             <button class="invertButtonSidebar">Executive Dashboard</button>
             <br></br>
             <button class="invertButtonSidebar" onClick={RedirectTo} >Exit</button>
-        </div> 
-    )
-
+        </div>  
+    );
 }
-
-export default Home_Sidebar;
