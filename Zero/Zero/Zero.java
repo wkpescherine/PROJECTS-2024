@@ -14,7 +14,7 @@ public class Zero implements ActionListener {
 	MainView mainView = new MainView();
 	CreateAccountView accountView = new CreateAccountView();
 
-	JFrame window = new JFrame("Zero v5");
+	JFrame window = new JFrame("Zero v6.3");
 
 	Zero() {
 		startView.createAcct.addActionListener(
@@ -137,7 +137,7 @@ public class Zero implements ActionListener {
 		String usernameEntered = startView.startEditUsername.getText();
 		String passwordEntered = startView.startEditPassword.getText();
 		String[] checklogin;
-		config.username = usernameEntered;
+		Config.username = usernameEntered;
 
 		try {
 			File myFile = new File("accountDB.txt");
@@ -151,7 +151,7 @@ public class Zero implements ActionListener {
 					startView.errorMessage.setText("");
 					config.getTempId();
 					config.getDate();
-					config.username = usernameEntered;
+					Config.username = usernameEntered;
 					startView.start.setVisible(false);
 					accountView.create.setVisible(false);
 					mainView.main.setVisible(true);
