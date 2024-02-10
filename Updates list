@@ -1,3 +1,7 @@
+2/9/24
+    CMP:
+        0.4
+            Adjusted dashboard to a sidebar and display area
 2/8/24
     Zero:
         6.3
@@ -23,12 +27,3 @@
         0.5
             Added Pick screen
             Update some minor UI elements
-1/16/24
-    CMP:
-        0.3:
-            Fixed minor rendering issue
-            Added Portfolio Section
-            Updated Marketplace
-            Added categories to the Marketplace
-            Added market to one of the categories
-            Added a create account section

@@ -37,7 +37,7 @@ function Main() {
                 <button onClick={RedirectTo}>Login</button> 
                 <button onClick={RedirectTo2}> Create Account</button>
             </p>
-            <p>version 0.3</p>
+            <p>version 0.4</p>
         </div>
     ); 
 }

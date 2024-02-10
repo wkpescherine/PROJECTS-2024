@@ -8,10 +8,15 @@ function Create (){
         navigate('/dashboard')
     }
 
+    function RedirectToMain(){
+        navigate('/')
+    }
+
     return (
         <div>
             <p>Create account</p>
             <button  onClick={RedirectTo}>Create</button>
+            <button  onClick={RedirectToMain}>Exit</button>
         </div>
     );
 }
