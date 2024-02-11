@@ -9,3 +9,11 @@ p , h1 {
 body {
   background-color: #000;
 }
+
+.displayArea {
+  width: 400px;
+}
+
+.buttonStyle {
+  width: 100px;
+}

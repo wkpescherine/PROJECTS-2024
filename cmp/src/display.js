@@ -7,16 +7,16 @@ import PROFILE from "./profile"
 import MARKETPLACE from "./marketplace"
 import PORTFOLIO from "./portfolio"
 
-export default function Display (){
-    const[section,setSection] = useState ("Home");
+export default function Display (props){
+    //const[section,setSection] = useState ("Home");
 
     return (
         <div>
-            <div>
-                { section === "Home" && < HOME />}
-                { section === "Profile" && < PROFILE />}
-                { section === "Marketplace" && < MARKETPLACE />}
-                { section === "Portfolio" && < PORTFOLIO />}
+            <div class="displayArea">
+                { props.sendData === "Home" && < HOME />}
+                { props.sendData === "Profile" && < PROFILE />}
+                { props.sendData === "Marketplace" && < MARKETPLACE />}
+                { props.sendData === "Portfolio" && < PORTFOLIO />}
             </div>
         </div>
     );

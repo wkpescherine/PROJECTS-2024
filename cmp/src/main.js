@@ -34,10 +34,10 @@ function Main() {
                 <input type="password" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
             </p>
             <p>
-                <button onClick={RedirectTo}>Login</button> 
-                <button onClick={RedirectTo2}> Create Account</button>
+                <button style={{margin: "5px"}}onClick={RedirectTo}>Login</button> 
+                <button style={{margin: "5px"}} onClick={RedirectTo2}> Create Account</button>
             </p>
-            <p>version 0.4</p>
+            <p>version 0.5</p>
         </div>
     ); 
 }

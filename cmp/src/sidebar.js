@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom'
 import {useState} from 'react'
 
 
-export default function Sidebar (){
+export default function Sidebar (props){
     const[section,setSection] = useState ("");
 
     let navigate = useNavigate();
@@ -15,15 +15,15 @@ export default function Sidebar (){
     return (
         <div>
             <div>
-                <button onClick={() => {setSection("Home")}}>Home</button>
+                <button class="buttonStyle" onClick={() => props.getData("Home")}>Home</button>
                 <br></br>
-                <button onClick={() => {setSection("Profile")}}>Profile</button>
+                <button class="buttonStyle" onClick={() => props.getData("Profile")}>Profile</button>
                 <br></br>
-                <button onClick={() => {setSection("Portfolio")}}>Portfolio</button>
+                <button class="buttonStyle" onClick={() => {setSection("Portfolio")}}>Portfolio</button>
                 <br></br>
-                <button onClick={() => {setSection("Marketplace")}}>Marketplace</button> 
+                <button class="buttonStyle" onClick={() => {setSection("Marketplace")}}>Marketplace</button> 
                 <br></br>
-                <button onClick={RedirectTo}>Exit</button>  
+                <button class="buttonStyle" onClick={RedirectTo}>Exit</button>  
             </div>
         </div>
     );

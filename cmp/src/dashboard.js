@@ -15,14 +15,18 @@ function Dashboard (){
 
     let navigate = useNavigate();
 
+    const handleSetSection = (subData) =>{
+        setSection(subData)
+    }
+
     function RedirectTo(){
         navigate('/')
     }
 
     return (
-        <div>
-            < Sidebar />
-            < Display />
+        <div style={{display: "flex",justifyContent: "center"}}>
+            < Sidebar getData={handleSetSection}/>
+            < Display sendData={section}/>
         </div>
     );
 }
