@@ -37,7 +37,7 @@ function Main() {
                 <button style={{margin: "5px"}}onClick={RedirectTo}>Login</button> 
                 <button style={{margin: "5px"}} onClick={RedirectTo2}> Create Account</button>
             </p>
-            <p>version 0.5</p>
+            <p>version 0.6</p>
         </div>
     ); 
 }

@@ -11,7 +11,7 @@ import MARKETPLACE from "./marketplace"
 import PORTFOLIO from "./portfolio"
 
 function Dashboard (){
-    const[section,setSection] = useState ("");
+    const[section,setSection] = useState ("Home");
 
     let navigate = useNavigate();
 

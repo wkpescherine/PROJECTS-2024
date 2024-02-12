@@ -19,9 +19,9 @@ export default function Sidebar (props){
                 <br></br>
                 <button class="buttonStyle" onClick={() => props.getData("Profile")}>Profile</button>
                 <br></br>
-                <button class="buttonStyle" onClick={() => {setSection("Portfolio")}}>Portfolio</button>
+                <button class="buttonStyle" onClick={() => props.getData("Portfolio")}>Portfolio</button>
                 <br></br>
-                <button class="buttonStyle" onClick={() => {setSection("Marketplace")}}>Marketplace</button> 
+                <button class="buttonStyle" onClick={() => props.getData("Marketplace")}>Marketplace</button> 
                 <br></br>
                 <button class="buttonStyle" onClick={RedirectTo}>Exit</button>  
             </div>
