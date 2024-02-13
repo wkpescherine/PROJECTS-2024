@@ -2,14 +2,14 @@ import React, {useState} from 'react';
 import './App.css';
 import {useNavigate} from 'react-router-dom'
 
-function Sidebar() {
-    const[category,setCategory] = useState ("");
+function Sidebar(props) {
+    //const[category,setCategory] = useState ("");
 
     let navigate = useNavigate();
 
-    function selectCategory(choice){
-        setCategory(choice);
-    }
+    //function selectCategory(choice){
+    //    setCategory(choice);
+    //}
     
     function RedirectToExit(){
         navigate('/')
@@ -20,7 +20,9 @@ function Sidebar() {
 
     return (
         <div>
-            <button class='invertButton' onClick={() => selectCategory("Home")}>Home</button> 
+            <button class='invertButton'>Home</button>
+            <br></br>
+            <button class='invertButton' onClick={() => props.getData("Home")}>Home</button> 
             <br></br>
             <button class='invertButton' onClick={RedirectToExit}>Exit</button>  
         </div>

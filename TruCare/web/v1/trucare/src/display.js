@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import {useNavigate} from 'react-router-dom'
 
-function Display() {
+function Display(props) {
     const[category,setCategory] = useState ("");
 
     let navigate = useNavigate();
@@ -21,6 +21,7 @@ function Display() {
     return (
         <div class="displayArea">
             <p>Display Area</p>
+            {props.sendData === "Home"&& <p>Home</p>}
         </div>
     ); 
 }

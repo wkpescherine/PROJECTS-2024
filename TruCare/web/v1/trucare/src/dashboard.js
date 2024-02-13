@@ -6,18 +6,14 @@ import Sidebar from "./sidebar"
 import Display from "./display"
 
 function Dashboard() {
-    //const[logInUsername,setLogInUsername] = useState ("");
-    //const[logInPassword,setLogInPassword] = useState ("");
+    const[section,setSection] = useState ("");
 
     let navigate = useNavigate();
     
-    //const handleLogInUsernameChange = (event) => {
-    //    setLogInUsername(event.target.value)
-    //}
+    function handleSectionChoices (selection){
+        setSection(selection)
+    }
 
-    //const handleLogInPasswordChange = (event) => {
-    //    setLogInPassword(event.target.value)
-    //}
     
     function RedirectToExit(){
         navigate('/')
@@ -30,8 +26,8 @@ function Dashboard() {
         <div>
             <p>Dashboard</p>
             <div style={{display: "flex",justifyContent: "center"}}>
-                <Sidebar />
-                <Display />
+                <Sidebar getData={handleSectionChoices}/>
+                <Display sendData={section}/>
             </div>
             <p>
                 <button class='invertButton' onClick={RedirectToExit}>Exit</button>   

@@ -44,7 +44,7 @@ function Main() {
                 <button class='invertButton' onClick={RedirectToCreate}>Create Patient</button>
                 <button class='invertButton' onClick={RedirectTo}>Create Doctor</button>  
             </p>
-            <p>version 0.1.1 </p>
+            <p>version 0.1.2 </p>
         </div>
     ); 
 }
