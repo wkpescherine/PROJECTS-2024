@@ -17,7 +17,15 @@ function Main() {
     }
     
     function RedirectTo(){
-        navigate('./home')
+        navigate('./')
+    }
+
+    function RedirectToCreate(){
+        navigate('./create')
+    }
+
+    function RedirectToDashboard(){
+        navigate('./dashboard')
     }
 
     //Test codethat I can switch in
@@ -26,15 +34,17 @@ function Main() {
     return (
         <div>
             <p>
-                <input type="text" placeholder="Enter username" onChange={handleLogInUsernameChange}></input>
+                <input class="inputField" type="text" placeholder="Enter username" onChange={handleLogInUsernameChange}></input>
             </p>
             <p>
-                <input type="password" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
+                <input class="inputField" type="password" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
             </p>
             <p>
-                <button class='invertButton' onClick={RedirectTo}>Login</button> 
+                <button class='invertButton' onClick={RedirectToDashboard}>Login</button> 
+                <button class='invertButton' onClick={RedirectToCreate}>Create Patient</button>
+                <button class='invertButton' onClick={RedirectTo}>Create Doctor</button>  
             </p>
-            <p>version 0.1 </p>
+            <p>version 0.1.1 </p>
         </div>
     ); 
 }
