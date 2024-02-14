@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import {useNavigate} from 'react-router-dom'
 
-function Create() {
+function PCreate() {
     const[logInUsername,setLogInUsername] = useState ("");
     const[logInPassword,setLogInPassword] = useState ("");
 
@@ -14,6 +14,10 @@ function Create() {
 
     const handleLogInPasswordChange = (event) => {
         setLogInPassword(event.target.value)
+    }
+
+    function RedirectToDashboard(){
+        navigate('/dashboard')
     }
     
     function RedirectToExit(){
@@ -34,10 +38,10 @@ function Create() {
             </p>
             <p>
                 <button class='invertButton' onClick={RedirectToExit}>Exit</button> 
-                <button class='invertButton'>Create</button>  
+                <button class='invertButton' onClick={RedirectToDashboard}>Create</button>  
             </p>
         </div>
     ); 
 }
 
-export default Create;
+export default PCreate;

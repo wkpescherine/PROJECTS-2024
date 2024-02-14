@@ -20,8 +20,12 @@ function Main() {
         navigate('./')
     }
 
-    function RedirectToCreate(){
-        navigate('./create')
+    function RedirectToDCreate(){
+        navigate('./dcreate')
+    }
+
+    function RedirectToPCreate(){
+        navigate('./pcreate')
     }
 
     function RedirectToDashboard(){
@@ -41,10 +45,10 @@ function Main() {
             </p>
             <p>
                 <button class='invertButton' onClick={RedirectToDashboard}>Login</button> 
-                <button class='invertButton' onClick={RedirectToCreate}>Create Patient</button>
-                <button class='invertButton' onClick={RedirectTo}>Create Doctor</button>  
+                <button class='invertButton' onClick={RedirectToPCreate}>Create Patient</button>
+                <button class='invertButton' onClick={RedirectToDCreate}>Create Doctor</button>  
             </p>
-            <p>version 0.1.2 </p>
+            <p>version 0.2</p>
         </div>
     ); 
 }

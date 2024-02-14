@@ -1,15 +1,8 @@
-2/12/124
+1/13/24
     TruCare
-        0.1.2:
-            Added logic for selection and display area
-        0.1.1:
-            Added Create Account screen
-            Added Dashboard
-            Added sidebar
-            Added Display Area
-        0.1:
-            Build out initial functionality
-            Added Main Screen
+        0.2:
+            Added Doctor create Screen
+            Have full navigation between all screens
 2/11/24
     CMP:
         0.6

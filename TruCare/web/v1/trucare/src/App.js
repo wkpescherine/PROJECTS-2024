@@ -3,7 +3,8 @@ import './App.css';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 import Main from "./main"
-import Create from "./create"
+import PCreate from "./pcreate"
+import DCreate from "./dcreate"
 import Dashboard from "./dashboard"
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       <div className="App">
         <Routes>
           <Route exct path="/" element={ <Main />} />
-          <Route exct path="/create" element={ <Create />} />
+          <Route exct path="/pcreate" element={ <PCreate />} />
+          <Route exct path="/dcreate" element={ <DCreate />} />
           <Route exct path="/dashboard" element={ <Dashboard />} />
         </Routes>
       </div>
