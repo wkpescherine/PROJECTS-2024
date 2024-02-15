@@ -20,9 +20,13 @@ function Sidebar(props) {
 
     return (
         <div>
-            <button class='invertButton'>Home</button>
-            <br></br>
             <button class='invertButton' onClick={() => props.getData("Home")}>Home</button> 
+            <br></br>
+            <button class='invertButton' onClick={() => props.getData("Account")}>Account</button> 
+            <br></br>
+            <button class='invertButton' onClick={() => props.getData("Search")}>Search</button> 
+            <br></br>
+            <button class='invertButton' onClick={() => props.getData("Setting")}>Setting</button> 
             <br></br>
             <button class='invertButton' onClick={RedirectToExit}>Exit</button>  
         </div>

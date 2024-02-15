@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import './App.css';
 import {useNavigate} from 'react-router-dom'
 
+import Account from "./account"
+
 function Display(props) {
     const[category,setCategory] = useState ("");
 
@@ -22,6 +24,7 @@ function Display(props) {
         <div class="displayArea">
             <p>Display Area</p>
             {props.sendData === "Home"&& <p>Home</p>}
+            {props.sendData === "Account" && <Account /> }
         </div>
     ); 
 }
