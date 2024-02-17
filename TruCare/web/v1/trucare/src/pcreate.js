@@ -30,12 +30,14 @@ function PCreate() {
     return (
         <div>
             <p>Create New Patient</p>
-            <p>
+            <div>
+                <label>Username</label> 
                 <input type="text" placeholder="Enter username" onChange={handleLogInUsernameChange}></input>
-            </p>
-            <p>
+            </div>
+            <div>
+                <label>Password</label>
                 <input type="password" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
-            </p>
+            </div>
             <p>
                 <button class='invertButton' onClick={RedirectToExit}>Exit</button> 
                 <button class='invertButton' onClick={RedirectToDashboard}>Create</button>  

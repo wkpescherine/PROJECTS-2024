@@ -26,3 +26,8 @@ p {
 .displayArea {
   width: 400px;;
 }
+
+label {
+  color:#fff;
+  padding-right: 10px;
+}
