@@ -14,24 +14,12 @@ function Dashboard() {
         setSection(selection)
     }
 
-    
-    function RedirectToExit(){
-        navigate('/')
-    }
-
-    //Test codethat I can switch in
-    //<button onClick={checkLogInCred}>Login</button> 
-
     return (
         <div>
-            <p>Dashboard</p>
             <div style={{display: "flex",justifyContent: "center"}}>
                 <Sidebar getData={handleSectionChoices}/>
                 <Display sendData={section}/>
             </div>
-            <p>
-                <button class='invertButton' onClick={RedirectToExit}>Exit</button>   
-            </p>
         </div>
     ); 
 }

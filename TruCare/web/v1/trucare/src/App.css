@@ -27,6 +27,12 @@ p {
   width: 400px;;
 }
 
+.sidebarbutton {
+  width: 100px;
+  background: #fff;
+  margin: 2px;;
+}
+
 label {
   color:#fff;
   padding-right: 10px;
