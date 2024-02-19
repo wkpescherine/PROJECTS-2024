@@ -34,6 +34,12 @@ p {
 }
 
 label {
+  padding-left: 10px;
   color:#fff;
   padding-right: 10px;
+}
+
+.inputData {
+  width: 50px;
+  background-color: #fff;
 }
