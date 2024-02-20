@@ -5,6 +5,8 @@ import Account from "./account"
 import Search from "./search"
 import Home from "./home"
 import Settings from "./settings"
+import About from "./about"
+import PList from "./plist"
 
 function Display(props) {
     return (
@@ -13,6 +15,8 @@ function Display(props) {
             {props.sendData === "Account" && <Account /> }
             {props.sendData === "Search" && <Search /> }
             {props.sendData === "Settings" && <Settings /> }
+            {props.sendData === "About" && <About /> }
+            {props.sendData === "List" && <PList /> }
         </div>
     ); 
 }

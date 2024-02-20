@@ -38,12 +38,11 @@ function PCreate() {
             </div>
             <div>
                 <label>Email</label>
-                <input type="password" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
-                <label>Age: Yrs</label>
-                <input type="text" placeholder="YRS" class="inputData"></input>
-                <label>Mos</label>
-                <input type="text" placeholder="MOS" class="inputData"></input>
+                <input type="text" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
+                <label>Age:</label>
+                <input type="text" placeholder="00/00/0000" class="inputData"></input>
             </div>
+            <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
             <div>
                 <p style={{margin:"5px"}}>Select Doctor:</p>
                 <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
@@ -51,18 +50,37 @@ function PCreate() {
                     <button>Family</button>
                     <button>Dentist</button>
                     <button>Eye</button>
+                    <button>Allergist</button>
+                    <button>Therapist</button>
+                    <button>Psychiatrist</button>
+                    <button>Trainer</button>
+                    <button>Dietiationist</button>
                 </div>
                 <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
-                <p style={{margin:"5px"}}>State:</p>
+                <p style={{margin:"5px"}}>Contact Info:</p>
                 <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
+                <div>
+                    <label>Address</label> 
+                    <input style={{width:"410px", background:"#fff"}} type="text" placeholder="Enter Addresss"></input>
+                </div>
+                <div>
+                    <label>City</label> 
+                    <input style={{width:"180px", background:"#fff"}} type="text" placeholder="Enter Addresss"></input>
+                    <label>State</label> 
+                    <input style={{width:"50px", background:"#fff"}} type="text" placeholder="Enter Addresss"></input>
+                    <label>Zip</label> 
+                    <input style={{width:"100px", background:"#fff"}} type="text" placeholder="Enter Addresss"></input>
+                </div>
                 <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
                 <p style={{margin:"5px"}}>Rate of Coverage:</p>
                 <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
                 <div>
                     <label>
-                        <input type="radio" value="normal"/>Slow
-                        <input type="radio" value="normal"/>Normal
-                        <input type="radio" value="normal"/>Fast
+                        <input type="radio" value="normal"/>Slow(.5x)
+                        <input type="radio" value="normal"/>Normal (1x)
+                        <input type="radio" value="normal"/>Fast(1.25x)
+                        <input type="radio" value="normal"/>Hyper(1.5x)
+                        <input type="radio" value="normal"/>Super(2x)
                     </label>
                 </div>
                 <hr style={{background:"#fff", height: "1px", width: "500px"}}/>                

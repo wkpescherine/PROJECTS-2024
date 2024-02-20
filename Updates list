@@ -1,9 +1,11 @@
-2/16/24
+2/19/24
     TruCare
-        0.6
-            Update to Patient create screen
-            Added doctors, states and pay rate to Patient screen
-            Added more Patient info sections
+        0.7
+            Updated Patient Create screen
+            Updated Medical Create screen
+            Added more sectiosn to sidebar
+            Added About sections
+            Added Patient List Section
 2/15/24 
     musik:
         0.10

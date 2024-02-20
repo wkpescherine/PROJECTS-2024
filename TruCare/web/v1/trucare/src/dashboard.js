@@ -6,7 +6,7 @@ import Sidebar from "./sidebar"
 import Display from "./display"
 
 function Dashboard() {
-    const[section,setSection] = useState ("");
+    const[section,setSection] = useState ("Home");
 
     let navigate = useNavigate();
     
