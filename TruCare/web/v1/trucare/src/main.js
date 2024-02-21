@@ -32,9 +32,6 @@ function Main() {
         navigate('./dashboard')
     }
 
-    //Test codethat I can switch in
-    //<button onClick={checkLogInCred}>Login</button> 
-
     return (
         <div>
             <p>
@@ -48,7 +45,7 @@ function Main() {
                 <button class='invertButton' onClick={RedirectToPCreate}>Create Patient</button>
                 <button class='invertButton' onClick={RedirectToDCreate}>Create Doctor</button>  
             </p>
-            <p>version 0.7</p>
+            <p>version 0.8</p>
         </div>
     ); 
 }

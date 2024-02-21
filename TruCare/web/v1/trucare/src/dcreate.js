@@ -31,6 +31,12 @@ function DCreate() {
         <div>
             <p>Create New Doctor</p>
             <div>
+                <label>First Name</label> 
+                <input type="text" placeholder="Enter username" onChange={handleLogInUsernameChange}></input>
+                <label>Last Name</label>
+                <input type="text" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
+            </div>
+            <div>
                 <label>Username</label> 
                 <input type="text" placeholder="Enter username" onChange={handleLogInUsernameChange}></input>
                 <label>Password</label>
@@ -38,9 +44,11 @@ function DCreate() {
             </div>
             <div>
                 <label>Email</label>
-                <input type="text" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
+                <input type="text" class="inputData" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
                 <label>Age:</label>
                 <input type="text" placeholder="00/00/0000" class="inputData"></input>
+                <label>Name/Title:</label>
+                <input type="text" placeholder="Name/Title"></input>
             </div>
             <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
             <div>
@@ -56,6 +64,26 @@ function DCreate() {
                     <button>Trainer</button>
                     <button>Pharmacy</button>
                 </div>
+                <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
+                <p style={{margin:"5px"}}>Services and Rates:</p>
+                <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
+                <div>
+                    <label>Visit: $</label>
+                    <input type="text" style={{width:"40px", background:"#fff"}}></input>
+                    <label>Medication: $</label>
+                    <input type="text" style={{width:"40px", background:"#fff"}}></input>
+                    <label>X Rays: $</label>
+                    <input type="text" style={{width:"40px", background:"#fff"}}></input>
+                </div>
+                <div>
+                    <label>Blood Work: $</label>
+                    <input type="text" style={{width:"40px", background:"#fff"}}></input>
+                    <label>Supplies: $</label>
+                    <input type="text" style={{width:"40px", background:"#fff"}}></input>
+                    <label>Others: $</label>
+                    <input type="text" style={{width:"40px", background:"#fff"}}></input>
+                </div>
+                    <div style={{fontSize: "8px", color: "#fff", margin: "5px"}}>While this does not cover all expenses. We suggest using average for any of the above . If not in the list use the Other.</div>
                 <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
                 <p style={{margin:"5px"}}>Expected Visits:</p>
                 <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
