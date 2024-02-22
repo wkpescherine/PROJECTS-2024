@@ -11,6 +11,7 @@ function Sidebar(props) {
 
     return (
         <div>
+            <p>TRUCARE</p>
             <button class='sidebarbutton' onClick={() => props.getData("Home")}>Home</button> 
             <br></br>
             <button class='sidebarbutton' onClick={() => props.getData("Account")}>Account</button> 
@@ -18,6 +19,8 @@ function Sidebar(props) {
             <button class='sidebarbutton' onClick={() => props.getData("Search")}>Search</button> 
             <br></br>
             <button class='sidebarbutton' onClick={() => props.getData("List")}>Patient List</button> 
+            <br></br>
+            <button class='sidebarbutton' onClick={() => props.getData("Billing")}>Billing</button> 
             <br></br>
             <button class='sidebarbutton' onClick={() => props.getData("Settings")}>Setting</button> 
             <br></br>

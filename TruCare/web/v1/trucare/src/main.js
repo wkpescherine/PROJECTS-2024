@@ -34,6 +34,7 @@ function Main() {
 
     return (
         <div>
+            <p style={{fontSize: "48px"}}>TRUCARE</p>
             <p>
                 <input class="inputField" type="text" placeholder="Enter username" onChange={handleLogInUsernameChange}></input>
             </p>
@@ -45,7 +46,7 @@ function Main() {
                 <button class='invertButton' onClick={RedirectToPCreate}>Create Patient</button>
                 <button class='invertButton' onClick={RedirectToDCreate}>Create Doctor</button>  
             </p>
-            <p>version 0.8</p>
+            <p>version 0.9</p>
         </div>
     ); 
 }
