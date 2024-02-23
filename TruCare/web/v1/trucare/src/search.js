@@ -24,12 +24,12 @@ function Search() {
                     <button style={{marginRight:"2px", fontSize: "12px"}}>Pharmacy</button>
                 </div>
             <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
-            <div>
-                <label>Doctor</label>
-                <label>City</label>
-                <label>State</label>
-                <label>Zip Code</label>
-                <label>Occupation</label>
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <p style={{width:"150px", fontSize:"12px"}}>Doctor</p>
+                <p style={{width:"100px", fontSize:"12px"}}>City</p>
+                <p style={{width:"50px", fontSize:"12px"}}>State</p>
+                <p style={{width:"100px", fontSize:"12px"}}>Zip Code</p>
+                <p style={{width:"150px", fontSize:"12px"}}>Occupation</p>
             </div>
             <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
         </div>

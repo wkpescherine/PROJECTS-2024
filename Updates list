@@ -1,11 +1,8 @@
-2/21/24
+2/22/24
     TruCare
-        0.9
-            Added Billing to sidebar
-            Added more information required for Doctor Creation
-            Added Search Criteria
-            Updated Search UI
-            Updated logic for capturing input for Doctor creation
+        0.10
+            Update to Search screen
+            Update to Account Screen
 2/15/24 
     musik:
         0.10
