@@ -1,10 +1,9 @@
 2/23/24
     TruCare
-        0.11
-            Update to Patient List Screen
-            Updated Sidebar and Display area
-            Added Billing screen
-            Built out initIal Biiling Screen
+        0.12
+            Add Finance Screen
+            Updated Biiling Screen
+            Updated Home Screen
 2/15/24 
     musik:
         0.10
@@ -22,7 +21,7 @@
             Increase home area size
             Increase site area size
 2/6/24
-    emails:
+    emails:(Currently on hold)
         Able to resolve the code for HTML in email
         Ctrl A and Ctrl c to copy all and paste
 2/2/24

@@ -22,6 +22,8 @@ function Sidebar(props) {
             <br></br>
             <button class='sidebarbutton' onClick={() => props.getData("Billing")}>Billing</button> 
             <br></br>
+            <button class='sidebarbutton' onClick={() => props.getData("Finances")}>Finances</button> 
+            <br></br>
             <button class='sidebarbutton' onClick={() => props.getData("Settings")}>Setting</button> 
             <br></br>
             <button class='sidebarbutton' onClick={() => props.getData("About")}>About</button> 

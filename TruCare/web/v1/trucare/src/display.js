@@ -8,6 +8,7 @@ import Settings from "./settings"
 import About from "./about"
 import PList from "./plist"
 import Billing from "./billing"
+import Finance from "./finances"
 
 function Display(props) {
     return (
@@ -19,6 +20,7 @@ function Display(props) {
             {props.sendData === "About" && <About /> }
             {props.sendData === "List" && <PList /> }
             {props.sendData === "Billing" && <Billing /> }
+            {props.sendData === "Finances" && <Finance /> }
         </div>
     ); 
 }
