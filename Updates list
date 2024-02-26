@@ -1,9 +1,10 @@
-2/23/24
+2/24/24
     TruCare
-        0.12
-            Add Finance Screen
-            Updated Biiling Screen
-            Updated Home Screen
+        0.13
+            Updated CS file for standardization
+            Updated Billing Screen
+            Updated Finance Screen
+            Setting up Rails and sqlite3 env
 2/15/24 
     musik:
         0.10

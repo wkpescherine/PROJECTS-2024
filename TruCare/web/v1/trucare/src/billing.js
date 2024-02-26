@@ -29,6 +29,12 @@ function Billing() {
                 <p style={{width: "75px", height:"25px", alignSelf:"center"}}>Extraction</p>
                 <input type='text' style={{width: "75px", height:"25px", alignSelf:"center", fontSize: "14px"}}></input>
             </div>
+            <div style={{display: "flex", height:"30px"}}>
+                <p style={{width: "75px", height:"25px", alignSelf:"center", fontSize: "14px"}}>Other</p>
+                <input type='text' placeholder="Enter Code " style={{width: "150px", height:"25px", alignSelf:"center"}}></input>
+                <input type='text' placeholder='Enter Cost' style={{width: "75px", height:"25px", alignSelf:"center"}}></input>
+                <button> Add</button>
+            </div>
             <p style={{width: "500px", height:"25px", alignSelf:"center", justifyContent:"center"}}>Current Cost $0</p>
             <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
             <div style={{display: "flex", justifyContent: "center" }}>
