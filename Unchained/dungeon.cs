@@ -15,13 +15,14 @@ namespace unchained{
 
             gamePanel.Width = 800;
             gamePanel.Height = 600;
+            gamePanel.Visible = false;
             gamePanel.Controls.Add(quitGame); 
-            return gamePanel;
-            
+
             void quitGamePlay(Object ? sender, EventArgs e){
                 ScreenManager.screen = "Main";
             }
 
+            return gamePanel;
         }
     }
 }

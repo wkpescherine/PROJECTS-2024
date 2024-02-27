@@ -13,6 +13,7 @@ namespace unchained{
 
             Label savedText = new();
             savedText.Text = "Unchained Saved Games";
+            savedText.Width = 400;
             //The location is (Width,hieght)
             savedText.Location = new System.Drawing.Point(400,100);
             savedText.ForeColor = Color.FromArgb(255, 255, 255);
@@ -31,7 +32,8 @@ namespace unchained{
             savedPanel.BackColor = Color.FromArgb(0,0,0);
 
             void backToMain(Object ? sender, EventArgs e){
-                ScreenManager.screen = "Saved";
+                ScreenManager.screen = "Main";
+                ScreenManager.HandleScreenChanges(ScreenManager.pan1, ScreenManager.pan2, ScreenManager.pan3, ScreenManager.pan4);
             }
 
             return savedPanel;

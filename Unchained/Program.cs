@@ -14,8 +14,6 @@ namespace unchained{
     public static class Program{
         public static void Main(String [] args){
             Form window = new();
-            Button selectExit = new();
-            Button savedExit = new();
 
             Main main = new Main();
             Panel mainScreen = main.MainPanel();
@@ -23,24 +21,13 @@ namespace unchained{
             Panel savedScreen = saved.SavedGamesPanel();
             Selection selection = new Selection();
             Panel selectionScreen = selection.SelectionPanel();
-            if(ScreenManager.screen == "Main"){
-                mainScreen.Visible = true;
-            }
-            if (ScreenManager.screen == "Saved"){
-                mainScreen.Visible = false;
-                savedScreen.Visible = true;
-            }
-            if (ScreenManager.screen == "Selection"){
-                mainScreen.Visible = false;
-                savedScreen.Visible = false;
-                selectionScreen.Visible = true;
-            }
-            if (ScreenManager.screen == "Dungeon"){
-                mainScreen.Visible = false;
-                savedScreen.Visible = false;
-                selectionScreen.Visible = false;
-                //dungeon.Visible = false;
-            }
+            Dungeon dungeon = new Dungeon();
+            Panel dungeonScreen = dungeon.DungeonPanel();
+            ScreenManager.pan1 = mainScreen;
+            ScreenManager.pan2 = savedScreen;
+            ScreenManager.pan3 = selectionScreen;
+            ScreenManager.pan4 = dungeonScreen;
+            ScreenManager.HandleScreenChanges(ScreenManager.pan1, ScreenManager.pan2, ScreenManager.pan3, ScreenManager.pan4);
             
             //selectExit.Click += backToMain;
 
@@ -52,7 +39,7 @@ namespace unchained{
             
             window.Width = 800;
             window.Height = 600;
-            window.Text = "Unchained v0.2.17";
+            window.Text = "Unchained v0.2.18";
             window.Controls.Add(mainScreen);
             window.Controls.Add(savedScreen);
             window.Controls.Add(selectionScreen);

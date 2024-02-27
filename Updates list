@@ -1,3 +1,9 @@
+2/25/24
+    Unchained:
+        0.2.18:
+            Updated ScreenManager with handling of swiitches
+            Updated Selection Screen to include chnaging handling
+            Added Duungeon to Screen Manager logic
 2/24/24
     TruCare
         0.13
@@ -25,10 +31,6 @@
     emails:(Currently on hold)
         Able to resolve the code for HTML in email
         Ctrl A and Ctrl c to copy all and paste
-2/2/24
-    Unchained:
-        0.2.17:
-            Finish refactoring
 1/24/24
     MUSK:(Currently on Hold)
         0.5

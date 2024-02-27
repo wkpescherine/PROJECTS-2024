@@ -11,7 +11,19 @@ namespace unchained{
         public Panel SelectionPanel(){
             Panel select = new();
 
-             //Char Building components
+            //Char Building components
+            Button startNewGame = new();
+            startNewGame.Text = " Start New Game";
+            startNewGame.Width = 100;
+            startNewGame.Location = new Point(425, 525);
+            startNewGame.BackColor = Color.FromArgb(255, 255, 255);
+            startNewGame.Click += StartFullNewGame;
+            Button selectExit = new();
+            selectExit.Text = "Exit Selection";
+            selectExit.Width = 100;
+            selectExit.Location = new Point(275, 525);
+            selectExit.BackColor = Color.FromArgb(255, 255, 255);
+            selectExit.Click += ExitSelection;
             Panel charChoices = new();
             charChoices.Location = new Point(0,0);
             charChoices.Width = 400;
@@ -267,8 +279,6 @@ namespace unchained{
             charChoices.Controls.Add(justicar);
             charChoices.Controls.Add(ranger);
             charChoices.Controls.Add(shadow);
-            select.Controls.Add(selectExit);
-            select.Controls.Add(startGame);
             charStats.Controls.Add(nameString);            
             charStats.Controls.Add(lvlString);            
             charStats.Controls.Add(selectStyle);
@@ -276,6 +286,8 @@ namespace unchained{
             charStats.Controls.Add(selectRole);
             charStats.Controls.Add(strString);
             select.BackColor = Color.FromArgb(0,0,0);
+            select.Controls.Add(selectExit);
+            select.Controls.Add(startNewGame);
 
             void styleSelect(object ? sender, EventArgs e){
                 Button btn = sender as Button;
@@ -298,7 +310,17 @@ namespace unchained{
                 selectRole.Text = charSheet.role;
             }
 
-            return SelectionPanel;
+            void ExitSelection(Object ? sender, EventArgs e){
+                ScreenManager.screen = "Main";
+                ScreenManager.HandleScreenChanges(ScreenManager.pan1, ScreenManager.pan2, ScreenManager.pan3, ScreenManager.pan4);
+            }
+
+             void StartFullNewGame(Object ? sender, EventArgs e){
+                ScreenManager.screen = "Dungeon";
+                ScreenManager.HandleScreenChanges(ScreenManager.pan1, ScreenManager.pan2, ScreenManager.pan3, ScreenManager.pan4);
+            }
+
+            return select;
         }
     }
 }

@@ -39,12 +39,13 @@ namespace unchained{
             mainPanel.BackColor = Color.FromArgb(0, 0, 0);
 
             void savedGame(Object ? sender, EventArgs e){
-                //mainPanel.Visible = false;
                 ScreenManager.screen = "Saved";
+                ScreenManager.HandleScreenChanges(ScreenManager.pan1, ScreenManager.pan2, ScreenManager.pan3, ScreenManager.pan4);
             }
 
             void newGame(Object ? sender, EventArgs e){
                 ScreenManager.screen = "New";
+                ScreenManager.HandleScreenChanges(ScreenManager.pan1, ScreenManager.pan2, ScreenManager.pan3, ScreenManager.pan4);
             }
 
             return mainPanel;
