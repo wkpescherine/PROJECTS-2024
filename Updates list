@@ -1,9 +1,9 @@
-2/25/24
+2/26/24
     Unchained:
-        0.2.18:
-            Updated ScreenManager with handling of swiitches
-            Updated Selection Screen to include chnaging handling
-            Added Duungeon to Screen Manager logic
+        0.2.19:
+            Added Key pressing to Dungeon (WIP)
+            Updated Dungeon screen to now appear
+            Updated Program file by cleaning up unneeded code
 2/24/24
     TruCare
         0.13
