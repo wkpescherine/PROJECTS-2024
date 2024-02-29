@@ -16,7 +16,7 @@ namespace unchained{
             quitGame.Width = 200;
             quitGame.Location = new System.Drawing.Point(395, 150);
             quitGame.Text = "Quit Game";
-            quitGame.Click += quitGamePlay;
+            //quitGame.Click += quitGamePlay;
 
             gamePanel.Width = 800;
             gamePanel.Height = 600;
@@ -25,6 +25,7 @@ namespace unchained{
             //(Sender, e) => newGame(Sender,e);
             gamePanel.KeyPress += (Sender, e) =>detectKeyPress(Sender, e);
             gamePanel.Controls.Add(quitGame); 
+            (gamePanel as Control).KeyPress += new KeyPressEventArgs(detectKeyPress);
 
             void quitGamePlay(Object ? sender, EventArgs e){
                 ScreenManager.screen = "Main";
@@ -33,7 +34,7 @@ namespace unchained{
 
             void detectKeyPress(Object ? sender, KeyPressEventArgs e){
                 Console.Write("1");
-                if(e.KeyChar == (char)Keys.F){Console.Write("Test");}
+                if(e == f){Console.Write("Test");}
             }
 
             return gamePanel;

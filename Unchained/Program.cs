@@ -27,7 +27,7 @@ namespace unchained{
             
             window.Width = 800;
             window.Height = 600;
-            window.Text = "Unchained v0.2.19";
+            window.Text = "Unchained v0.2.20";
             window.Controls.Add(mainScreen);
             window.Controls.Add(savedScreen);
             window.Controls.Add(selectionScreen);
