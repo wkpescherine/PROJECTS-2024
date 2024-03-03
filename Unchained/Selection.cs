@@ -202,13 +202,21 @@ namespace unchained{
             conString.Location = new Point( 25, 145);
             conString.ForeColor = Color.FromArgb(255, 255, 255);
             Label dexString = new();
-            dexString.Text = "Dex: "+charSheet.str;
+            dexString.Text = "Dex: "+charSheet.dex;
             dexString.Location = new Point( 25, 175);
             dexString.ForeColor = Color.FromArgb(255, 255, 255);
             Label quiString = new();
-            quiString.Text = "Qui: "+charSheet.str;
+            quiString.Text = "Qui: "+charSheet.dex;
             quiString.Location = new Point( 25, 205);
             quiString.ForeColor = Color.FromArgb(255, 255, 255);
+            Label intString = new();
+            intString.Text = "Int: "+charSheet.iq;
+            intString.Location = new Point( 25, 230);
+            intString.ForeColor = Color.FromArgb(255, 255, 255);
+            Label pieString = new();
+            pieString.Text = "Pie: "+charSheet.pie;
+            pieString.Location = new Point( 25, 255);
+            pieString.ForeColor = Color.FromArgb(255, 255, 255);
             //Event handling section
             holy.Click += (sender, e) => styleSelect(sender, e);
             wise.Click += (sender, e) => styleSelect(sender, e);
@@ -285,6 +293,11 @@ namespace unchained{
             charStats.Controls.Add(selectRace);
             charStats.Controls.Add(selectRole);
             charStats.Controls.Add(strString);
+            charStats.Controls.Add(conString);
+            charStats.Controls.Add(dexString);
+            charStats.Controls.Add(quiString);
+            charStats.Controls.Add(intString);
+            charStats.Controls.Add(pieString);
             select.BackColor = Color.FromArgb(0,0,0);
             select.Controls.Add(selectExit);
             select.Controls.Add(startNewGame);
@@ -294,6 +307,8 @@ namespace unchained{
                 string s = btn.Text;
                 charSheet.style = s;
                 selectStyle.Text = charSheet.style;
+                charSheet.setStyleStats();
+                setScreenData();
             }
 
             void raceSelect(object ? sender, EventArgs e){
@@ -301,6 +316,7 @@ namespace unchained{
                 string r = btn2.Text;
                 charSheet.race = r;
                 selectRace.Text = charSheet.race;
+                setScreenData();
             }
             
             void roleSelect(object ? sender, EventArgs e){
@@ -318,6 +334,15 @@ namespace unchained{
              void StartFullNewGame(Object ? sender, EventArgs e){
                 ScreenManager.screen = "Dungeon";
                 ScreenManager.HandleScreenChanges(ScreenManager.pan1, ScreenManager.pan2, ScreenManager.pan3, ScreenManager.pan4);
+            }
+
+            void setScreenData(){
+                strString.Text = "Str: "+charSheet.str;
+                conString.Text = "Con: "+charSheet.con;
+                dexString.Text = "Dex: "+charSheet.dex;
+                quiString.Text = "Qui: "+charSheet.qui;
+                intString.Text = "Int: "+charSheet.iq;
+                pieString.Text = "Pie: "+charSheet.pie;
             }
 
             return select;
