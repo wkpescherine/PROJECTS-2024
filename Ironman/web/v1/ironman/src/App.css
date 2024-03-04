@@ -1,0 +1,119 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #000;
+}
+
+p {
+  color: #fff;
+}
+
+.invertButton {
+  background-color: #fff;
+  color:#000;
+  width: 120px;
+  margin: 10px;
+}
+
+.inputField {
+  background-color: #fff;
+  width: 400px;
+  text-align: center;
+}
+
+.sidebarArea {
+  width: 100px;
+}
+
+.displayArea {
+  width: 500px;
+}
+
+.sidebarbutton {
+  width: 100px;
+  background: #fff;
+  margin: 2px;;
+}
+
+label {
+  padding-left: 10px;
+  color:#fff;
+  padding-right: 10px;
+}
+
+.inputData {
+  width: 50px;
+  background-color: #fff;
+}
+
+.text25 {
+  width: 25px;
+  color: #fff;
+}
+
+.text50 {
+  width: 50px;
+  color: #fff;
+}
+
+.text75 {
+  width: 75px;
+  color: #fff;
+}
+
+.text100 {
+  width: 100px;
+  color: #fff;
+}
+
+.text125 {
+  width: 125px;
+  color: #fff;
+}
+
+.text150 {
+  width: 150px;
+  color: #fff;
+}
+
+.text200 {
+  width: 200px;
+  color: #fff;
+}
+
+.input25 {
+  width: 25px;
+  background-color: #fff;
+}
+
+.input50 {
+  width: 50px;
+  background-color: #fff;
+}
+
+.input75 {
+  width: 75px;
+  background-color: #fff;
+}
+
+.input100 {
+  width: 100px;
+  background-color: #fff;
+}
+
+.input125 {
+  width: 125px;
+  background-color: #fff;
+}
+
+.input150 {
+  width: 150px;
+  background-color: #fff;
+}
+
+.input200 {
+  width: 200px;
+  background-color: #fff;
+}
