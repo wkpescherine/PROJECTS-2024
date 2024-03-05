@@ -16,6 +16,10 @@ function Main() {
         setLogInPassword(event.target.value)
     }
 
+    function RedirectToCreate(){
+        navigate("./create")
+    }
+
     function RedirectToDashboard(){
         navigate('./dashboard')
     }
@@ -29,10 +33,15 @@ function Main() {
             <p>
                 <input class="inputField" type="password" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
             </p>
-            <p>
-                <button class='invertButton' onClick={RedirectToDashboard}>Login</button>  
-            </p>
-            <p>version 0.1</p>
+            <div style={{display: "flex", justifyContent: "center"}}>
+                <p>
+                    <button class='invertButton' onClick={RedirectToDashboard}>Login</button>  
+                </p>
+                <p>
+                    <button class='invertButton' onClick={RedirectToCreate}>Create</button>  
+                </p>
+            </div>
+            <p>version 0.2</p>
         </div>
     ); 
 }

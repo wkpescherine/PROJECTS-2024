@@ -53,6 +53,13 @@ label {
   color: #fff;
 }
 
+.headerButton{
+  margin-left: 25px;
+  width: 100px;
+  background-color: #fff;
+  color: #000;
+}
+
 .text50 {
   width: 50px;
   color: #fff;

@@ -18,7 +18,13 @@ function Sidebar(props) {
             <br></br>
             <button class='sidebarbutton' onClick={() => props.getData("Tourn")}>Tournamnets</button>
             <br></br>
+            <button class='sidebarbutton' onClick={() => props.getData("Current")}>Current</button>
+            <br></br>
+            <button class='sidebarbutton' onClick={() => props.getData("Scoreboard")}>Scoreboard</button>
+            <br></br>
             <button class='sidebarbutton' onClick={() => props.getData("History")}>History</button>
+            <br></br>
+            <button class='sidebarbutton' onClick={() => props.getData("Rules")}>Rules & Info</button>
             <br></br>
             <button class='sidebarbutton' onClick={RedirectToExit}>Exit</button>  
         </div>
