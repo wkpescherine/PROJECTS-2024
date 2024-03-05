@@ -60,6 +60,16 @@ label {
   color: #000;
 }
 
+.headerEmpty {
+  height: 50px;
+}
+
+.headerBar{
+  width: 500px;
+  display: flex;
+  justify-content: left;
+}
+
 .text50 {
   width: 50px;
   color: #fff;
@@ -71,6 +81,8 @@ label {
 }
 
 .text100 {
+  margin-left: 25px;
+  text-align: left;
   width: 100px;
   color: #fff;
 }
@@ -86,6 +98,8 @@ label {
 }
 
 .text200 {
+  margin-left: 25px;
+  text-align: left;
   width: 200px;
   color: #fff;
 }
