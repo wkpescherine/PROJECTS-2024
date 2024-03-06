@@ -48,11 +48,6 @@ label {
   background-color: #fff;
 }
 
-.text25 {
-  width: 25px;
-  color: #fff;
-}
-
 .headerButton{
   margin-left: 25px;
   width: 100px;
@@ -68,6 +63,17 @@ label {
   width: 500px;
   display: flex;
   justify-content: left;
+}
+
+.horizontalContainer {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.text25 {
+  width: 25px;
+  color: #fff;
 }
 
 .text50 {

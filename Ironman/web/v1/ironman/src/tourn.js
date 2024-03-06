@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import './App.css';
 
+import TournDisplay from "./components/tourn_display"
+
 function Tourn() {
     const[leagues, setLeagues] = useState ("NFL");
 
@@ -27,6 +29,8 @@ function Tourn() {
             </div>
             <hr style={{background:"#fff", height: "1px", width: "525px"}}/>
             <p>{leagues}</p>
+            <TournDisplay />
+            <TournDisplay />
         </div>
     ); 
 }

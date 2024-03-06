@@ -1,11 +1,10 @@
-3/4/24
+3/5/24
     Ironman(web):
-        0.2.1
-            Updated Acccount Creation
-            Added a Live Scoreboard
-        0.2
-            Added Acccount Creation
-            Added a Live Scoreboard
+        0.3
+            Component: Added Scoreboard game display
+            Component: Added Tournamnets display 
+            Updated Scoreboard Display
+            Updated Tourn available Display
 3/2/24
     Unchained:
         0.2.23

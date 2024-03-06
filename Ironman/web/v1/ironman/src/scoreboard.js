@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import './App.css';
 import {useNavigate} from 'react-router-dom'
 
+import ScoreboardDisplay from "./components/scoreboard_display"
+
 function Scoreboard() {
     const[leagues, setLeagues] = useState ("NFL");
 
@@ -20,6 +22,10 @@ function Scoreboard() {
             </div>
             <hr style={{background:"#fff", height: "1px", width: "525px"}}/>
             <p>{leagues}</p>
+            <div class="horizontalContainer">
+                <ScoreboardDisplay />
+                <ScoreboardDisplay />
+            </div>
         </div>
     ); 
 }
