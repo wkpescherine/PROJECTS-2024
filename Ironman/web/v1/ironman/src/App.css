@@ -62,7 +62,7 @@ label {
 .headerBar{
   width: 500px;
   display: flex;
-  justify-content: left;
+  justify-content: center;
 }
 
 .horizontalContainer {
@@ -77,20 +77,24 @@ label {
 }
 
 .text50 {
+  text-align: Center;
   width: 50px;
   color: #fff;
+  font-size: 14px;
 }
 
 .text75 {
+  text-align: center;
   width: 75px;
   color: #fff;
+  font-size: 14px;
 }
 
 .text100 {
-  margin-left: 25px;
-  text-align: left;
+  text-align: Center;
   width: 100px;
   color: #fff;
+  font-size: 14px;
 }
 
 .text125 {
@@ -104,10 +108,10 @@ label {
 }
 
 .text200 {
-  margin-left: 25px;
-  text-align: left;
+  text-align: Center;
   width: 200px;
   color: #fff;
+  font-size: 14px;
 }
 
 .input25 {

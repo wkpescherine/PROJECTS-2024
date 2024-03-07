@@ -20,17 +20,17 @@ function Tourn() {
             </div>
             <hr style={{background:"#fff", height: "1px", width: "525px"}}/>
             <div class="headerBar">
-                <label class="text75">Id</label>
-                <label class="text75"># Players</label>
+                <label class="text100">Id</label>
+                <label class="text75">Players</label>
                 <label class="text75">Max #</label>
                 <label class="text75">Start</label>
                 <label class="text75">Length</label>
+                <label class="text75">Cost</label>
                 <label class="text75">Status</label>
             </div>
             <hr style={{background:"#fff", height: "1px", width: "525px"}}/>
-            <p>{leagues}</p>
-            <TournDisplay />
-            <TournDisplay />
+            <TournDisplay sendLeague={leagues}/>
+            <TournDisplay sendLeague={leagues}/>
         </div>
     ); 
 }

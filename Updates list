@@ -1,10 +1,11 @@
-3/5/24
+3/6/24
     Ironman(web):
-        0.3
-            Component: Added Scoreboard game display
-            Component: Added Tournamnets display 
-            Updated Scoreboard Display
-            Updated Tourn available Display
+        0.4
+            Updated some css elements
+            Updated Tourn screen
+            Updated Tourn display
+            Added History
+            Componenent: Added history display
 3/2/24
     Unchained:
         0.2.23
