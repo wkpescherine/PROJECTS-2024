@@ -25,6 +25,9 @@ namespace unchained{
             ScreenManager.pan4 = dungeonScreen;
             ScreenManager.HandleScreenChanges(ScreenManager.pan1, ScreenManager.pan2, ScreenManager.pan3, ScreenManager.pan4);
             
+            window.KeyPreview = true;
+            window.KeyPress += (Sender, e) => KeyPressHandler(Sender, e);
+
             window.Width = 800;
             window.Height = 600;
             window.Text = "Unchained v0.2.23";
@@ -34,6 +37,25 @@ namespace unchained{
             window.Controls.Add(dungeonScreen);
             window.Update();
             Application.Run(window);
+
+            void KeyPressHandler(object sender, KeyPressEventArgs e){
+                if (e.KeyChar == 'a')
+                {
+                    Console.Write("A ");
+                }
+                if (e.KeyChar == 'w')
+                {
+                    Console.Write("W");
+                }
+                if (e.KeyChar == 's')
+                {
+                    Console.Write("S");
+                }
+                if (e.KeyChar == 'd')
+                {
+                    Console.Write("D");
+                }
+            }
         }
     }
 }

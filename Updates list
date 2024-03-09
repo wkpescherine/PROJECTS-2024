@@ -1,14 +1,13 @@
+3/2/24
+    Unchained:
+        0.2.24
+            Updated keyhandling on Form 
 3/6/24
     Ironman(web):
         0.5
             Component: Added Current Display component
             Added Current screen
             Added Rules and Info screen
-3/2/24
-    Unchained:
-        0.2.23
-            Update Sleection of style to start adding stats
-            Working on getting KeyPress setup on the dungeon panel
 2/24/24
     TruCare
         0.13
