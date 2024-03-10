@@ -27,10 +27,11 @@ namespace unchained{
             
             window.KeyPreview = true;
             window.KeyPress += (Sender, e) => KeyPressHandler(Sender, e);
+            //window.Update();
 
             window.Width = 800;
             window.Height = 600;
-            window.Text = "Unchained v0.2.23";
+            window.Text = "Unchained v0.2.25";
             window.Controls.Add(mainScreen);
             window.Controls.Add(savedScreen);
             window.Controls.Add(selectionScreen);
@@ -39,22 +40,11 @@ namespace unchained{
             Application.Run(window);
 
             void KeyPressHandler(object sender, KeyPressEventArgs e){
-                if (e.KeyChar == 'a')
-                {
-                    Console.Write("A ");
-                }
-                if (e.KeyChar == 'w')
-                {
-                    Console.Write("W");
-                }
-                if (e.KeyChar == 's')
-                {
-                    Console.Write("S");
-                }
-                if (e.KeyChar == 'd')
-                {
-                    Console.Write("D");
-                }
+                if (e.KeyChar == 'a'){ dungeon.movement(5,-5); }
+                if (e.KeyChar == 'w'){ dungeon.movement(5,5);}
+                if (e.KeyChar == 's'){ dungeon.movement(-5,5);}
+                if (e.KeyChar == 'd'){ dungeon.movement(-5,-5); }
+                Console.WriteLine(sender);
             }
         }
     }

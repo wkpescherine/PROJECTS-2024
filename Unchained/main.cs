@@ -44,6 +44,7 @@ namespace unchained{
             }
 
             void newGame(Object ? sender, EventArgs e){
+                //Console.WriteLine(sender);
                 ScreenManager.screen = "New";
                 ScreenManager.HandleScreenChanges(ScreenManager.pan1, ScreenManager.pan2, ScreenManager.pan3, ScreenManager.pan4);
             }

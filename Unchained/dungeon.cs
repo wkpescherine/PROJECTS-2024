@@ -8,13 +8,15 @@ using System.Windows;
 
 namespace unchained{
     public class Dungeon{ 
+        static int vertical = 50;
+        static int horizontal = 200;
         public Panel DungeonPanel(){
             Panel gamePanel = new();
             
             Button quitGame = new();
             quitGame.BackColor = Color.FromArgb( 255, 255 , 255);
             quitGame.Width = 200;
-            quitGame.Location = new System.Drawing.Point(395, 150);
+            quitGame.Location = new System.Drawing.Point(horizontal,  vertical);
             quitGame.Text = "Quit Game";
 
             gamePanel.Width = 800;
@@ -32,13 +34,17 @@ namespace unchained{
                 ScreenManager.HandleScreenChanges(ScreenManager.pan1, ScreenManager.pan2, ScreenManager.pan3, ScreenManager.pan4);
             }
 
-            void detectKeyPress(Object ? sender, KeyPressEventArgs e){
-                if(e.KeyChar == (char)Keys.A){
-                    quitGame.Text = "Get";
-                }
-            }
+            void changeLocation(){}
 
             return gamePanel;
+        }
+
+        internal void movement(int vert, int hor)
+        {
+            vertical += vert;
+            horizontal += hor;
+            Console.Write(vertical);
+            Console.Write(horizontal);
         }
     }
 }
