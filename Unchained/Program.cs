@@ -40,10 +40,10 @@ namespace unchained{
             Application.Run(window);
 
             void KeyPressHandler(object sender, KeyPressEventArgs e){
-                if (e.KeyChar == 'a'){ dungeon.movement(5,-5); }
-                if (e.KeyChar == 'w'){ dungeon.movement(5,5);}
-                if (e.KeyChar == 's'){ dungeon.movement(-5,5);}
-                if (e.KeyChar == 'd'){ dungeon.movement(-5,-5); }
+                if (e.KeyChar == 'a'){ dungeonScreen.changeLocation(5,-5); }
+                if (e.KeyChar == 'w'){ dungeonScreen.changeLocation(5,5);}
+                if (e.KeyChar == 's'){ dungeonScreen.changeLocation(-5,5);}
+                if (e.KeyChar == 'd'){ dungeonScreen.changeLocation(-5,-5); }
                 Console.WriteLine(sender);
             }
         }

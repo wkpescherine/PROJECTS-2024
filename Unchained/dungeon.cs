@@ -8,9 +8,10 @@ using System.Windows;
 
 namespace unchained{
     public class Dungeon{ 
-        static int vertical = 50;
-        static int horizontal = 200;
         public Panel DungeonPanel(){
+            int vertical = 50;
+            int horizontal = 200;
+            int v1, v2;
             Panel gamePanel = new();
             
             Button quitGame = new();
@@ -18,33 +19,31 @@ namespace unchained{
             quitGame.Width = 200;
             quitGame.Location = new System.Drawing.Point(horizontal,  vertical);
             quitGame.Text = "Quit Game";
+            gamePanel.changeLocation(v1, v2);
 
             gamePanel.Width = 800;
             gamePanel.Height = 600;
             gamePanel.BackColor = Color.FromArgb(0, 0, 0);
             gamePanel.Visible = false;
+            //quitGame += (v1, v2) => changeLocation(v1, v2);
             //gamePanel.KeyPress += (Sender, e) =>detectKeyPress(Sender, e);
             gamePanel.Controls.Add(quitGame);
-            //gamePanel.Focus();
-            //gamePanel.KeyDown += (Sender, e) =>detectKeyPress(Sender, e); 
-            //(gamePanel as Control).KeyPress += new KeyPressEventArgs(detectKeyPress);
 
             void quitGamePlay(Object ? sender, EventArgs e){
                 ScreenManager.screen = "Main";
                 ScreenManager.HandleScreenChanges(ScreenManager.pan1, ScreenManager.pan2, ScreenManager.pan3, ScreenManager.pan4);
             }
 
-            void changeLocation(){}
+            void changeLocation(int vert, int hor)
+            {
+                vertical += vert;
+                horizontal += hor;
+                quitGame.Location = new System.Drawing.Point(horizontal,  vertical);
+                Console.Write(vertical);
+                Console.Write(horizontal);
+            }
 
             return gamePanel;
-        }
-
-        internal void movement(int vert, int hor)
-        {
-            vertical += vert;
-            horizontal += hor;
-            Console.Write(vertical);
-            Console.Write(horizontal);
         }
     }
 }
