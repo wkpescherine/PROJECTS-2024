@@ -5,9 +5,14 @@ import TournDisplay from "./components/tourn_display"
 
 function Tourn() {
     const[leagues, setLeagues] = useState ("NFL");
+    const[format, setFormat] = useState ("I");
 
     const handleSetLeagues = (choice) => {
         setLeagues(choice);
+    }
+
+    const handleSetFormat = (picked) =>{
+        setFormat(picked);
     }
     return (
         <div>
@@ -17,6 +22,11 @@ function Tourn() {
                 <button class="headerButton" onClick={() => handleSetLeagues("NBA")}>NBA</button>
                 <button class="headerButton" onClick={() => handleSetLeagues("MLB")}>MLB</button>
                 <button class="headerButton" onClick={() => handleSetLeagues("NHL")}>NHL</button>
+            </div>
+            <div>
+                <button class="headerButton" onClick={() => handleSetFormat("I")}>IRONMAN</button>
+                <button class="headerButton" onClick={() => handleSetFormat("S")}>STANDARD</button>
+                <button class="headerButton" onClick={() => handleSetFormat("R")}>RT IRONMAN</button>
             </div>
             <hr style={{background:"#fff", height: "1px", width: "525px"}}/>
             <div class="headerBar">
@@ -29,8 +39,8 @@ function Tourn() {
                 <label class="text75">Status</label>
             </div>
             <hr style={{background:"#fff", height: "1px", width: "525px"}}/>
-            <TournDisplay sendLeague={leagues}/>
-            <TournDisplay sendLeague={leagues}/>
+            <TournDisplay sendLeague={leagues} sendFormat={format}/>
+            <TournDisplay sendLeague={leagues} sendFormat={format}/>
         </div>
     ); 
 }

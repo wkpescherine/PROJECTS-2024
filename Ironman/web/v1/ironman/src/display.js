@@ -8,6 +8,7 @@ import Tourn from "./tourn"
 import History from "./history"
 import Rules from "./rules"
 import Current from "./current"
+import TournDash from "./components/tourn_dash"
 
 function Display(props) {
     return (
@@ -15,10 +16,11 @@ function Display(props) {
             {props.sendData === "Home"&& <Home />}
             {props.sendData === "Account"&& <Account />}
             {props.sendData === "Scoreboard"&& <Scoreboard />}
-            {props.sendData === "Tourn"&& <Tourn />}
+            {props.sendData === "Tourn"&& <Tourn getFormat={props.getData}/>}
             {props.sendData === "History"&& <History />}
             {props.sendData === "Rules"&& <Rules />}
             {props.sendData === "Current"&& <Current />}
+            {props.sendData === "Tourn_Dash"&& <TournDash />}
         </div>
     ); 
 }

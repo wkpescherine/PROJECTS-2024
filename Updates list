@@ -1,8 +1,9 @@
 3/12/24
     Ironman(web):
-        0.7
-            General reviewing and analyist
-            General setup for Rails Api
+        0.8
+            Component: Added Tourn Dashboard
+            Update Tourn Screen to include Formats
+            Update to handling deeper step thru for Tourn
 3/10/24
     Unchained:
         0.2.26

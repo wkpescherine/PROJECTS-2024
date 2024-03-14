@@ -18,7 +18,7 @@ function Dashboard() {
         <div>
             <div style={{display: "flex",justifyContent: "center"}}>
                 <Sidebar getData={handleSectionChoices}/>
-                <Display sendData={section}/>
+                <Display sendData={section} getData={handleSectionChoices}/>
             </div>
         </div>
     ); 
