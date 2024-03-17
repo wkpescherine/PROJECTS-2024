@@ -1,10 +1,14 @@
-3/16/24
+3/17/24
     ToD:
-        0.3:
-            Added Stats Panel to char screen
-            Added Race to Char screen
-            Added the various Races to the Race section
-            Added Classes to char screen
+        0.4.4:
+            Added the various Classes to the Classes to char screen
+            Added Rool and Selection options for creating
+            Added Game Options
+            Added Char Name Section
+            Added charBuilder and handling of stats
+            CharBuilder with randomizing stats
+            CharScreen Roll requires a race before rolling now
+            CharScreen basic Approval logic that requires a name to be set
 3/13/24
     Ironman(web):
         0.8

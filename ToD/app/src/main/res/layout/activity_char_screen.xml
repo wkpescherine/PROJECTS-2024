@@ -9,6 +9,14 @@
     android:orientation="vertical"
     android:background="#000">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center"
+        android:hint="Enter name"
+        android:layout_margin="2dp"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +47,7 @@
                 android:textColor="#fff"
                 android:padding="2pt"
                 android:gravity="center"
-                android:text="Str: 0"/>
+                android:text="Str:"/>
             <TextView
                 android:id="@+id/statInt"
                 android:layout_weight="1"
@@ -47,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
                 android:gravity="center"
-                android:text="Int: 0"/>
+                android:text="Int:"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,7 +68,7 @@
                 android:padding="2pt"
                 android:textColor="#fff"
                 android:gravity="center"
-                android:text="Con: 0"/>
+                android:text="Con:"/>
             <TextView
                 android:id="@+id/statWis"
                 android:layout_weight="1"
@@ -68,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
                 android:gravity="center"
-                android:text="Wis: 0"/>
+                android:text="Wis:"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -81,7 +89,7 @@
                 android:padding="2pt"
                 android:textColor="#fff"
                 android:gravity="center"
-                android:text="Dex: 0"/>
+                android:text="Dex:"/>
             <TextView
                 android:id="@+id/statQui"
                 android:layout_weight="1"
@@ -89,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
                 android:gravity="center"
-                android:text="Qui: 0"/>
+                android:text="Qui:"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -102,7 +110,7 @@
                 android:padding="2pt"
                 android:textColor="#fff"
                 android:gravity="center"
-                android:text="Life: 0"/>
+                android:text="Life:"/>
             <TextView
                 android:id="@+id/statMana"
                 android:layout_weight="1"
@@ -110,15 +118,36 @@
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
                 android:gravity="center"
-                android:text="Mana: 0"/>
+                android:text="Mana:"/>
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_weight="1"
+            android:layout_margin="1pt"
+            android:background="@drawable/button_sq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Roll"
+            android:onClick="buildStats"
+            android:layout_gravity="center" />
+        <Button
+            android:layout_weight="1"
+            android:layout_margin="1pt"
+            android:background="@drawable/button_sq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Approve"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="1pt"
-        android:layout_marginTop="3pt"
-        android:layout_marginBottom="3pt"
         android:background="#fff"/>
 
     <LinearLayout
@@ -154,7 +183,8 @@
                     android:padding="2pt"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Human"/>
+                    android:text="Human"
+                    android:onClick="setRace"/>
                 <TextView
                     android:id="@+id/Elf"
                     android:layout_weight="1"
@@ -162,7 +192,8 @@
                     android:layout_height="wrap_content"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Elf"/>
+                    android:text="Elf"
+                    android:onClick="setRace"/>
                 <TextView
                     android:id="@+id/Dwarf"
                     android:layout_weight="1"
@@ -170,7 +201,8 @@
                     android:layout_height="wrap_content"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Dwarf"/>
+                    android:text="Dwarf"
+                    android:onClick="setRace"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -183,7 +215,8 @@
                     android:padding="2pt"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Kobold"/>
+                    android:text="Kobold"
+                    android:onClick="setRace"/>
                 <TextView
                     android:id="@+id/Gnome"
                     android:layout_weight="1"
@@ -191,7 +224,8 @@
                     android:layout_height="wrap_content"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Gnome"/>
+                    android:text="Gnome"
+                    android:onClick="setRace"/>
                 <TextView
                     android:id="@+id/Orc"
                     android:layout_weight="1"
@@ -199,7 +233,8 @@
                     android:layout_height="wrap_content"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Orc"/>
+                    android:text="Orc"
+                    android:onClick="setRace"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -212,7 +247,8 @@
                     android:padding="2pt"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Troll"/>
+                    android:text="Troll"
+                    android:onClick="setRace"/>
                 <TextView
                     android:id="@+id/Giant"
                     android:layout_weight="1"
@@ -220,7 +256,8 @@
                     android:layout_height="wrap_content"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Giant"/>
+                    android:text="Giant"
+                    android:onClick="setRace"/>
                 <TextView
                     android:id="@+id/Undead"
                     android:layout_weight="1"
@@ -228,7 +265,8 @@
                     android:layout_height="wrap_content"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Undead"/>
+                    android:text="Undead"
+                    android:onClick="setRace"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -253,16 +291,316 @@
                 android:layout_marginTop="3pt"
                 android:layout_marginBottom="3pt"
                 android:background="#fff"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/Warrior"
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:padding="2pt"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:text="Warrior"/>
+                <TextView
+                    android:id="@+id/Priest"
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:text="Priest"/>
+                <TextView
+                    android:id="@+id/Mage"
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:text="Mage"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/Paladin"
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:padding="2pt"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:text="Paladin"/>
+                <TextView
+                    android:id="@+id/Assassin"
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:text="Cleric"/>
+                <TextView
+                    android:id="@+id/Cleric"
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:text="Wizard"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/Ravager"
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:padding="2pt"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:text="Ravager"/>
+                <TextView
+                    android:id="@+id/Avenger"
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:text="Avenger"/>
+                <TextView
+                    android:id="@+id/Archmage"
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:text="Archmage"/>
+            </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1pt"
+        android:background="#fff"/>
 
-    <Button
-        android:background="@drawable/button_sq"
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_weight="2"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text="char 1"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text=" "/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text="class 1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_weight="2"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text="char 1"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text=" "/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text="class 1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_weight="2"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text="char 1"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text=" "/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text="class 1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_weight="2"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text="char 1"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text=" "/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text="class 1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_weight="2"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text="char 1"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text=" "/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text="class 1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_weight="2"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text="char 1"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text=" "/>
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5pt"
+                    android:textColor="#fff"
+                    android:text="class 1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter"
-        android:layout_gravity="center"
-        android:onClick="beginGame"/>
-
+        android:orientation="horizontal">
+        <Button
+            android:layout_weight="1"
+            android:layout_margin="1pt"
+            android:background="@drawable/button_sq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:text="Select"
+            android:layout_gravity="center"
+            android:onClick="beginGame"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_margin="1pt"
+            android:textSize="12dp"
+            android:background="@drawable/button_sq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remove"
+            android:layout_gravity="center" />
+        <Button
+            android:layout_weight="1"
+            android:layout_margin="1pt"
+            android:textSize="12dp"
+            android:background="@drawable/button_sq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:layout_gravity="center" />
+        <Button
+            android:layout_weight="1"
+            android:layout_margin="1pt"
+            android:textSize="12dp"
+            android:background="@drawable/button_sq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter"
+            android:layout_gravity="center" />
+    </LinearLayout>
 </LinearLayout>
