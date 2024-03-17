@@ -42,7 +42,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="v0.2"
+            android:text="v0.3.1"
             android:textSize="8pt"
             android:textColor="#ff0"
             android:textAlignment="center"
