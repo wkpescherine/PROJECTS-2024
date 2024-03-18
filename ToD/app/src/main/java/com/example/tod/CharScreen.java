@@ -48,6 +48,12 @@ public class CharScreen extends AppCompatActivity {
         charBuilder.race = selectRace;
     }
 
+    public void setClass(View v){
+        TextView t = (TextView) v;
+        String selectClass = t.getText().toString();
+        charBuilder.classPicked = selectClass;
+    }
+
     public void updateStatsPanel(){
         TextView ss = findViewById(R.id.statStr);
         TextView sc = findViewById(R.id.statCon);
@@ -57,6 +63,8 @@ public class CharScreen extends AppCompatActivity {
         TextView sq = findViewById(R.id.statQui);
         TextView sl = findViewById(R.id.statLife);
         TextView sm = findViewById(R.id.statMana);
+        TextView rp =findViewById(R.id.racePicked);
+        TextView cp = findViewById(R.id.classPicked);
         ss.setText("Str: "+ charBuilder.charStats[0]);
         sc.setText("Con: "+ charBuilder.charStats[1]);
         sd.setText("Dex: "+ charBuilder.charStats[2]);
@@ -65,5 +73,7 @@ public class CharScreen extends AppCompatActivity {
         sq.setText("Qui: "+ charBuilder.charStats[5]);
         sl.setText("Life: "+ charBuilder.charStats[6]);
         sm.setText("Mana: "+ charBuilder.charStats[7]);
+        rp.setText(charBuilder.race);
+        cp.setText(charBuilder.classPicked);
     }
 }

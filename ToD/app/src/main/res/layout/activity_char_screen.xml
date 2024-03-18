@@ -120,6 +120,27 @@
                 android:gravity="center"
                 android:text="Mana:"/>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/racePicked"
+                android:layout_weight="1"
+                android:layout_width="0pt"
+                android:layout_height="wrap_content"
+                android:padding="2pt"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:text="Race"/>
+            <TextView
+                android:id="@+id/classPicked"
+                android:layout_weight="1"
+                android:layout_width="0pt"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:text="Class"/>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -302,7 +323,8 @@
                     android:padding="2pt"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Warrior"/>
+                    android:text="Warrior"
+                    android:onClick="setClass"/>
                 <TextView
                     android:id="@+id/Priest"
                     android:layout_weight="1"
@@ -310,7 +332,8 @@
                     android:layout_height="wrap_content"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Priest"/>
+                    android:text="Priest"
+                    android:onClick="setClass"/>
                 <TextView
                     android:id="@+id/Mage"
                     android:layout_weight="1"
@@ -318,7 +341,8 @@
                     android:layout_height="wrap_content"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Mage"/>
+                    android:text="Mage"
+                    android:onClick="setClass"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -331,7 +355,8 @@
                     android:padding="2pt"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Paladin"/>
+                    android:text="Paladin"
+                    android:onClick="setClass"/>
                 <TextView
                     android:id="@+id/Assassin"
                     android:layout_weight="1"
@@ -339,7 +364,8 @@
                     android:layout_height="wrap_content"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Cleric"/>
+                    android:text="Cleric"
+                    android:onClick="setClass"/>
                 <TextView
                     android:id="@+id/Cleric"
                     android:layout_weight="1"
@@ -347,7 +373,8 @@
                     android:layout_height="wrap_content"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Wizard"/>
+                    android:text="Wizard"
+                    android:onClick="setClass"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -360,7 +387,8 @@
                     android:padding="2pt"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Ravager"/>
+                    android:text="Ravager"
+                    android:onClick="setClass"/>
                 <TextView
                     android:id="@+id/Avenger"
                     android:layout_weight="1"
@@ -368,7 +396,8 @@
                     android:layout_height="wrap_content"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Avenger"/>
+                    android:text="Avenger"
+                    android:onClick="setClass"/>
                 <TextView
                     android:id="@+id/Archmage"
                     android:layout_weight="1"
@@ -376,7 +405,8 @@
                     android:layout_height="wrap_content"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="Archmage"/>
+                    android:text="Archmage"
+                    android:onClick="setClass"/>
             </LinearLayout>
 
         </LinearLayout>

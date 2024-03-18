@@ -1,5 +1,9 @@
 3/17/24
     ToD:
+        0.4.5:
+            Added the class selection to char screen
+            Added race and class visibility to stats
+            Added class requirements to the clSass subsection
         0.4.4:
             Added the various Classes to the Classes to char screen
             Added Rool and Selection options for creating
