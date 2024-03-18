@@ -46,12 +46,24 @@ public class CharScreen extends AppCompatActivity {
         TextView t = (TextView) v;
         String selectRace = t.getText().toString();
         charBuilder.race = selectRace;
+        updateStatsPanel();
+        checkClass();
     }
 
     public void setClass(View v){
         TextView t = (TextView) v;
         String selectClass = t.getText().toString();
         charBuilder.classPicked = selectClass;
+        updateStatsPanel();
+    }
+
+    public void checkClass(){
+        TextView war = findViewById(R.id.Warrior);
+        TextView pri = findViewById(R.id.Priest);
+        TextView mag = findViewById(R.id.Mage);
+        if(charBuilder.charStats[0] >= 9){ war.setVisibility(View.VISIBLE);}
+        if(charBuilder.charStats[4] >= 9){ pri.setVisibility(View.VISIBLE);}
+        if(charBuilder.charStats[3] >= 9){ mag.setVisibility(View.VISIBLE);}
     }
 
     public void updateStatsPanel(){

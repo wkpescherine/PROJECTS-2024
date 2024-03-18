@@ -323,10 +323,12 @@
                     android:padding="2pt"
                     android:textColor="#fff"
                     android:gravity="center"
+                    android:visibility="invisible"
                     android:text="Warrior"
                     android:onClick="setClass"/>
                 <TextView
                     android:id="@+id/Priest"
+                    android:visibility="invisible"
                     android:layout_weight="1"
                     android:layout_width="0pt"
                     android:layout_height="wrap_content"
@@ -336,6 +338,7 @@
                     android:onClick="setClass"/>
                 <TextView
                     android:id="@+id/Mage"
+                    android:visibility="invisible"
                     android:layout_weight="1"
                     android:layout_width="0pt"
                     android:layout_height="wrap_content"
@@ -349,6 +352,7 @@
                 android:layout_height="wrap_content">
                 <TextView
                     android:id="@+id/Paladin"
+                    android:visibility="invisible"
                     android:layout_weight="1"
                     android:layout_width="0pt"
                     android:layout_height="wrap_content"
@@ -358,7 +362,8 @@
                     android:text="Paladin"
                     android:onClick="setClass"/>
                 <TextView
-                    android:id="@+id/Assassin"
+                    android:id="@+id/Cleric"
+                    android:visibility="invisible"
                     android:layout_weight="1"
                     android:layout_width="0pt"
                     android:layout_height="wrap_content"
@@ -367,7 +372,8 @@
                     android:text="Cleric"
                     android:onClick="setClass"/>
                 <TextView
-                    android:id="@+id/Cleric"
+                    android:id="@+id/Wizard"
+                    android:visibility="invisible"
                     android:layout_weight="1"
                     android:layout_width="0pt"
                     android:layout_height="wrap_content"
@@ -381,6 +387,7 @@
                 android:layout_height="wrap_content">
                 <TextView
                     android:id="@+id/Ravager"
+                    android:visibility="invisible"
                     android:layout_weight="1"
                     android:layout_width="0pt"
                     android:layout_height="wrap_content"
@@ -391,6 +398,7 @@
                     android:onClick="setClass"/>
                 <TextView
                     android:id="@+id/Avenger"
+                    android:visibility="invisible"
                     android:layout_weight="1"
                     android:layout_width="0pt"
                     android:layout_height="wrap_content"
@@ -400,6 +408,7 @@
                     android:onClick="setClass"/>
                 <TextView
                     android:id="@+id/Archmage"
+                    android:visibility="invisible"
                     android:layout_weight="1"
                     android:layout_width="0pt"
                     android:layout_height="wrap_content"
