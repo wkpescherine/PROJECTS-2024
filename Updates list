@@ -1,21 +1,12 @@
 3/18/24
-    No updates today
-3/17/24
     ToD:
-        0.4.8:
-            Added class requirements to the class subsection
-        0.4.5:
-            Added the class selection to char screen
-            Added race and class visibility to stats
-        0.4.4:
-            Added the various Classes to the Classes to char screen
-            Added Rool and Selection options for creating
-            Added Game Options
-            Added Char Name Section
-            Added charBuilder and handling of stats
-            CharBuilder with randomizing stats
-            CharScreen Roll requires a race before rolling now
-            CharScreen basic Approval logic that requires a name to be set
+        0.5.8:
+            Added Team display into Game Screen 
+            Updated class requirements to include all classes
+            Updated class requirements
+            Updated classes being displayed
+            Added basic stub for future saving of chars
+            Added bonus stats solution and displaying
 3/13/24
     Ironman(web):
         0.8

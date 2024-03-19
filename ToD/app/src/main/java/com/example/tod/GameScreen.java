@@ -13,6 +13,5 @@ public class GameScreen extends AppCompatActivity {
         setContentView(R.layout.activity_game_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        //getSupportActionBar().hide();
     }
 }
