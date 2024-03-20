@@ -3,9 +3,11 @@ package com.example.tod;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -113,13 +115,27 @@ public class CharScreen extends AppCompatActivity {
     }
 
     public void saveData(View v){
-        charBuilder.race = "None";
-        charBuilder.classPicked ="None";
-        int [] reset = {0,0,0,0,0,0,0,0};
-        int [] reset2 = {0,0,0,0,0,0};
-        charBuilder.charStats = reset;
-        charBuilder.charBonus = reset2;
-        updateStatsPanel();
-        Toast.makeText(this, "Stub, this will be where we save the data", Toast.LENGTH_SHORT).show();
+        EditText cName = findViewById(R.id.charName);
+        String cNameStr = "None";
+        cNameStr = cName.getText().toString();
+        if(cNameStr.equals("None")){
+            Toast.makeText(this, "Enter a Name to continue", Toast.LENGTH_SHORT).show();
+        }else if(charBuilder.classPicked.equals("None"){
+            Toast.makeText(this, "Select a Class to continue", Toast.LENGTH_SHORT).show();
+        }else{
+            String filename = "TOD";
+            SharedPreferences spCS = getSharedPreferences(filename,MODE_PRIVATE);
+            SharedPreferences.Editor editorCS = spCS.edit();
+            editorCS.putString("charSlot1", cNameStr +":"+ charBuilder.race);
+            editorCS.commit();
+            charBuilder.race = "None";
+            charBuilder.classPicked ="None";
+            int [] reset = {0,0,0,0,0,0,0,0};
+            int [] reset2 = {0,0,0,0,0,0};
+            charBuilder.charStats = reset;
+            charBuilder.charBonus = reset2;
+            updateStatsPanel();
+        }
+        //Toast.makeText(this, "Stub, this will be where we save the data", Toast.LENGTH_SHORT).show();
     }
 }
