@@ -13,6 +13,12 @@
         android:theme="@style/Theme.ToD"
         tools:targetApi="31">
         <activity
+            android:name=".CharSheetScreen"
+            android:exported="false" />
+        <activity
+            android:name=".CharGameScreen"
+            android:exported="false" />
+        <activity
             android:name=".CharScreen"
             android:exported="false" />
         <activity

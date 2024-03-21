@@ -120,7 +120,7 @@ public class CharScreen extends AppCompatActivity {
         cNameStr = cName.getText().toString();
         if(cNameStr.equals("None")){
             Toast.makeText(this, "Enter a Name to continue", Toast.LENGTH_SHORT).show();
-        }else if(charBuilder.classPicked.equals("None"){
+        }else if(charBuilder.classPicked.equals("None")){
             Toast.makeText(this, "Select a Class to continue", Toast.LENGTH_SHORT).show();
         }else{
             String filename = "TOD";
@@ -136,6 +136,5 @@ public class CharScreen extends AppCompatActivity {
             charBuilder.charBonus = reset2;
             updateStatsPanel();
         }
-        //Toast.makeText(this, "Stub, this will be where we save the data", Toast.LENGTH_SHORT).show();
     }
 }

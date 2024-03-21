@@ -8,6 +8,7 @@ public class charBuilder {
     public static String race = "None";
     public static String charName = "None";
     public static String classPicked = "None";
+    public static String charSheetHandler = "Char";
 
     public static void rollStats(){
         Random rnd = new Random();

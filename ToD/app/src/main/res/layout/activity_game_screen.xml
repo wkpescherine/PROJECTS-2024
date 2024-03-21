@@ -239,7 +239,8 @@
                 android:layout_width="0pt"
                 android:layout_height="match_parent"
                 android:text="Exit"
-                android:padding="2pt" />
+                android:padding="2pt"
+                android:onClick="returnToCharScreen"/>
         </LinearLayout>
         <LinearLayout
             android:layout_weight="1"
@@ -252,20 +253,8 @@
                 android:layout_width="0pt"
                 android:layout_height="match_parent"
                 android:text="Char"
-                android:padding="2pt" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0pt"
-            android:layout_height="match_parent"
-            android:padding="2pt">
-            <Button
-                android:background="@drawable/button_sq"
-                android:layout_weight="1"
-                android:layout_width="0pt"
-                android:layout_height="match_parent"
-                android:text="Gear"
-                android:padding="2pt" />
+                android:padding="2pt"
+                android:onClick="toCharSheetScreen"/>
         </LinearLayout>
         <LinearLayout
             android:layout_weight="1"

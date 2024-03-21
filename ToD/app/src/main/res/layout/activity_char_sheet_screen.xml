@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CharSheetScreen"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_weight="9"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:id="@+id/charSection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000"
+            android:orientation="vertical">
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/gearSection"
+            android:background="#333"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:background="#fff"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="match_parent"
+            android:padding="2pt">
+            <Button
+                android:background="@drawable/button_sq"
+                android:layout_weight="1"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:text="Exit"
+                android:padding="2pt"
+                android:onClick="returnGameScreen"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0pt"
+            android:layout_height="match_parent"
+            android:padding="2pt">
+            <Button
+                android:id="@+id/CharGear"
+                android:background="@drawable/button_sq"
+                android:layout_weight="1"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:text="Gear"
+                android:padding="2pt"
+                android:onClick="charGearSwitch"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

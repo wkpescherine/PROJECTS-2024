@@ -1,8 +1,9 @@
-3/19/24
+3/20/24
     ToD:
-        0.6:
-            Added local memory storage
-            Added local writing to storage in Char Screen
+        0.7:
+            Minor clean ups
+            Added a Char Sheet to view each char on
+            Added Char and Gear section to Char Sheet
 3/13/24
     Ironman(web):
         0.8
