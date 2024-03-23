@@ -1,3 +1,9 @@
+3/22/24
+    Ironman(web):
+        0.9
+            Component: Player Name sub section
+            Compoent: Toturn Scoreboard
+            Added Tourn Dashboard
 3/21/24
     General:
         Cleaning up files
@@ -7,12 +13,6 @@
             Minor clean ups
             Added a Char Sheet to view each char on
             Added Char and Gear section to Char Sheet
-3/13/24
-    Ironman(web):
-        0.8
-            Component: Added Tourn Dashboard
-            Update Tourn Screen to include Formats
-            Update to handling deeper step thru for Tourn
 3/10/24
     Unchained:
         0.2.26

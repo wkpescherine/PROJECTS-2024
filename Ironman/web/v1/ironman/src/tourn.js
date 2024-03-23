@@ -2,10 +2,13 @@ import React, {useState} from 'react';
 import './App.css';
 
 import TournDisplay from "./components/tourn_display"
+import TournDash from "./components/tourn_dash"
 
 function Tourn() {
     const[leagues, setLeagues] = useState ("NFL");
     const[format, setFormat] = useState ("I");
+    const[current, setCurrent] = useState ("None");
+    
 
     const handleSetLeagues = (choice) => {
         setLeagues(choice);
@@ -13,6 +16,14 @@ function Tourn() {
 
     const handleSetFormat = (picked) =>{
         setFormat(picked);
+    }
+
+    function handleCurrent(currentPicked){
+        if(current == "Current"){
+            setCurrent("None")
+        } else {
+            setCurrent(currentPicked);
+        }
     }
     return (
         <div>
@@ -39,8 +50,9 @@ function Tourn() {
                 <label class="text75">Status</label>
             </div>
             <hr style={{background:"#fff", height: "1px", width: "525px"}}/>
-            <TournDisplay sendLeague={leagues} sendFormat={format}/>
-            <TournDisplay sendLeague={leagues} sendFormat={format}/>
+            <TournDisplay sendLeague={leagues} sendFormat={format} getCurrent={handleCurrent}/>
+            <TournDisplay sendLeague={leagues} sendFormat={format} getCurrent={handleCurrent}/>
+            {current == "Current" && <TournDash />}
         </div>
     ); 
 }

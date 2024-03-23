@@ -11,7 +11,7 @@ function Tourn_Display(props) {
             <label class="text75">7 days</label>
             <label class="text75">$5</label>
             <label class="text75">
-                <button>Join</button>
+                <button onClick={() => props.getCurrent("Current")}>Join</button>
             </label>
         </div>
     ); 

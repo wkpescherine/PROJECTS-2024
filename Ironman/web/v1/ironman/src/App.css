@@ -71,6 +71,11 @@ label {
   justify-content: center;
 }
 
+.miniContainer{
+  display: flex;
+  justify-content: center;
+}
+
 .text25 {
   width: 25px;
   color: #fff;
