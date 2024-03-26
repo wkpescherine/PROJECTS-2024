@@ -2,8 +2,18 @@ import React, {useState} from 'react';
 import './App.css';
 
 import HistoryDisplay from "./components/history_display"
+import HistScore from "./components/historyScore"
 
 function History() {
+    const[displayHistScore,setDisplayHistScore] = useState ("None");
+    
+    function handleHistScore(){
+        if(displayHistScore == "Score"){
+            setDisplayHistScore("None")
+        }else {
+            setDisplayHistScore("Score")
+        }
+    }
     return (
         <div>
             <p>Previous Results</p>
@@ -16,7 +26,8 @@ function History() {
                 <label class="text75"></label>
             </div>
             <hr style={{background:"#fff", height: "1px", width: "525px"}}/>
-            <HistoryDisplay />
+            <HistoryDisplay getHistScore={handleHistScore}/>
+            {displayHistScore ==="Score" && <HistScore/> }
         </div>
     ); 
 }
