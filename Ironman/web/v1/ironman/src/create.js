@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom'
 function Create() {
     const[logInUsername,setLogInUsername] = useState ("");
     const[logInPassword,setLogInPassword] = useState ("");
+    const[logInEmail,setLogInEmail] = useState ("");
 
     let navigate = useNavigate();
     
@@ -14,6 +15,10 @@ function Create() {
 
     const handleLogInPasswordChange = (event) => {
         setLogInPassword(event.target.value)
+    }
+
+    const handleEmailChange = (event) => {
+        setLogInEmail(event.target.value)
     }
 
     function RedirectToDashboard(){
@@ -32,6 +37,10 @@ function Create() {
                 <input type="text" placeholder="Enter username" onChange={handleLogInUsernameChange}></input>
                 <label>Password</label>
                 <input type="password" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
+            </div>
+            <div>
+                <label>Email</label> 
+                <input type="text" placeholder="Enter Email" onChange={handleEmailChange}></input>
             </div>
             <p>
                 <button class='invertButton' onClick={RedirectToExit}>Exit</button> 
