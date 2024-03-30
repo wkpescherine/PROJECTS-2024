@@ -33,7 +33,7 @@ function Create() {
         <div>
             <p>Create Account</p>
             <div>
-                <label>Username</label> 
+                <label >Username</label> 
                 <input type="text" placeholder="Enter username" onChange={handleLogInUsernameChange}></input>
                 <label>Password</label>
                 <input type="password" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
