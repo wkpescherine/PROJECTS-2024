@@ -26,6 +26,8 @@ function Sidebar(props) {
             <br></br>
             <button class='sidebarbutton' onClick={() => props.getData("Rules")}>Rules & Info</button>
             <br></br>
+            <button class='sidebarbutton' onClick={() => props.getData("Admin")}>Admin</button>
+            <br></br>
             <button class='sidebarbutton' onClick={RedirectToExit}>Exit</button>  
         </div>
     ); 

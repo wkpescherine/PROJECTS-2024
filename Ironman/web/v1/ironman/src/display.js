@@ -9,6 +9,7 @@ import History from "./history"
 import Rules from "./rules"
 import Current from "./current"
 import TournDash from "./components/tourn_dash"
+import Admin from "./admin"
 
 function Display(props) {
     return (
@@ -21,6 +22,7 @@ function Display(props) {
             {props.sendData === "Rules"&& <Rules />}
             {props.sendData === "Current"&& <Current />}
             {props.sendData === "Tourn_Dash"&& <TournDash />}
+            {props.sendData === "Admin"&& <Admin />}
         </div>
     ); 
 }
