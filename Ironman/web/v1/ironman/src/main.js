@@ -41,7 +41,7 @@ function Main() {
                     <button class='invertButton' onClick={RedirectToCreate}>Create</button>  
                 </p>
             </div>
-            <p>version 0.14.0.0</p>
+            <p>version 0.14</p>
         </div>
     ); 
 }
