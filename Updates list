@@ -1,10 +1,11 @@
-3/30/24
-    Ironman(web):
-        0.14
-            Added Admin Section
-            Added Leagues to Admin Section
-            Added Teams Section for Leagues
-            Added Admin Players Section to Admin section
+3/31/24
+    Ironman:
+        API:
+            0.14a
+                Created basic Rails API setup
+        web:
+            0.14
+                No Update here
 03/28/24
     PAMM:
         0.43.0
