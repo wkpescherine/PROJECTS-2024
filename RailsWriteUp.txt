@@ -1,0 +1,5 @@
+1)Create a new Rails API
+    rails new <appname> --api
+cd in the app created
+go to the gemfile to add the rack cors
+    this might just need to be uncommented.
