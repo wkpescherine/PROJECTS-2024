@@ -1,5 +1,18 @@
-1)Create a new Rails API
+1)Create a new Rails API:
     rails new <appname> --api
-cd in the app created
-go to the gemfile to add the rack cors
+cd into the app created
+go to the gemfile to add the rack cors:
     this might just need to be uncommented.
+then need to install the rack cors gem:
+    bundle install
+Need to go to config > initializers and uncoimment the cors section:
+    set origins to "*" 
+        this would allow anyone to access it
+    or
+    origins "http://localhost:3001" 
+        this is for the react frontend
+        inf production this would be the actual URL
+Start building out the backend
+    rails g scaffold <dbname> name:type name:type
+    rails destroy <dbname> if made a mistake before migrate command
+Then migrate the DB so that it is actually fully built
