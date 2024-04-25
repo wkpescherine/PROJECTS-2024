@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../App.css';
 
-function AdminLeagues() {
+function AdminLeagues(props) {
     const [adminLeague, setAdminLeague] = useState("NFL");
 
     function handleSetAdminLeague(league){
