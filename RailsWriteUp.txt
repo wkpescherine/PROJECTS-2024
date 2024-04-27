@@ -16,3 +16,24 @@ Start building out the backend
     rails g scaffold <dbname> name:type name:type
     rails destroy <dbname> if made a mistake before migrate command
 Then migrate the DB so that it is actually fully built
+    db migrate
+Config the routes to the db
+    go to config => routes and add namespaces as such
+        namespace :<name> do 
+            namespace : <name> do
+                resource: <name>    name here is the db to be accessed
+            end
+        end
+Go into the app > controllers folder 
+Add in nested folders that match the path of the namespace
+    app
+        controllers
+            <first namespace name>
+                <second namespace name>
+                    resource controller here
+In the resource controller then adjust the path to match the folders
+    class <first namespace name>::<second namespace name>::<name>Controller < ApplicationController
+        ex. class Api::V1::UsersController < ApplicationController
+Within the rails APi folder create the react app
+    npx create-react-app <app name>
+    
