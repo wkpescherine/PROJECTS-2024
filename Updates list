@@ -1,24 +1,15 @@
-<<<<<<< HEAD
+4/28/24
+    General:
+        No updates
 4/26/24
-=======
-4/24/24
->>>>>>> 6085ba2d8437be45d65b3fe93600632484919d60
     Ironman:
         API:
             0.14d
                 Updated API
                 Added user db
         web:
-<<<<<<< HEAD
             0.14
                 No Update here
-=======
-            0.15
-                Update to Admin panel
->>>>>>> 6085ba2d8437be45d65b3fe93600632484919d60
-4/22/24
-    General:
-        Update to Rails Documents
 03/28/24
     PAMM:
         0.43.0
