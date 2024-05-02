@@ -34,6 +34,9 @@ Add in nested folders that match the path of the namespace
 In the resource controller then adjust the path to match the folders
     class <first namespace name>::<second namespace name>::<name>Controller < ApplicationController
         ex. class Api::V1::UsersController < ApplicationController
+Testing api check the following path
+    localhost:3000
+    loclahost:3000/api/v1/{route name}
 Within the rails APi folder create the react app
     npx create-react-app <app name>
     
