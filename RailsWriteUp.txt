@@ -37,6 +37,13 @@ In the resource controller then adjust the path to match the folders
 Testing api check the following path
     localhost:3000
     loclahost:3000/api/v1/{route name}
-Within the rails APi folder create the react app
+Can add data to the DB with the rails console
+    rails c
+    Can view the DB to see what data is in it by
+        {Dbname}
+    Can add data into the db by the following
+        {Dbname}.create!("firstdbcolumnname":{data}, "secondDBcolumnname":{data})
+    Can view by starting the server and going to the above URL
+Within the rails API folder create the react app
     npx create-react-app <app name>
     

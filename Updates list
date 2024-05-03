@@ -1,9 +1,8 @@
-5/1/24
+5/2/24
     Ironman:
         API:
-            0.14e
-                API setup and working
-                Added some basic data to DB
+            0.14.f
+                Installed react app inside rails api
         web:
             0.14
                 No Update here
