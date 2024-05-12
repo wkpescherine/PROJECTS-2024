@@ -9,13 +9,12 @@ import Knowledge from "./knowledge"
 export default function Display (props){
     return (
         <div class="displayArea">
+            <p>{props.sendData}</p>
             { props.sendData === "Home" && < Home/>}
             { props.sendData === "Support" && < Support/>}
             { props.sendData === "Message" && < Message/>}
             { props.sendData === "Admin" && < Admin/>}
             { props.sendData === "Knowledge" && < Knowledge sendSel={props.sendSubCat}/>}
-            <p>{props.sendData}</p>
-            <p>{props.sendSubCat}</p>
         </div>  
     );
 }

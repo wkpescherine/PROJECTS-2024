@@ -4,8 +4,7 @@ import AdminSubCategory from
 
 export default function Sidebar (){
     return (
-        <div>
-            <p>SideBar under development</p> 
+        <div> 
             <button class="invertButtonSidebar">Pick</button>
             <br></br>
             <button class="invertButtonSidebar">Crew</button>
