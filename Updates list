@@ -1,11 +1,9 @@
-5/11/24
+
+5/12/24
     MUSK:
-        0.6
-           Added Crew Section
-           Added Timekeeping section
-           Added LPC section
-           Updated Knowledge section
-           Cleanup display area
+        Updated to Musk_1.0
+            1.0
+                Added redux and rebuilding to improve state
         Issue:
             001: Need to double click on sub cat to get it to work proper, need to fix layers
 5/7/24

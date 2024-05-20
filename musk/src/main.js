@@ -37,7 +37,7 @@ function Main() {
             <p>
                 <button class='invertButton' onClick={RedirectTo}>Login</button> 
             </p>
-            <p>version 0.6 </p>
+            <p>version 0.7 </p>
         </div>
     ); 
 }
