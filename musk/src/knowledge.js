@@ -9,17 +9,21 @@ import Timekeeping from "./timekeeping"
 import LPC from "./lpc"
 //import Crew from "./crew"
 
-export default function Knowledge (props){
+export default function Knowledge (){
     const [ subSection, setSubSection] = useState("None")
 
     return (
         <div>
             <div>
-                <p>{props.sendSel}</p>
-                {props.sendSel === "Pick" && <Pick />}
+                <p>Knowledge Base</p>
+                <button>Pick</button>
+                <button>Crew</button>
+                <button>Timekeeping</button>
+                <button>LPC</button>
+                {/*{props.sendSel === "Pick" && <Pick />}
                 {props.sendSel === "Crew" && <Crew />}
                 {props.sendSel === "Timekeeping" && <Timekeeping />}
-                {props.sendSel === "LPC" && <LPC />}
+                {props.sendSel === "LPC" && <LPC />}*/}
             </div>
         </div>
     );

@@ -5,14 +5,17 @@ import CaseHeader from "./caseheader"
 import Case from "./case"
 
 export default function Admin (){
-    const [ adminSections, setAdminSection] = useState("Open")
+    const [ adminSections, setAdminSections] = useState("Open")
 
     return (
         <div>
            <p>Admin Center</p>
-           <p>{adminSections}</p>
+           <button>Open</button>
+           <button>Pending</button>
+           <button>Closed</button>
+           <button>Personal</button>
            < CaseHeader />
-           < Case />
+           {adminSections === "Closed" && < Case />}
         </div>
     );
 }

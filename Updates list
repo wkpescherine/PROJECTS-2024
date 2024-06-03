@@ -1,11 +1,9 @@
-
-5/12/24
+6/2/24
     MUSK:
-        Updated to Musk_1.0
-            1.0
-                Added redux and rebuilding to improve state
-        Issue:
-            001: Need to double click on sub cat to get it to work proper, need to fix layers
+        Musk 0.8:
+            Updated Knowledge section handling
+            Updated Admmin section handling
+            Updated Message section handling 
 5/7/24
     General:
         No update
