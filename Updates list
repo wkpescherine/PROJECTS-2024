@@ -1,3 +1,8 @@
+6/3/24
+    Unchained:
+        General C# updating
+        0.2.26
+            WIP on handling the changing of elements within a Panel 
 6/2/24
     MUSK:
         Musk 0.8:
@@ -25,10 +30,6 @@
             Minor clean ups
             Added a Char Sheet to view each char on
             Added Char and Gear section to Char Sheet
-3/10/24
-    Unchained:
-        0.2.26
-            WIP on handling the changing of elements within a Panel 
 2/24/24
     TruCare
         0.13
