@@ -23,8 +23,8 @@ function Account() {
                 <div style={{width: "250px"}}>
                     <p style={{textAlign: "left", marginLeft: "20px"}}>Months in System: </p>
                     <p style={{textAlign: "left", marginLeft: "20px"}}>Rate of Accumulation: </p>
-                    <p style={{textAlign: "left", marginLeft: "20px"}}>Months Cost: </p>
-                    <p style={{textAlign: "left", marginLeft: "20px"}}>Inestment to Date: </p>
+                    <p style={{textAlign: "left", marginLeft: "20px"}}>Monthly Cost: </p>
+                    <p style={{textAlign: "left", marginLeft: "20px"}}>Investment to Date: </p>
                     <p style={{textAlign: "left", marginLeft: "20px"}}>Expenses to Date: </p>
                     <p style={{textAlign: "left", marginLeft: "20px"}}>Net Investment: </p>
                     <p style={{textAlign: "left", marginLeft: "20px"}}>+/-: </p>

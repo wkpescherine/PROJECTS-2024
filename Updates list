@@ -1,3 +1,12 @@
+6/4/24
+    TruCare
+        0.14
+            Updated Account Screen
+            Updated Sidebar
+            Updated Settings screen
+            Added more ability to modify user data in Settings screen
+        1.1
+            Setting up Rails and sqlite3 env
 6/3/24
     Unchained:
         General C# updating
@@ -30,13 +39,6 @@
             Minor clean ups
             Added a Char Sheet to view each char on
             Added Char and Gear section to Char Sheet
-2/24/24
-    TruCare
-        0.13
-            Updated CS file for standardization
-            Updated Billing Screen
-            Updated Finance Screen
-            Setting up Rails and sqlite3 env
 2/15/24 
     musik:
         0.10
