@@ -1,7 +1,10 @@
 6/9/24
     TruCare
-        0.15
-            No Updates, doing evaluation
+        0.17
+            Updated Setting Page
+            Updated Patient Create Page
+            Updated Search Page
+            Updated CSS File
         1.1
             Setting up Rails and sqlite3 env
 6/3/24

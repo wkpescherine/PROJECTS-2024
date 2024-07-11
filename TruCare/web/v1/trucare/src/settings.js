@@ -1,4 +1,5 @@
 import './App.css';
+import React, {useState} from 'react';
 
 function Settings() {
     const[editSection,setEditSection] = useState ("");
@@ -15,11 +16,20 @@ function Settings() {
                         Patient Address:
                         <button  onClick={() => setEditSection("PA")}>Edit</button>
                     </p>
-                    {editSection == "PA" && <div>Test</div>}
+                    {editSection == "PA" && 
+                        <div>                
+                            <input type="text" placeholder="New Address" class="inputData200"></input>
+                        </div>
+                    }
                     <p style={{textAlign: "left", marginLeft: "20px"}}>
                         Patient State:
-                        <button>Edit</button>
+                        <button  onClick={() => setEditSection("PS")}>Edit</button>
                     </p>
+                    {editSection == "PS" && 
+                        <div>                
+                            <input type="text" placeholder="New State" class="inputData200"></input>
+                        </div>
+                    }
                     <p style={{textAlign: "left", marginLeft: "20px"}}>Patient Zip Code:</p>
                     <p style={{textAlign: "left", marginLeft: "20px"}}>Patient Age Yrs:</p>
                     <p style={{textAlign: "left", marginLeft: "20px"}}>Patient Age Mos:</p>

@@ -10,8 +10,6 @@ function Search() {
                 <input type='text' style={{width: "100px"}}></input>
                 <label>State:</label>
                 <input type='text' style={{width: "25px"}}></input>
-                <label>State:</label>
-                <input type='text' style={{width: "40px"}}></input>
             </div>
             <div>
                     <button style={{marginRight:"2px", fontSize: "12px"}}>Family</button>

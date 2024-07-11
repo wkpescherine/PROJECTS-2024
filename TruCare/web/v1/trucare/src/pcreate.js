@@ -40,7 +40,7 @@ function PCreate() {
                 <label>Email</label>
                 <input type="text" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
                 <label>Age:</label>
-                <input type="text" placeholder="00/00/0000" class="inputData"></input>
+                <input type="text" placeholder="00/00/0000" class="inputData75"></input>
             </div>
             <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
             <div>
@@ -65,11 +65,11 @@ function PCreate() {
                 </div>
                 <div>
                     <label>City</label> 
-                    <input style={{width:"180px", background:"#fff"}} type="text" placeholder="Enter Addresss"></input>
+                    <input style={{width:"180px", background:"#fff"}} type="text" placeholder="City"></input>
                     <label>State</label> 
-                    <input style={{width:"50px", background:"#fff"}} type="text" placeholder="Enter Addresss"></input>
+                    <input style={{width:"50px", background:"#fff"}} type="text" placeholder="State"></input>
                     <label>Zip</label> 
-                    <input style={{width:"100px", background:"#fff"}} type="text" placeholder="Enter Addresss"></input>
+                    <input style={{width:"100px", background:"#fff"}} type="text" placeholder="Zip Code"></input>
                 </div>
                 <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
                 <p style={{margin:"5px"}}>Rate of Coverage:</p>
