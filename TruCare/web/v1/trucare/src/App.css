@@ -34,9 +34,9 @@ p {
 }
 
 label {
-  padding-left: 10px;
   color:#fff;
-  padding-right: 10px;
+  width: 100px;
+  display: inline-block;
 }
 
 .inputData50 {

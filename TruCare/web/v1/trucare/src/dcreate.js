@@ -68,23 +68,23 @@ function DCreate() {
             <p>Create New Doctor</p>
             <div>
                 <label>First Name</label> 
-                <input type="text" placeholder="Enter username" onChange={handleFirstNameameChange}></input>
+                <input type="text" class="input150" placeholder="First Name" onChange={handleFirstNameameChange}></input>
                 <label>Last Name</label>
-                <input type="text" placeholder="Enter password" onChange={handleLastNameChange}></input>
+                <input type="text" class="input150" placeholder="Last Name" onChange={handleLastNameChange}></input>
             </div>
             <div>
                 <label>Username</label> 
-                <input type="text" placeholder="Enter username" onChange={handleDCUsernameChange}></input>
+                <input type="text" class="input150" placeholder="Enter username" onChange={handleDCUsernameChange}></input>
                 <label>Password</label>
-                <input type="password" placeholder="Enter password" onChange={handleDCPasswordChange}></input>
+                <input type="password" class="input150" placeholder="Enter password" onChange={handleDCPasswordChange}></input>
             </div>
             <div>
                 <label>Street</label> 
-                <input type="text" style={{width:"450px", backgroundColor:"#fff"}} onChange={handleStreetChange}></input>
+                <input type="text" style={{width:"408px", backgroundColor:"#fff"}} onChange={handleStreetChange}></input>
             </div>
             <div>
                 <label>City</label> 
-                <input type="text" style={{width:"200px", backgroundColor:"#fff"}} onChange={handleCityChange}></input>
+                <input type="text" style={{width:"110px", backgroundColor:"#fff"}} onChange={handleCityChange}></input>
                 <label>State</label>
                 <input type="text" style={{width:"25px", backgroundColor:"#fff"}} onChange={handleStateChange}></input>
                 <label>Zip Code</label>
@@ -92,11 +92,11 @@ function DCreate() {
             </div>
             <div>
                 <label>Email</label>
-                <input type="text" style={{width: "200px", backgroundColor:"#fff"}} placeholder="Enter Email" onChange={handleEmailChange}></input>
+                <input type="text" style={{width: "146px", backgroundColor:"#fff"}} placeholder="Enter Email" onChange={handleEmailChange}></input>
                 <label>Age:</label>
-                <input type="text" class="inputData"></input>
+                <input type="text" class="input25"></input>
                 <label>Yrs Exp:</label>
-                <input type="text" class="inputData"></input>
+                <input type="text" class="input25"></input>
             </div>
             <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
             <div>
@@ -116,34 +116,41 @@ function DCreate() {
                 <p style={{margin:"5px"}}>Services and Rates:</p>
                 <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
                 <div>
-                    <label>Visit: $</label>
+                    <label>Visit:</label>
                     <input type="text" style={{width:"40px", background:"#fff"}}></input>
-                    <label>Medication: $</label>
+                    <label>Medication: </label>
                     <input type="text" style={{width:"40px", background:"#fff"}}></input>
-                    <label>X Rays: $</label>
+                    <label>X Rays:</label>
                     <input type="text" style={{width:"40px", background:"#fff"}}></input>
-                    <label>Supplies: $</label>
+                    <label>Supplies:</label>
                     <input type="text" style={{width:"40px", background:"#fff"}}></input>
                 </div>
                 <div>
-                    <label>Blood Work: $</label>
+                    <label>Tests:</label>
                     <input type="text" style={{width:"40px", background:"#fff"}}></input>
                     <label>Others: $</label>
                     <input type="text" style={{width:"40px", background:"#fff"}}></input>
                     <label>Custom:</label>
-                    <input type="text" placeholder='Enter title' style={{width:"110px", background:"#fff"}}></input>
+                    <input type="text" placeholder='Enter title' style={{width:"108px", background:"#fff"}}></input>
                     <input type="text" placeholder='Enter cost' style={{width:"50px", background:"#fff"}}></input>
+                    <button>+</button>
                 </div>
                     <div style={{fontSize: "8px", color: "#fff", margin: "5px"}}>While this does not cover all expenses. We suggest using average for any of the above . If not in the list use the Other.</div>
                 <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
-                <p style={{margin:"5px"}}>Expected Visits:</p>
+                <p style={{margin:"5px"}}>Expected Visits(per year):</p>
                 <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
                 <div>
                     <label>
-                        <input type="radio" value="normal"/>Once per year
-                        <input type="radio" value="normal"/>2-4 per year
-                        <input type="radio" value="normal"/>5-10 per year
-                        <input type="radio" value="normal"/>11+ per year
+                        <input type="radio" value="normal"/>Once
+                    </label>
+                    <label>
+                        <input type="radio" value="normal"/>2-4
+                    </label>
+                    <label>
+                        <input type="radio" value="normal"/>5-10 
+                    </label>
+                    <label>
+                        <input type="radio" value="normal"/>11
                     </label>
                 </div>
                 <hr style={{background:"#fff", height: "1px", width: "550px"}}/>                
