@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import './App.css';
 import {useNavigate} from 'react-router-dom'
 
+import Users from "./users.json"
+
 function Main() {
     const[logInUsername,setLogInUsername] = useState ("");
     const[logInPassword,setLogInPassword] = useState ("");
@@ -47,7 +49,7 @@ function Main() {
                 <button class='invertButton' onClick={RedirectToPCreate}>Create Patient</button>
                 <button class='invertButton' onClick={RedirectToDCreate}>Create Doctor</button>  
             </p>
-            <p>version 0.19</p>
+            <p>version 0.20</p>
         </div>
     ); 
 }

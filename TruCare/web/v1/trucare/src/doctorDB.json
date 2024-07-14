@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "username":"drAdmin1",
+        "password":"dradmin@1",
+        "name":[
+            "first",
+            "last"
+        ],
+        "occupation":"eye",
+        "estimate": 150,
+        "occurance": "12"
+    },
+    {
+        "id":2,
+        "username":"drAdmin2",
+        "password":"dradmin@2",
+        "name":[
+            "first",
+            "last"
+        ],
+        "occupation":"family",
+        "estimate": 150,
+        "occurance": "biyearly"
+    }
+]

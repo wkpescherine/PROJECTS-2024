@@ -1,0 +1,18 @@
+[
+    {
+        "id":1,
+        "username":"admin1",
+        "password":"pass4word@1",
+        "email":"admin1@gmail.com",
+        "address":{
+                "street":"1 someplace dr",
+                "town":"someplace",
+                "state":"ST",
+                "zipcode":"00000"
+            },
+        "payment": 250,
+        "speed": "Hyper",
+        "invested$":1500,
+        "doctorIDs":[1,2,3,4]
+    }
+]
