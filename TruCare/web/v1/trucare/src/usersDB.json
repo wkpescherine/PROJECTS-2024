@@ -2,13 +2,45 @@
     {
         "id":1,
         "username":"admin1",
-        "password":"pass4word@1",
+        "password": "admin@1",
         "email":"admin1@gmail.com",
         "address":{
                 "street":"1 someplace dr",
                 "town":"someplace",
                 "state":"ST",
                 "zipcode":"00000"
+            },
+        "payment": 250,
+        "speed": "Hyper",
+        "invested$":1500,
+        "doctorIDs":[1,2,3,4]
+    },
+    {
+        "id":2,
+        "username":"admin2",
+        "password":"admin@2",
+        "email":"admin2@gmail.com",
+        "address":{
+                "street":"2 someplace dr",
+                "town":"someplace",
+                "state":"ST",
+                "zipcode":"11111"
+            },
+        "payment": 250,
+        "speed": "Hyper",
+        "invested$":1500,
+        "doctorIDs":[1,2,3,4]
+    },
+    {
+        "id":3,
+        "username":"admin3",
+        "password":"admin@3",
+        "email":"admin3@gmail.com",
+        "address":{
+                "street":"3 someplace dr",
+                "town":"someplace",
+                "state":"ST",
+                "zipcode":"22222"
             },
         "payment": 250,
         "speed": "Hyper",

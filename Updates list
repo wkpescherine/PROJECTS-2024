@@ -1,9 +1,7 @@
-7/13/24
+7/14/24
     TruCare
-        0.20
-            Added userdb json file
-            Added doctordb json file
-            *Both files being used as temp DBS* 
+        0.21
+            Updated userdb json file(Temp DB )
         1.1
             Setting up Rails and sqlite3 env
 6/3/24

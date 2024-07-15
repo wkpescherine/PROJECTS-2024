@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import './App.css';
 import {useNavigate} from 'react-router-dom'
 
-import Users from "./users.json"
+import Users from "./usersDB.json"
+import Docters from "./doctorDB.json"
 
 function Main() {
     const[logInUsername,setLogInUsername] = useState ("");
@@ -31,7 +32,9 @@ function Main() {
     }
 
     function RedirectToDashboard(){
-        navigate('./dashboard')
+        if((logInUsername === Users.username) && (logInPassword=== Users.password)){
+            navigate('./dashboard')
+        }
     }
 
     return (
@@ -49,7 +52,7 @@ function Main() {
                 <button class='invertButton' onClick={RedirectToPCreate}>Create Patient</button>
                 <button class='invertButton' onClick={RedirectToDCreate}>Create Doctor</button>  
             </p>
-            <p>version 0.20</p>
+            <p>version 0.21</p>
         </div>
     ); 
 }
