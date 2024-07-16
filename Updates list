@@ -1,7 +1,7 @@
-7/14/24
+7/15/24
     TruCare
-        0.21
-            Updated userdb json file(Temp DB )
+        0.22
+            Update main screen and handling of Username/Password
         1.1
             Setting up Rails and sqlite3 env
 6/3/24

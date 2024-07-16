@@ -31,10 +31,14 @@ function Main() {
         navigate('./pcreate')
     }
 
-    function RedirectToDashboard(){
+    function RedirectUnderDev(){
         if((logInUsername === Users.username) && (logInPassword=== Users.password)){
             navigate('./dashboard')
         }
+    }
+
+    function RedirectToDashboard(){
+        navigate('./dashboard')
     }
 
     return (
@@ -52,7 +56,7 @@ function Main() {
                 <button class='invertButton' onClick={RedirectToPCreate}>Create Patient</button>
                 <button class='invertButton' onClick={RedirectToDCreate}>Create Doctor</button>  
             </p>
-            <p>version 0.21</p>
+            <p>version 0.22</p>
         </div>
     ); 
 }
