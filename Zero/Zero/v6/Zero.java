@@ -11,7 +11,7 @@ public class Zero implements ActionListener {
 
 	AboutView aboutView = new AboutView();
 	StartView startView = new StartView();
-	MainView mainView = new MainView();
+	Main main = new Main();
 	CreateAccountView accountView = new CreateAccountView();
 
 	JFrame window = new JFrame("Zero v6.3");
@@ -55,7 +55,7 @@ public class Zero implements ActionListener {
 					public void actionPerformed(ActionEvent e) {
 						accountView.checkStatus();
 						if (accountView.checkValue < 1) {
-							mainView.main.setVisible(true);
+							main.main.setVisible(true);
 						}
 					}
 				});
@@ -68,57 +68,57 @@ public class Zero implements ActionListener {
 					}
 				});
 
-		mainView.searchBtn.addActionListener(
+		main.searchBtn.addActionListener(
 				new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						mainView.mailView.mail.setVisible(false);
-						mainView.chatView.chat.setVisible(false);
-						mainView.siteView.site.setVisible(true);
-						mainView.homeView.home.setVisible(false);
-						mainView.about2View.about2.setVisible(false);
-						mainView.historyView.history.setVisible(false);
-						mainView.settingView.setting.setVisible(false);
-						mainView.bankView.bank.setVisible(false);
+						main.mailView.mail.setVisible(false);
+						main.chatView.chat.setVisible(false);
+						main.siteView.site.setVisible(true);
+						main.homeView.home.setVisible(false);
+						main.about2View.about2.setVisible(false);
+						main.historyView.history.setVisible(false);
+						main.settingView.setting.setVisible(false);
+						main.bankView.bank.setVisible(false);
 					}
 				});
 
-		mainView.close.addActionListener(
+		main.close.addActionListener(
 				new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						exit();
 					}
 				});
 
-		mainView.mail.addActionListener(
+		main.mail.addActionListener(
 				new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						mainView.mailView.mail.setVisible(true);
-						mainView.chatView.chat.setVisible(false);
-						mainView.siteView.site.setVisible(false);
-						mainView.homeView.home.setVisible(false);
-						mainView.about2View.about2.setVisible(false);
-						mainView.historyView.history.setVisible(false);
-						mainView.settingView.setting.setVisible(false);
-						mainView.bankView.bank.setVisible(false);
+						main.mailView.mail.setVisible(true);
+						main.chatView.chat.setVisible(false);
+						main.siteView.site.setVisible(false);
+						main.homeView.home.setVisible(false);
+						main.about2View.about2.setVisible(false);
+						main.historyView.history.setVisible(false);
+						main.settingView.setting.setVisible(false);
+						main.bankView.bank.setVisible(false);
 					}
 				});
 
-		mainView.chat.addActionListener(
+		main.chat.addActionListener(
 				new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						mainView.mailView.mail.setVisible(false);
-						mainView.chatView.chat.setVisible(true);
-						mainView.siteView.site.setVisible(false);
-						mainView.homeView.home.setVisible(false);
-						mainView.about2View.about2.setVisible(false);
-						mainView.historyView.history.setVisible(false);
-						mainView.settingView.setting.setVisible(false);
-						mainView.bankView.bank.setVisible(false);
+						main.mailView.mail.setVisible(false);
+						main.chatView.chat.setVisible(true);
+						main.siteView.site.setVisible(false);
+						main.homeView.home.setVisible(false);
+						main.about2View.about2.setVisible(false);
+						main.historyView.history.setVisible(false);
+						main.settingView.setting.setVisible(false);
+						main.bankView.bank.setVisible(false);
 					}
 				});
 
 		window.add(startView.start);
-		window.add(mainView.main);
+		window.add(main.main);
 		window.add(accountView.create);
 		window.add(aboutView.aboutSec);
 		window.setLayout(new FlowLayout());
