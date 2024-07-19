@@ -11,7 +11,7 @@ import javax.swing.*;
 public class Zero {
     Start start = new Start();
 
-    JFrame window = new JFrame("Zero v7.3.1");
+    JFrame window = new JFrame("Zero v7.4.1");
 
     Zero() {
         start.start.setBounds(0, 0, Config.width, Config.height);

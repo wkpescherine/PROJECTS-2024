@@ -6,12 +6,10 @@ public class Main implements ActionListener {
 	Mail mailView = new Mail();
 	Chat chatView = new Chat();
 	Site siteView = new Site();
-	Bank bankView = new Bank();
-	Retail retailView = new Retail();
-	Settings settingView = new Settings();
-	About2 about2View = new About2();
-	Home homeView = new Home();
-	History historyView = new History();
+	Settings settings = new Settings();
+	About2 about2 = new About2();
+	Home home = new Home();
+	History history = new History();
 
 	JPanel main = new JPanel();
 	JPanel sidebar = new JPanel();
@@ -51,28 +49,11 @@ public class Main implements ActionListener {
 		blank.setPreferredSize(new Dimension(60, 60));
 		home.setPreferredSize(new Dimension(60, 60));
 		chat.setPreferredSize(new Dimension(60, 60));
-		bank.setPreferredSize(new Dimension(60, 60));
 		settings.setPreferredSize(new Dimension(60, 60));
-		retail.setPreferredSize(new Dimension(60, 60));
 
-		bank.addActionListener(this);
+		// bank.addActionListener(this);
 
 		home.addActionListener(this);
-
-		retail.addActionListener(
-				new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						mailView.mail.setVisible(false);
-						siteView.site.setVisible(false);
-						chatView.chat.setVisible(false);
-						bankView.bank.setVisible(false);
-						homeView.home.setVisible(false);
-						retailView.retail.setVisible(true);
-						about2View.about2.setVisible(false);
-						settingView.setting.setVisible(false);
-						historyView.history.setVisible(false);
-					}
-				});
 
 		history.addActionListener(
 				new ActionListener() {
@@ -144,8 +125,6 @@ public class Main implements ActionListener {
 		sidebar.add(home);
 		sidebar.add(mail);
 		sidebar.add(chat);
-		sidebar.add(bank);
-		sidebar.add(retail);
 		sidebar.add(about2);
 		sidebar.add(settings);
 		sidebar.add(close);
@@ -156,8 +135,6 @@ public class Main implements ActionListener {
 		display.add(mailView.mail);
 		display.add(siteView.site);
 		display.add(chatView.chat);
-		display.add(bankView.bank);
-		display.add(retailView.retail);
 		display.add(about2View.about2);
 		display.add(settingView.setting);
 		display.add(homeView.home);
@@ -168,26 +145,12 @@ public class Main implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		mailView.mail.setVisible(false);
-		siteView.site.setVisible(false);
-		chatView.chat.setVisible(false);
-		homeView.home.setVisible(true);
-		bankView.bank.setVisible(false);
-		about2View.about2.setVisible(false);
-		retailView.retail.setVisible(false);
-		settingView.setting.setVisible(false);
-		historyView.history.setVisible(false);
-	}
-
-	public void Bank() {
-		mailView.mail.setVisible(false);
-		siteView.site.setVisible(false);
-		chatView.chat.setVisible(false);
-		homeView.home.setVisible(true);
-		bankView.bank.setVisible(true);
-		about2View.about2.setVisible(false);
-		retailView.retail.setVisible(false);
-		settingView.setting.setVisible(false);
-		historyView.history.setVisible(false);
+		mail.mail.setVisible(false);
+		site.site.setVisible(false);
+		chat.chat.setVisible(false);
+		home.home.setVisible(true);
+		about2.about2.setVisible(false);
+		setting.setting.setVisible(false);
+		history.history.setVisible(false);
 	}
 }
