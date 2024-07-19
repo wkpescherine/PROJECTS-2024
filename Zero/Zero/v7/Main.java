@@ -3,9 +3,9 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class Main implements ActionListener {
-	Mail mailView = new Mail();
-	Chat chatView = new Chat();
-	Site siteView = new Site();
+	Mail mail = new Mail();
+	Chat chat = new Chat();
+	Site site = new Site();
 	Settings settings = new Settings();
 	About2 about2 = new About2();
 	Home home = new Home();
@@ -58,15 +58,15 @@ public class Main implements ActionListener {
 		history.addActionListener(
 				new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						mailView.mail.setVisible(false);
-						siteView.site.setVisible(false);
-						chatView.chat.setVisible(false);
-						bankView.bank.setVisible(false);
-						homeView.home.setVisible(false);
-						retailView.retail.setVisible(false);
-						about2View.about2.setVisible(false);
-						settingView.setting.setVisible(false);
-						historyView.history.setVisible(true);
+						mail.mail.setVisible(false);
+						site.site.setVisible(false);
+						chat.chat.setVisible(false);
+						bank.bank.setVisible(false);
+						home.home.setVisible(false);
+						retail.retail.setVisible(false);
+						about2.about2.setVisible(false);
+						settings.setting.setVisible(false);
+						history.history.setVisible(true);
 					}
 				});
 
