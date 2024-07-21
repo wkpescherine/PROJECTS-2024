@@ -1,3 +1,5 @@
+package v7;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -14,17 +16,15 @@ public class Main implements ActionListener {
 	JPanel main = new JPanel();
 	JPanel sidebar = new JPanel();
 	JPanel display = new JPanel();
-	JButton close = new JButton("Exit");
-	JButton mail = new JButton("Mail");
-	JButton home = new JButton("Home");
-	JButton bank = new JButton("Bank");
-	JButton retail = new JButton("Retail");
-	JButton settings = new JButton("Setting");
-	JButton chat = new JButton("Chat");
-	JButton about2 = new JButton("About");
+	JButton closeBtn = new JButton("Exit");
+	JButton mailBtn = new JButton("Mail");
+	JButton homeBtn = new JButton("Home");
+	JButton settingsBtn = new JButton("Setting");
+	JButton chatBtn = new JButton("Chat");
+	JButton about2Btn = new JButton("About");
 	JButton searchBtn = new JButton("search");
-	JButton history = new JButton("History");
-	JButton blank = new JButton("");
+	JButton historyBtn = new JButton("History");
+	JButton blankBtn = new JButton("");
 	JTextField search = new JTextField(75);
 
 	Main() {
@@ -35,35 +35,33 @@ public class Main implements ActionListener {
 		display.setPreferredSize(new Dimension(930, 660));
 		display.setBackground(Color.BLACK);
 		sidebar.setPreferredSize(new Dimension(80, 660));
-		close.setPreferredSize(new Dimension(60, 60));
-		close.setFont(new Font("Serif", Font.PLAIN, 12));
-		history.setPreferredSize(new Dimension(60, 60));
-		history.setFont(new Font("Serif", Font.PLAIN, 12));
-		mail.setPreferredSize(new Dimension(60, 60));
-		mail.setFont(new Font("Serif", Font.PLAIN, 12));
-		about2.setPreferredSize(new Dimension(60, 60));
-		about2.setFont(new Font("Serif", Font.PLAIN, 12));
+		closeBtn.setPreferredSize(new Dimension(60, 60));
+		closeBtn.setFont(new Font("Serif", Font.PLAIN, 12));
+		historyBtn.setPreferredSize(new Dimension(60, 60));
+		historyBtn.setFont(new Font("Serif", Font.PLAIN, 12));
+		mailBtn.setPreferredSize(new Dimension(60, 60));
+		mailBtn.setFont(new Font("Serif", Font.PLAIN, 12));
+		about2Btn.setPreferredSize(new Dimension(60, 60));
+		about2Btn.setFont(new Font("Serif", Font.PLAIN, 12));
 		search.setHorizontalAlignment(SwingConstants.CENTER);
 		searchBtn.setPreferredSize(new Dimension(90, 20));
 		searchBtn.setFont(new Font("Serif", Font.PLAIN, 12));
-		blank.setPreferredSize(new Dimension(60, 60));
-		home.setPreferredSize(new Dimension(60, 60));
-		chat.setPreferredSize(new Dimension(60, 60));
-		settings.setPreferredSize(new Dimension(60, 60));
+		blankBtn.setPreferredSize(new Dimension(60, 60));
+		homeBtn.setPreferredSize(new Dimension(60, 60));
+		chatBtn.setPreferredSize(new Dimension(60, 60));
+		settingsBtn.setPreferredSize(new Dimension(60, 60));
 
 		// bank.addActionListener(this);
 
-		home.addActionListener(this);
+		homeBtn.addActionListener(this);
 
-		history.addActionListener(
+		historyBtn.addActionListener(
 				new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						mail.mail.setVisible(false);
 						site.site.setVisible(false);
 						chat.chat.setVisible(false);
-						bank.bank.setVisible(false);
 						home.home.setVisible(false);
-						retail.retail.setVisible(false);
 						about2.about2.setVisible(false);
 						settings.setting.setVisible(false);
 						history.history.setVisible(true);
@@ -74,16 +72,14 @@ public class Main implements ActionListener {
 				new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						System.out.println(Config.username);
-						settingView.settingConfigs();
-						mailView.mail.setVisible(false);
-						siteView.site.setVisible(false);
-						chatView.chat.setVisible(false);
-						bankView.bank.setVisible(false);
-						homeView.home.setVisible(false);
-						retailView.retail.setVisible(false);
-						about2View.about2.setVisible(false);
-						settingView.setting.setVisible(true);
-						historyView.history.setVisible(false);
+						settings.settingConfigs();
+						mail.mail.setVisible(false);
+						site.site.setVisible(false);
+						chat.chat.setVisible(false);
+						home.home.setVisible(false);
+						about2.about2.setVisible(false);
+						settings.setting.setVisible(true);
+						history.history.setVisible(false);
 					}
 				});
 
@@ -122,14 +118,14 @@ public class Main implements ActionListener {
 					}
 				});
 
-		sidebar.add(home);
-		sidebar.add(mail);
-		sidebar.add(chat);
-		sidebar.add(about2);
-		sidebar.add(settings);
-		sidebar.add(close);
-		sidebar.add(history);
-		sidebar.add(blank);
+		sidebar.add(homeBtn);
+		sidebar.add(mailBtn);
+		sidebar.add(chatBtn);
+		sidebar.add(about2Btn);
+		sidebar.add(settingsBtn);
+		sidebar.add(closeBtn);
+		sidebar.add(historyBtn);
+		sidebar.add(blankBtn);
 		display.add(search);
 		display.add(searchBtn);
 		display.add(mailView.mail);
@@ -150,7 +146,7 @@ public class Main implements ActionListener {
 		chat.chat.setVisible(false);
 		home.home.setVisible(true);
 		about2.about2.setVisible(false);
-		setting.setting.setVisible(false);
+		settings.setting.setVisible(false);
 		history.history.setVisible(false);
 	}
 }

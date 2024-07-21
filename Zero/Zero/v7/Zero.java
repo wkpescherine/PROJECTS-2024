@@ -46,11 +46,92 @@ public class Zero implements ActionListener {
         start.logIn.addActionListener(this);
         // End of all start screen actions
 
+        // Account section starts here
+        account.back.addActionListener(
+                new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        exit();
+                    }
+                });
+
+        account.newAccount.addActionListener(
+                new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        account.checkStatus();
+                        if (account.checkValue < 1) {
+                            main.main.setVisible(true);
+                        }
+                    }
+                });
+        // End of account section
+
+        // start of about section
+        about.aboutBack.addActionListener(
+                new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        about.aboutSec.setVisible(false);
+                        start.start.setVisible(true);
+                    }
+                });
+        // End ofabout sectiom=n
+
+        // Start of main section
+        main.searchBtn.addActionListener(
+                new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        main.mailView.mail.setVisible(false);
+                        main.chatView.chat.setVisible(false);
+                        main.siteView.site.setVisible(true);
+                        main.homeView.home.setVisible(false);
+                        main.about2View.about2.setVisible(false);
+                        main.historyView.history.setVisible(false);
+                        main.settingView.setting.setVisible(false);
+                        main.bankView.bank.setVisible(false);
+                    }
+                });
+
+        main.close.addActionListener(
+                new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        exit();
+                    }
+                });
+
+        main.mail.addActionListener(
+                new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        main.mailView.mail.setVisible(true);
+                        main.chatView.chat.setVisible(false);
+                        main.siteView.site.setVisible(false);
+                        main.homeView.home.setVisible(false);
+                        main.about2View.about2.setVisible(false);
+                        main.historyView.history.setVisible(false);
+                        main.settingView.setting.setVisible(false);
+                    }
+                });
+
+        main.chat.addActionListener(
+                new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        main.mailView.mail.setVisible(false);
+                        main.chatView.chat.setVisible(true);
+                        main.siteView.site.setVisible(false);
+                        main.homeView.home.setVisible(false);
+                        main.about2View.about2.setVisible(false);
+                        main.historyView.history.setVisible(false);
+                        main.settingView.setting.setVisible(false);
+                    }
+                });
+        // End of main section
+
         // setting bounds for each screen
         start.start.setBounds(0, 0, Config.width, Config.height);
         // end of setting bound section
 
         window.add(start.start);
+        window.add(main.main);
+        window.add(account.create);
+        window.add(about.aboutSec);
         window.setLayout(null);
         window.getContentPane().setBackground(Color.BLACK);
         window.setSize(Config.width, Config.height);
@@ -64,8 +145,8 @@ public class Zero implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        String usernameEntered = startView.startEditUsername.getText();
-        String passwordEntered = startView.startEditPassword.getText();
+        String usernameEntered = start.startEditUsername.getText();
+        String passwordEntered = start.startEditPassword.getText();
         String[] checklogin;
         Config.username = usernameEntered;
 
