@@ -8,14 +8,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Zero {
+public class Zero implements ActionListener {
     Config config = new Config();
     Start start = new Start();
     Account account = new Account();
     Main main = new Main();
     About about = new About();
 
-    JFrame window = new JFrame("Zero v7.4.2");
+    JFrame window = new JFrame("Zero v7.5.1");
 
     Zero() {
         // All start screen actions
@@ -95,5 +95,16 @@ public class Zero {
         } catch (FileNotFoundException ioe) {
             ioe.printStackTrace();
         }
+    }
+
+    public void exit() {
+        main.main.setVisible(false);
+        start.start.setVisible(true);
+    }
+
+    public void update() {
+        System.out.println("This is where we will have system updates");
+        System.out.println("Eventually will add in the logic to update");
+        System.out.println("At moment this is just placeholder");
     }
 }
