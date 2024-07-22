@@ -83,18 +83,16 @@ public class Main implements ActionListener {
 					}
 				});
 
-		about2.addActionListener(
+		about2.about2Back.addActionListener(
 				new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						mailView.mail.setVisible(false);
-						siteView.site.setVisible(false);
-						chatView.chat.setVisible(false);
-						bankView.bank.setVisible(false);
-						homeView.home.setVisible(false);
-						about2View.about2.setVisible(true);
-						retailView.retail.setVisible(false);
-						settingView.setting.setVisible(false);
-						historyView.history.setVisible(false);
+						mail.mail.setVisible(false);
+						site.site.setVisible(false);
+						chat.chat.setVisible(false);
+						home.home.setVisible(false);
+						about2.about2.setVisible(true);
+						settings.setting.setVisible(false);
+						history.history.setVisible(false);
 					}
 				});
 
@@ -102,17 +100,15 @@ public class Main implements ActionListener {
 				new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						String siteName = search.getText();
-						historyView.historyArray[historyView.historyCount] = siteName;
-						historyView.historyCount += 1;
-						mailView.mail.setVisible(false);
-						siteView.site.setVisible(true);
-						chatView.chat.setVisible(false);
-						bankView.bank.setVisible(false);
-						homeView.home.setVisible(false);
-						about2View.about2.setVisible(false);
-						retailView.retail.setVisible(false);
-						settingView.setting.setVisible(false);
-						historyView.history.setVisible(false);
+						history.historyArray[history.historyCount] = siteName;
+						history.historyCount += 1;
+						mail.mail.setVisible(false);
+						site.site.setVisible(true);
+						chat.chat.setVisible(false);
+						home.home.setVisible(false);
+						about2.about2.setVisible(false);
+						settings.setting.setVisible(false);
+						history.history.setVisible(false);
 						String zsite = search.getText();
 						Config.requestedSite = zsite;
 					}
@@ -128,13 +124,13 @@ public class Main implements ActionListener {
 		sidebar.add(blankBtn);
 		display.add(search);
 		display.add(searchBtn);
-		display.add(mailView.mail);
-		display.add(siteView.site);
-		display.add(chatView.chat);
-		display.add(about2View.about2);
-		display.add(settingView.setting);
-		display.add(homeView.home);
-		display.add(historyView.history);
+		display.add(mail.mail);
+		display.add(site.site);
+		display.add(chat.chat);
+		display.add(about2.about2);
+		display.add(settings.setting);
+		display.add(home.home);
+		display.add(history.history);
 		main.add(sidebar);
 		main.add(display);
 		main.setVisible(false);

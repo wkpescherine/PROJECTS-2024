@@ -15,7 +15,7 @@ public class Zero implements ActionListener {
     Main main = new Main();
     About about = new About();
 
-    JFrame window = new JFrame("Zero v7.5.1");
+    JFrame window = new JFrame("Zero v7.5.2");
 
     Zero() {
         // All start screen actions
@@ -79,47 +79,46 @@ public class Zero implements ActionListener {
         main.searchBtn.addActionListener(
                 new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
-                        main.mailView.mail.setVisible(false);
-                        main.chatView.chat.setVisible(false);
-                        main.siteView.site.setVisible(true);
-                        main.homeView.home.setVisible(false);
-                        main.about2View.about2.setVisible(false);
-                        main.historyView.history.setVisible(false);
-                        main.settingView.setting.setVisible(false);
-                        main.bankView.bank.setVisible(false);
+                        main.mail.mail.setVisible(false);
+                        main.chat.chat.setVisible(false);
+                        main.site.site.setVisible(true);
+                        main.home.home.setVisible(false);
+                        main.about2.about2.setVisible(false);
+                        main.history.history.setVisible(false);
+                        main.settings.setting.setVisible(false);
                     }
                 });
 
-        main.close.addActionListener(
+        main.closeBtn.addActionListener(
                 new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
                         exit();
                     }
                 });
 
-        main.mail.addActionListener(
+        main.mailBtn.addActionListener(
                 new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
-                        main.mailView.mail.setVisible(true);
-                        main.chatView.chat.setVisible(false);
-                        main.siteView.site.setVisible(false);
-                        main.homeView.home.setVisible(false);
-                        main.about2View.about2.setVisible(false);
-                        main.historyView.history.setVisible(false);
-                        main.settingView.setting.setVisible(false);
+                        main.mail.mail.setVisible(true);
+                        main.chat.chat.setVisible(false);
+                        main.site.site.setVisible(false);
+                        main.home.home.setVisible(false);
+                        main.about2.about2.setVisible(false);
+                        main.history.history.setVisible(false);
+                        main.settings.setting.setVisible(false);
                     }
                 });
 
-        main.chat.addActionListener(
+        main.chatBtn.addActionListener(
                 new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
-                        main.mailView.mail.setVisible(false);
-                        main.chatView.chat.setVisible(true);
-                        main.siteView.site.setVisible(false);
-                        main.homeView.home.setVisible(false);
-                        main.about2View.about2.setVisible(false);
-                        main.historyView.history.setVisible(false);
-                        main.settingView.setting.setVisible(false);
+                        main.mail.mail.setVisible(false);
+                        main.chat.chat.setVisible(true);
+                        main.site.site.setVisible(false);
+                        main.home.home.setVisible(false);
+                        main.about2.about2.setVisible(false);
+                        main.history.history.setVisible(false);
+                        main.settings.setting.setVisible(false);
                     }
                 });
         // End of main section
