@@ -1,8 +1,9 @@
-7/21/24
+7/22/24
     Zero:
-        7.7.2
-            Updating various sections to current design
-            Updated various screen transitions
+        7.8.1
+            Resolved outstanding update issues
+            Reviewing paradigm design docs for updates
+            Added in local DBs for testing
 7/15/24
     TruCare
         0.22

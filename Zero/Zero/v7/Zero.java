@@ -139,8 +139,12 @@ public class Zero implements ActionListener {
         window.setResizable(false);
     }
 
-    public static void main(String args[]) {
+    public static void main(String args[]) throws Exception {
         Zero zero = new Zero();
+        // Attempting to read from file in:
+        // C:\Users\wkpes\Desktop\PROJECTS-2024\accountDB.txt
+        File myFile = new File("accountDB.txt");
+        System.out.println("Attempting to read from file in: " + myFile.getCanonicalPath());
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -150,7 +154,14 @@ public class Zero implements ActionListener {
         Config.username = usernameEntered;
 
         try {
+            // C:\Users\wkpes\Desktop\PROJECTS-2024\Zero\Zero\v7\DB_Files\accountDB.txt
             File myFile = new File("accountDB.txt");
+            // This will work as a tempoirary solution for now
+            // File("C:\Users\wkpes\Desktop\PROJECTS-2024\Zero\Zero\v7\DB_Files\accountDB.txt");
+            // File myFile = new
+            // File("C:/Users/wkpes/Desktop/PROJECTS-2024/Zero/Zero/v7/DB_Files/accountDB.txt");
+            // System.out.println("Attempting to read from file in: " +
+            // myFile.getCanonicalPath());
             Scanner myReader = new Scanner(myFile);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();

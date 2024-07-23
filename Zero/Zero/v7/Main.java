@@ -68,7 +68,7 @@ public class Main implements ActionListener {
 					}
 				});
 
-		settings.addActionListener(
+		settingsBtn.addActionListener(
 				new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						System.out.println(Config.username);
