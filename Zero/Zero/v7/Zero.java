@@ -12,10 +12,10 @@ public class Zero implements ActionListener {
     Config config = new Config();
     Start start = new Start();
     Account account = new Account();
-    Main main = new Main();
+    Main browser = new Main();
     About about = new About();
 
-    JFrame window = new JFrame("Zero v7.5.2");
+    JFrame window = new JFrame("Zero v7.9.2");
 
     Zero() {
         // All start screen actions
@@ -76,40 +76,40 @@ public class Zero implements ActionListener {
         // End ofabout sectiom=n
 
         // Start of main section
-        main.searchBtn.addActionListener(
+        browser.searchBtn.addActionListener(
                 new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
-                        main.mail.mail.setVisible(false);
-                        main.chat.chat.setVisible(false);
-                        main.site.site.setVisible(true);
-                        main.home.home.setVisible(false);
-                        main.about2.about2.setVisible(false);
-                        main.history.history.setVisible(false);
-                        main.settings.setting.setVisible(false);
+                        browser.mail.mail.setVisible(false);
+                        browser.chat.chat.setVisible(false);
+                        browser.site.site.setVisible(true);
+                        browser.home.home.setVisible(false);
+                        browser.about2.about2.setVisible(false);
+                        browser.history.history.setVisible(false);
+                        browser.settings.setting.setVisible(false);
                     }
                 });
 
-        main.closeBtn.addActionListener(
+        browser.closeBtn.addActionListener(
                 new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
                         exit();
                     }
                 });
 
-        main.mailBtn.addActionListener(
+        browser.mailBtn.addActionListener(
                 new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
-                        main.mail.mail.setVisible(true);
-                        main.chat.chat.setVisible(false);
-                        main.site.site.setVisible(false);
-                        main.home.home.setVisible(false);
-                        main.about2.about2.setVisible(false);
-                        main.history.history.setVisible(false);
-                        main.settings.setting.setVisible(false);
+                        browser.mail.mail.setVisible(true);
+                        browser.chat.chat.setVisible(false);
+                        browser.site.site.setVisible(false);
+                        browser.home.home.setVisible(false);
+                        browser.about2.about2.setVisible(false);
+                        browser.history.history.setVisible(false);
+                        browser.settings.setting.setVisible(false);
                     }
                 });
 
-        main.chatBtn.addActionListener(
+        browser.chatBtn.addActionListener(
                 new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
                         main.mail.mail.setVisible(false);
@@ -143,8 +143,9 @@ public class Zero implements ActionListener {
         Zero zero = new Zero();
         // Attempting to read from file in:
         // C:\Users\wkpes\Desktop\PROJECTS-2024\accountDB.txt
-        File myFile = new File("accountDB.txt");
-        System.out.println("Attempting to read from file in: " + myFile.getCanonicalPath());
+        // File myFile = new File("accountDB.txt");
+        // System.out.println("Attempting to read from file in: " +
+        // myFile.getCanonicalPath());
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -155,11 +156,11 @@ public class Zero implements ActionListener {
 
         try {
             // C:\Users\wkpes\Desktop\PROJECTS-2024\Zero\Zero\v7\DB_Files\accountDB.txt
-            File myFile = new File("accountDB.txt");
+            // File myFile = new File("accountDB.txt");
             // This will work as a tempoirary solution for now
-            // File("C:\Users\wkpes\Desktop\PROJECTS-2024\Zero\Zero\v7\DB_Files\accountDB.txt");
             // File myFile = new
-            // File("C:/Users/wkpes/Desktop/PROJECTS-2024/Zero/Zero/v7/DB_Files/accountDB.txt");
+            // File("C:\Users\wkpes\Desktop\PROJECTS-2024\Zero\Zero\v7\DB_Files\accountDB.txt");
+            File myFile = new File("C:/Users/wkpes/Desktop/PROJECTS-2024/Zero/Zero/v7/DB_Files/accountDB.txt");
             // System.out.println("Attempting to read from file in: " +
             // myFile.getCanonicalPath());
             Scanner myReader = new Scanner(myFile);
@@ -173,13 +174,14 @@ public class Zero implements ActionListener {
                     config.getTempId();
                     config.getDate();
                     Config.username = usernameEntered;
-                    start.start.setVisible(false);
-                    account.create.setVisible(false);
-                    main.main.setVisible(true);
+                    // start.start.setVisible(false);
+                    // account.create.setVisible(false);
+                    // main.main.setVisible(true);
+                    start.errorMessage.setText("You have entered correct information");
                 } else {
                     start.startEditPassword.setText("");
                     start.startEditUsername.setText("");
-                    start.errorMessage.setText("You have entered incorrect information");
+                    start.errorMessage.setText("You have entered incorrect information???");
                 }
             }
             myReader.close();
