@@ -18,7 +18,7 @@ public class Start {
     Start() {
         start.setLayout(null);
         start.setPreferredSize(new Dimension(1040, 670));
-        start.setBackground(Color.RED);
+        start.setBackground(Color.BLACK);
         startUsername.setForeground(Color.WHITE);
         startUsername.setHorizontalAlignment(SwingConstants.CENTER);
         startPassword.setForeground(Color.WHITE);

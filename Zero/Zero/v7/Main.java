@@ -28,8 +28,8 @@ public class Main implements ActionListener {
 	JTextField search = new JTextField(75);
 
 	Main() {
-		main.setLayout(new FlowLayout());
-		main.setBackground(Color.RED);
+		main.setLayout(null);
+		main.setBackground(Color.BLACK);
 		main.setPreferredSize(new Dimension(1040, 670));
 		display.setLayout(new FlowLayout());
 		display.setPreferredSize(new Dimension(930, 660));

@@ -15,7 +15,7 @@ public class Zero implements ActionListener {
     Main browser = new Main();
     About about = new About();
 
-    JFrame window = new JFrame("Zero v7.9.2");
+    JFrame window = new JFrame("Zero v7.10.2");
 
     Zero() {
         // All start screen actions
@@ -59,7 +59,7 @@ public class Zero implements ActionListener {
                     public void actionPerformed(ActionEvent e) {
                         account.checkStatus();
                         if (account.checkValue < 1) {
-                            main.main.setVisible(true);
+                            browser.main.setVisible(true);
                         }
                     }
                 });
@@ -112,23 +112,26 @@ public class Zero implements ActionListener {
         browser.chatBtn.addActionListener(
                 new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
-                        main.mail.mail.setVisible(false);
-                        main.chat.chat.setVisible(true);
-                        main.site.site.setVisible(false);
-                        main.home.home.setVisible(false);
-                        main.about2.about2.setVisible(false);
-                        main.history.history.setVisible(false);
-                        main.settings.setting.setVisible(false);
+                        browser.mail.mail.setVisible(false);
+                        browser.chat.chat.setVisible(true);
+                        browser.site.site.setVisible(false);
+                        browser.home.home.setVisible(false);
+                        browser.about2.about2.setVisible(false);
+                        browser.history.history.setVisible(false);
+                        browser.settings.setting.setVisible(false);
                     }
                 });
         // End of main section
 
         // setting bounds for each screen
         start.start.setBounds(0, 0, Config.width, Config.height);
+        browser.main.setBounds(0, 0, Config.width, Config.height);
+        about.aboutSec.setBounds(0, 0, Config.width, Config.height);
+        account.create.setBounds(0, 0, Config.width, Config.height);
         // end of setting bound section
 
         window.add(start.start);
-        window.add(main.main);
+        window.add(browser.main);
         window.add(account.create);
         window.add(about.aboutSec);
         window.setLayout(null);
@@ -174,9 +177,9 @@ public class Zero implements ActionListener {
                     config.getTempId();
                     config.getDate();
                     Config.username = usernameEntered;
-                    // start.start.setVisible(false);
-                    // account.create.setVisible(false);
-                    // main.main.setVisible(true);
+                    start.start.setVisible(false);
+                    account.create.setVisible(false);
+                    browser.main.setVisible(true);
                     start.errorMessage.setText("You have entered correct information");
                 } else {
                     start.startEditPassword.setText("");
@@ -191,7 +194,7 @@ public class Zero implements ActionListener {
     }
 
     public void exit() {
-        main.main.setVisible(false);
+        browser.main.setVisible(false);
         start.start.setVisible(true);
     }
 
