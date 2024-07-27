@@ -114,6 +114,12 @@ public class Main implements ActionListener {
 					}
 				});
 
+		// Set the bounds of each component
+		// startUsername.setBounds(left to right, top to bottom, width, height);
+		sidebar.setBounds(10, 10, 80, 660);
+		display.setBounds(100, 10, 930, 660);
+		search.setBounds(10, 10, 75, 20);
+
 		sidebar.add(homeBtn);
 		sidebar.add(mailBtn);
 		sidebar.add(chatBtn);

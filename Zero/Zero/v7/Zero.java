@@ -15,7 +15,7 @@ public class Zero implements ActionListener {
     Main browser = new Main();
     About about = new About();
 
-    JFrame window = new JFrame("Zero v7.10.2");
+    JFrame window = new JFrame("Zero v7.11.1");
 
     Zero() {
         // All start screen actions
