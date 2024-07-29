@@ -11,7 +11,7 @@ public class Zero implements ActionListener {
 
 	AboutView aboutView = new AboutView();
 	StartView startView = new StartView();
-	Main main = new Main();
+	Browser main = new Browser();
 	CreateAccountView accountView = new CreateAccountView();
 
 	JFrame window = new JFrame("Zero v6.3");

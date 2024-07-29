@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Main implements ActionListener {
+public class Browser implements ActionListener {
 	Mail mail = new Mail();
 	Chat chat = new Chat();
 	Site site = new Site();
@@ -13,7 +13,7 @@ public class Main implements ActionListener {
 	Home home = new Home();
 	History history = new History();
 
-	JPanel main = new JPanel();
+	JPanel browser = new JPanel();
 	JPanel sidebar = new JPanel();
 	JPanel display = new JPanel();
 	JButton closeBtn = new JButton("Exit");
@@ -24,17 +24,19 @@ public class Main implements ActionListener {
 	JButton about2Btn = new JButton("About");
 	JButton searchBtn = new JButton("search");
 	JButton historyBtn = new JButton("History");
-	JButton blankBtn = new JButton("");
-	JTextField search = new JTextField(75);
+	// JButton blankBtn = new JButton("");
+	JTextField search = new JTextField(750);
 
-	Main() {
-		main.setLayout(null);
-		main.setBackground(Color.BLACK);
-		main.setPreferredSize(new Dimension(1040, 670));
-		display.setLayout(new FlowLayout());
+	Browser() {
+		browser.setLayout(null);
+		browser.setBackground(Color.BLACK);
+		browser.setPreferredSize(new Dimension(1050, 680));
+		display.setLayout(null);
 		display.setPreferredSize(new Dimension(930, 660));
+		display.setBounds(100, 10, 930, 660);
 		display.setBackground(Color.BLACK);
-		sidebar.setPreferredSize(new Dimension(80, 660));
+		sidebar.setPreferredSize(new Dimension(80, 640));
+		sidebar.setBounds(10, 10, 80, 640);
 		closeBtn.setPreferredSize(new Dimension(60, 60));
 		closeBtn.setFont(new Font("Serif", Font.PLAIN, 12));
 		historyBtn.setPreferredSize(new Dimension(60, 60));
@@ -43,27 +45,50 @@ public class Main implements ActionListener {
 		mailBtn.setFont(new Font("Serif", Font.PLAIN, 12));
 		about2Btn.setPreferredSize(new Dimension(60, 60));
 		about2Btn.setFont(new Font("Serif", Font.PLAIN, 12));
-		search.setHorizontalAlignment(SwingConstants.CENTER);
+		// search.setHorizontalAlignment(SwingConstants.CENTER);
+		search.setPreferredSize(new Dimension(750, 20));
+		search.setBounds(10, 0, 760, 20);
 		searchBtn.setPreferredSize(new Dimension(90, 20));
+		searchBtn.setBounds(780, 0, 90, 20);
 		searchBtn.setFont(new Font("Serif", Font.PLAIN, 12));
-		blankBtn.setPreferredSize(new Dimension(60, 60));
+		// blankBtn.setPreferredSize(new Dimension(60, 60));
 		homeBtn.setPreferredSize(new Dimension(60, 60));
 		chatBtn.setPreferredSize(new Dimension(60, 60));
 		settingsBtn.setPreferredSize(new Dimension(60, 60));
+
+		// home.home.setPreferredSize(new Dimension());
+		home.home.setBounds(10, 40, 900, 600);
+		chat.chat.setBounds(10, 40, 900, 600);
+		mail.mail.setBounds(10, 40, 900, 600);
+		site.site.setBounds(10, 40, 900, 600);
+		about2.about2.setBounds(10, 40, 900, 600);
+		history.history.setBounds(10, 40, 900, 600);
+		settings.setting.setBounds(10, 40, 900, 600);
 
 		// bank.addActionListener(this);
 
 		homeBtn.addActionListener(this);
 
+		chatBtn.addActionListener(
+				new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						clearViews();
+						chat.chat.setVisible(true);
+					}
+				});
+
+		mailBtn.addActionListener(
+				new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						clearViews();
+						mail.mail.setVisible(true);
+					}
+				});
+
 		historyBtn.addActionListener(
 				new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						mail.mail.setVisible(false);
-						site.site.setVisible(false);
-						chat.chat.setVisible(false);
-						home.home.setVisible(false);
-						about2.about2.setVisible(false);
-						settings.setting.setVisible(false);
+						clearViews();
 						history.history.setVisible(true);
 					}
 				});
@@ -73,26 +98,16 @@ public class Main implements ActionListener {
 					public void actionPerformed(ActionEvent e) {
 						System.out.println(Config.username);
 						settings.settingConfigs();
-						mail.mail.setVisible(false);
-						site.site.setVisible(false);
-						chat.chat.setVisible(false);
-						home.home.setVisible(false);
-						about2.about2.setVisible(false);
+						clearViews();
 						settings.setting.setVisible(true);
-						history.history.setVisible(false);
 					}
 				});
 
 		about2.about2Back.addActionListener(
 				new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						mail.mail.setVisible(false);
-						site.site.setVisible(false);
-						chat.chat.setVisible(false);
-						home.home.setVisible(false);
+						clearViews();
 						about2.about2.setVisible(true);
-						settings.setting.setVisible(false);
-						history.history.setVisible(false);
 					}
 				});
 
@@ -102,13 +117,8 @@ public class Main implements ActionListener {
 						String siteName = search.getText();
 						history.historyArray[history.historyCount] = siteName;
 						history.historyCount += 1;
-						mail.mail.setVisible(false);
+						clearViews();
 						site.site.setVisible(true);
-						chat.chat.setVisible(false);
-						home.home.setVisible(false);
-						about2.about2.setVisible(false);
-						settings.setting.setVisible(false);
-						history.history.setVisible(false);
 						String zsite = search.getText();
 						Config.requestedSite = zsite;
 					}
@@ -116,9 +126,6 @@ public class Main implements ActionListener {
 
 		// Set the bounds of each component
 		// startUsername.setBounds(left to right, top to bottom, width, height);
-		sidebar.setBounds(10, 10, 80, 660);
-		display.setBounds(100, 10, 930, 660);
-		search.setBounds(10, 10, 75, 20);
 
 		sidebar.add(homeBtn);
 		sidebar.add(mailBtn);
@@ -127,7 +134,7 @@ public class Main implements ActionListener {
 		sidebar.add(settingsBtn);
 		sidebar.add(closeBtn);
 		sidebar.add(historyBtn);
-		sidebar.add(blankBtn);
+		// sidebar.add(blankBtn);
 		display.add(search);
 		display.add(searchBtn);
 		display.add(mail.mail);
@@ -137,12 +144,17 @@ public class Main implements ActionListener {
 		display.add(settings.setting);
 		display.add(home.home);
 		display.add(history.history);
-		main.add(sidebar);
-		main.add(display);
-		main.setVisible(false);
+		browser.add(sidebar);
+		browser.add(display);
+		browser.setVisible(false);
 	}
 
 	public void actionPerformed(ActionEvent e) {
+		clearViews();
+		home.home.setVisible(true);
+	}
+
+	public void clearViews() {
 		mail.mail.setVisible(false);
 		site.site.setVisible(false);
 		chat.chat.setVisible(false);

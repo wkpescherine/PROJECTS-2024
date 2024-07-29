@@ -12,10 +12,10 @@ public class Zero implements ActionListener {
     Config config = new Config();
     Start start = new Start();
     Account account = new Account();
-    Main browser = new Main();
+    Browser browser = new Browser();
     About about = new About();
 
-    JFrame window = new JFrame("Zero v7.11.1");
+    JFrame window = new JFrame("Zero v7.12.2");
 
     Zero() {
         // All start screen actions
@@ -32,7 +32,7 @@ public class Zero implements ActionListener {
                     public void actionPerformed(ActionEvent e) {
                         start.start.setVisible(false);
                         account.create.setVisible(false);
-                        about.aboutSec.setVisible(true);
+                        about.about.setVisible(true);
                     }
                 });
 
@@ -59,7 +59,7 @@ public class Zero implements ActionListener {
                     public void actionPerformed(ActionEvent e) {
                         account.checkStatus();
                         if (account.checkValue < 1) {
-                            browser.main.setVisible(true);
+                            browser.browser.setVisible(true);
                         }
                     }
                 });
@@ -69,7 +69,7 @@ public class Zero implements ActionListener {
         about.aboutBack.addActionListener(
                 new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
-                        about.aboutSec.setVisible(false);
+                        about.about.setVisible(false);
                         start.start.setVisible(true);
                     }
                 });
@@ -95,45 +95,19 @@ public class Zero implements ActionListener {
                         exit();
                     }
                 });
-
-        browser.mailBtn.addActionListener(
-                new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        browser.mail.mail.setVisible(true);
-                        browser.chat.chat.setVisible(false);
-                        browser.site.site.setVisible(false);
-                        browser.home.home.setVisible(false);
-                        browser.about2.about2.setVisible(false);
-                        browser.history.history.setVisible(false);
-                        browser.settings.setting.setVisible(false);
-                    }
-                });
-
-        browser.chatBtn.addActionListener(
-                new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        browser.mail.mail.setVisible(false);
-                        browser.chat.chat.setVisible(true);
-                        browser.site.site.setVisible(false);
-                        browser.home.home.setVisible(false);
-                        browser.about2.about2.setVisible(false);
-                        browser.history.history.setVisible(false);
-                        browser.settings.setting.setVisible(false);
-                    }
-                });
         // End of main section
 
         // setting bounds for each screen
         start.start.setBounds(0, 0, Config.width, Config.height);
-        browser.main.setBounds(0, 0, Config.width, Config.height);
-        about.aboutSec.setBounds(0, 0, Config.width, Config.height);
+        browser.browser.setBounds(0, 0, Config.width, Config.height);
+        about.about.setBounds(0, 0, Config.width, Config.height);
         account.create.setBounds(0, 0, Config.width, Config.height);
         // end of setting bound section
 
         window.add(start.start);
-        window.add(browser.main);
+        window.add(browser.browser);
         window.add(account.create);
-        window.add(about.aboutSec);
+        window.add(about.about);
         window.setLayout(null);
         window.getContentPane().setBackground(Color.BLACK);
         window.setSize(Config.width, Config.height);
@@ -179,7 +153,7 @@ public class Zero implements ActionListener {
                     Config.username = usernameEntered;
                     start.start.setVisible(false);
                     account.create.setVisible(false);
-                    browser.main.setVisible(true);
+                    browser.browser.setVisible(true);
                     start.errorMessage.setText("You have entered correct information");
                 } else {
                     start.startEditPassword.setText("");
@@ -194,7 +168,7 @@ public class Zero implements ActionListener {
     }
 
     public void exit() {
-        browser.main.setVisible(false);
+        browser.browser.setVisible(false);
         start.start.setVisible(true);
     }
 
