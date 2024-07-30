@@ -1,11 +1,7 @@
-7/26/24
+7/29/24
     Zero:
-        7.12.3
-            Updated About section
-            Updated Browser section
-            Updated Browser section sub views
-            Refactored Browser handling of sub views
-            Added more subv views into Browser section
+        7.13.1
+            Reviewing issue with create account buttons issue
 7/27/24
     General:
         No update

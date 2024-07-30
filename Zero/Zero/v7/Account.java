@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class Account {
     JPanel create = new JPanel();
-    JButton logIn = new JButton("Log In");
+    // JButton logIn = new JButton("Log In");
     JButton back = new JButton("Back");
     JButton newAccount = new JButton("Create Account");
     JLabel CAVusernameLabel = new JLabel("Username");
