@@ -15,7 +15,7 @@ public class Zero implements ActionListener {
     Browser browser = new Browser();
     About about = new About();
 
-    JFrame window = new JFrame("Zero v7.13.1");
+    JFrame window = new JFrame("Zero v7.14.1");
 
     Zero() {
         // All start screen actions
@@ -169,6 +169,7 @@ public class Zero implements ActionListener {
 
     public void exit() {
         browser.browser.setVisible(false);
+        account.create.setVisible(false);
         start.start.setVisible(true);
     }
 
