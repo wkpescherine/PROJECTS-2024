@@ -1,0 +1,3 @@
+testsite1 | Zero;p(name,100,100, none);t(Welcome to a Zero Site)
+testsite2 | Zero;p(name,100,100, none);name(t(This is a string text))
+testsite3 | Zero;p(none, 250, 250)

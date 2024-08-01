@@ -158,7 +158,7 @@ public class Browser implements ActionListener {
 		mail.mail.setVisible(false);
 		site.site.setVisible(false);
 		chat.chat.setVisible(false);
-		home.home.setVisible(true);
+		home.home.setVisible(false);
 		about2.about2.setVisible(false);
 		settings.setting.setVisible(false);
 		history.history.setVisible(false);
