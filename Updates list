@@ -1,3 +1,15 @@
+8/3/24
+    Unchained:
+        C#
+            General C# updating
+            0.2.26
+                Moved into subfolder for c#
+                ***Keeping the following as of previous work***
+                WIP on handling the changing of elements within a Panel 
+        Java
+            0.1.1
+                Upgraded version
+                Working to resolveissue with images
 8/2/24
     General:
         No update
@@ -15,11 +27,6 @@
             Update main screen and handling of Username/Password
         1.1
             Setting up Rails and sqlite3 env
-6/3/24
-    Unchained:
-        General C# updating
-        0.2.26
-            WIP on handling the changing of elements within a Panel 
 6/2/24
     MUSK:
         Musk 0.8:

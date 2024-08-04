@@ -1,5 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "Zero/Zero"
+        "Zero/Zero",
+        "Unchained/java/v0",
+        "Unchained/java/v1"
     ]
 }
