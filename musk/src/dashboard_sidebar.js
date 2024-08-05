@@ -14,6 +14,10 @@ function Dashboard_Sidebar (props){
         navigate('/')
     }
 
+    function RedirectToSim(){
+        navigate('/simulator')
+    }
+
     const handleSubCategorySelection = (data2) => {
         setFromSub(data2)
         props.getSubCat(fromSub)
@@ -33,6 +37,8 @@ function Dashboard_Sidebar (props){
             <button class="invertButtonSidebar" onClick={() => props.getData("Message")}>Message</button>
             <br></br>
             <button class="invertButtonSidebar" onClick={() => props.getData("Admin")}>Admin</button>
+            <br></br>
+            <button class="invertButtonSidebar" onClick={RedirectToSim}>Simulator</button>
             <br></br>
             <button class="invertButtonSidebar" onClick={RedirectTo} >Exit</button>
         </div> 

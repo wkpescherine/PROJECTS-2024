@@ -14,6 +14,7 @@ export default function Display (props){
             { props.sendData === "Message" && < Message/>}
             { props.sendData === "Admin" && < Admin/>}
             { props.sendData === "Knowledge" && < Knowledge sendSel={props.sendSubCat}/>}
+            
         </div>  
     );
 }

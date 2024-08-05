@@ -1,3 +1,8 @@
+8/4/24
+    MUSK:
+        Musk 0.9:
+            Updated Display to account for simulator section
+            Added Simulator section
 8/3/24
     Unchained:
         C#
@@ -27,12 +32,6 @@
             Update main screen and handling of Username/Password
         1.1
             Setting up Rails and sqlite3 env
-6/2/24
-    MUSK:
-        Musk 0.8:
-            Updated Knowledge section handling
-            Updated Admmin section handling
-            Updated Message section handling 
 5/3/24
     Ironman:
         API:
