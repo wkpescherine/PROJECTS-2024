@@ -41,6 +41,7 @@ function Dashboard_Sidebar (props){
             <button class="invertButtonSidebar" onClick={RedirectToSim}>Simulator</button>
             <br></br>
             <button class="invertButtonSidebar" onClick={RedirectTo} >Exit</button>
+            <p>version 0.11</p>
         </div> 
     );
 }

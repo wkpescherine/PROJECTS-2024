@@ -54,6 +54,21 @@ body {
   font-size: 10pt;
 }
 
+.simBase {
+  width: 700px;
+  height: 500px;
+  background-color: darkgray;
+}
+
+.tinyLogo {
+  width:50px;
+  height: 50px;
+}
+
 .displayArea {
   width: 400px;
+}
+
+img {
+  max-width: 100%;
 }

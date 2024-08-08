@@ -1,8 +1,9 @@
-8/5/24
+8/7/24
     MUSK:
-        Musk 0.10:
-            Updated Knowledge section with category sellection
-            Updated Pick Section layout and some simple logic
+        Musk 0.11:
+            Updated Dashboard
+            Updated Main
+            Added UTS Simulator basicUI
 8/3/24
     Unchained:
         C#
@@ -14,7 +15,7 @@
         Java
             0.1.1
                 Upgraded version
-                Working to resolveissue with images
+                Working to resolve issue with images
 8/2/24
     General:
         No update
