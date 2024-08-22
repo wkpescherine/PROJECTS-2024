@@ -1,3 +1,9 @@
+8/21/24
+    TruCare
+        0.23
+            Updated Patient Creation UI
+        1.1
+            Setting up Rails and sqlite3 env
 8/20/24
     General:
         No update
@@ -27,12 +33,6 @@
             Added testsite to DB
             Need to rebuild Site screen
             Added Refactored new Site Screen
-7/15/24
-    TruCare
-        0.22
-            Update main screen and handling of Username/Password
-        1.1
-            Setting up Rails and sqlite3 env
 5/3/24
     Ironman:
         API:

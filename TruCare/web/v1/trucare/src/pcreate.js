@@ -30,22 +30,23 @@ function PCreate() {
     return (
         <div>
             <p>Create New Patient</p>
+            <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
             <div>
                 <label>Username</label> 
-                <input type="text" placeholder="Enter username" onChange={handleLogInUsernameChange}></input>
+                <input type="text" placeholder="Enter username" class="inputData100" onChange={handleLogInUsernameChange}></input>
                 <label>Password</label>
-                <input type="password" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
+                <input type="password" placeholder="Enter password" class="inputData100" onChange={handleLogInPasswordChange}></input>
             </div>
             <div>
                 <label>Email</label>
-                <input type="text" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
+                <input type="text" placeholder="Enter password" class="inputData100" onChange={handleLogInPasswordChange}></input>
                 <label>Age:</label>
-                <input type="text" placeholder="00/00/0000" class="inputData75"></input>
+                <input type="text" placeholder="00/00/0000" class="inputData100"></input>
             </div>
-            <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
+            <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
             <div>
                 <p style={{margin:"5px"}}>Select Doctor:</p>
-                <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
+                <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
                 <div>
                     <button>Family</button>
                     <button>Dentist</button>
@@ -56,34 +57,42 @@ function PCreate() {
                     <button>Trainer</button>
                     <button>Dietiationist</button>
                 </div>
-                <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
+                <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
                 <p style={{margin:"5px"}}>Contact Info:</p>
-                <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
+                <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
                 <div>
                     <label>Address</label> 
-                    <input style={{width:"410px", background:"#fff"}} type="text" placeholder="Enter Addresss"></input>
+                    <input style={{width:"425px", background:"#fff"}} type="text" placeholder="Enter Addresss"></input>
                 </div>
                 <div>
                     <label>City</label> 
-                    <input style={{width:"180px", background:"#fff"}} type="text" placeholder="City"></input>
+                    <input style={{width:"125px", background:"#fff"}} type="text" placeholder="City"></input>
                     <label>State</label> 
-                    <input style={{width:"50px", background:"#fff"}} type="text" placeholder="State"></input>
+                    <input style={{width:"25px", background:"#fff"}} type="text" placeholder="State"></input>
                     <label>Zip</label> 
-                    <input style={{width:"100px", background:"#fff"}} type="text" placeholder="Zip Code"></input>
+                    <input style={{width:"50px", background:"#fff"}} type="text" placeholder="Zip Code"></input>
                 </div>
-                <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
+                <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
                 <p style={{margin:"5px"}}>Rate of Coverage:</p>
-                <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
+                <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
                 <div>
                     <label>
                         <input type="radio" value="normal"/>Slow(.5x)
-                        <input type="radio" value="normal"/>Normal (1x)
-                        <input type="radio" value="normal"/>Fast(1.25x)
-                        <input type="radio" value="normal"/>Hyper(1.5x)
+                    </label>
+                    <label>
+                        <input type="radio" value="normal"/>Basic(1x)
+                    </label>
+                    <label>
+                        <input type="radio" value="normal"/>Fast(1.2x)
+                    </label>
+                    <label>
+                        <input type="radio" value="normal"/>Hype(1.5x)
+                    </label>
+                    <label>    
                         <input type="radio" value="normal"/>Super(2x)
                     </label>
                 </div>
-                <hr style={{background:"#fff", height: "1px", width: "500px"}}/>                
+                <hr style={{background:"#fff", height: "1px", width: "550px"}}/>                
             </div>
             <p>
                 <button class='invertButton' onClick={RedirectToExit}>Exit</button> 
