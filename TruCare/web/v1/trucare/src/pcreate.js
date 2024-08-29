@@ -5,6 +5,8 @@ import {useNavigate} from 'react-router-dom'
 function PCreate() {
     const[logInUsername,setLogInUsername] = useState ("");
     const[logInPassword,setLogInPassword] = useState ("");
+    const[pcAddresss,setPCAddress] = useState("");
+    const[cellNum, setCellNum]= useState("");
 
     let navigate = useNavigate();
     
@@ -14,6 +16,14 @@ function PCreate() {
 
     const handleLogInPasswordChange = (event) => {
         setLogInPassword(event.target.value)
+    }
+
+    const handleCellNumChange = (event) => {
+        setCellNum(event.target.value)
+    }
+
+    const handlePCAddressChange = (event) => {
+        setPCAddress(event.target.value)
     }
 
     function RedirectToDashboard(){
@@ -44,6 +54,25 @@ function PCreate() {
                 <input type="text" placeholder="00/00/0000" class="inputData100"></input>
             </div>
             <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
+                <p style={{margin:"5px"}}>Contact Info:</p>
+                <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
+                <div>
+                    <label>Address</label> 
+                    <input style={{width:"425px", background:"#fff"}} type="text" placeholder="Enter Addresss" onChange={handlePCAddressChange}></input>
+                </div>
+                <div>
+                    <label>City</label> 
+                    <input style={{width:"125px", background:"#fff"}} type="text" placeholder="City"></input>
+                    <label>State</label> 
+                    <input style={{width:"25px", background:"#fff"}} type="text" placeholder="State"></input>
+                    <label>Zip</label> 
+                    <input style={{width:"50px", background:"#fff"}} type="text" placeholder="Zip Code"></input>
+                </div>
+                <div>
+                    <label>Cell#</label> 
+                    <input style={{width:"125px", background:"#fff"}} type="text" placeholder="(000)000-0000"  onChange={handleCellNumChange}></input>
+                </div>
+            <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
             <div>
                 <p style={{margin:"5px"}}>Select Doctor:</p>
                 <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
@@ -56,21 +85,6 @@ function PCreate() {
                     <button>Psychiatrist</button>
                     <button>Trainer</button>
                     <button>Dietiationist</button>
-                </div>
-                <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
-                <p style={{margin:"5px"}}>Contact Info:</p>
-                <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
-                <div>
-                    <label>Address</label> 
-                    <input style={{width:"425px", background:"#fff"}} type="text" placeholder="Enter Addresss"></input>
-                </div>
-                <div>
-                    <label>City</label> 
-                    <input style={{width:"125px", background:"#fff"}} type="text" placeholder="City"></input>
-                    <label>State</label> 
-                    <input style={{width:"25px", background:"#fff"}} type="text" placeholder="State"></input>
-                    <label>Zip</label> 
-                    <input style={{width:"50px", background:"#fff"}} type="text" placeholder="Zip Code"></input>
                 </div>
                 <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
                 <p style={{margin:"5px"}}>Rate of Coverage:</p>

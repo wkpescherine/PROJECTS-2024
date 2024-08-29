@@ -7,6 +7,7 @@ function DCreate() {
     const[lastName,setLastName] = useState ("");
     const[DCUsername,setDCUsername] = useState ("");
     const[DCPassword,setDCPassword] = useState ("");
+    const[DCOrg,  setDCOrg] = useState("");
     const[street,setStreet] = useState ("");
     const[city,setCity] = useState ("");
     const[state,setState] = useState ("");
@@ -22,6 +23,10 @@ function DCreate() {
 
     const handleLastNameChange = (event) => {
         setLastName(event.target.value)
+    }
+
+    const handleDCOrgChange = (event) =>{
+        setDCOrg(event.target.value)
     }
 
     const handleDCUsernameChange = (event) => {
@@ -77,6 +82,10 @@ function DCreate() {
                 <input type="text" class="input150" placeholder="Enter username" onChange={handleDCUsernameChange}></input>
                 <label>Password</label>
                 <input type="password" class="input150" placeholder="Enter password" onChange={handleDCPasswordChange}></input>
+            </div>
+            <div>
+                <label>Organization</label> 
+                <input type="text" style={{width:"408px", backgroundColor:"#fff"}} placeholder="Optional" onChange={handleDCOrgChange}></input>
             </div>
             <div>
                 <label>Street</label> 
@@ -150,7 +159,7 @@ function DCreate() {
                         <input type="radio" value="normal"/>5-10 
                     </label>
                     <label>
-                        <input type="radio" value="normal"/>11
+                        <input type="radio" value="normal"/>11+
                     </label>
                 </div>
                 <hr style={{background:"#fff", height: "1px", width: "550px"}}/>                
