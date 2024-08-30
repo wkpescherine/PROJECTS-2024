@@ -1,12 +1,12 @@
-8/28/24
+8/29/24
     TruCare
+        0.25b
+            rebuilding API
         0.25
             Added Organization to DR create
             Added cell# to patient create
             Update PC Create Data 
             Update UI for Patient create
-        0.23a
-            Setting up Rails and sqlite3 env
 8/26/24
     General:
         No update
