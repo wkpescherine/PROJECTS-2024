@@ -1,12 +1,12 @@
 #Will use to setup auth
 #Blueprint helps to define the routes for the url
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 auth = Blueprint('auth', __name__)
 
 @auth.route('/login')
 def login():
-    return "<p>Login</p></br><button>Test</button>"
+    return render_template("login.html")
 
 @auth.route('/logout')
 def logout():
@@ -14,4 +14,4 @@ def logout():
 
 @auth.route('/sign-up')
 def signup():
-    return "<p>Sign-In</p>"
+    return render_template("signup.html")

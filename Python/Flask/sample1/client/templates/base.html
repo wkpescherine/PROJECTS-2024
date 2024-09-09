@@ -7,6 +7,10 @@
         <title>{% block title%}Sample{% endblock %}</title>
     </head>
     <body>
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
         <!-- This is how you can get js, css and regular HTML into the app-->
         <!-- in the index file you will then have you css stylesheet and any js functions-->
         <script 
