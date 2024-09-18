@@ -1,4 +1,12 @@
 <!-- This allows me to use the precreated base html -->
 {% extends "base.html" %}
 {% block title %}LogIn{% endblock %}
-{% block content%}<h1>This is the Login page</h1> {% endblock %}
+{% block content%}
+<h1>This is the Login page</h1> 
+{{ value}}
+{% if bolean == True %}
+    <p>The bolean passed was true</p>
+{% else %}
+    <p>Else the bolean is false</p>
+{% endif %}
+{% endblock %}

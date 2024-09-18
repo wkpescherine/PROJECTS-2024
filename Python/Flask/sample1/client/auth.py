@@ -6,7 +6,8 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/login')
 def login():
-    return render_template("login.html")
+    #the second part is how I would pass data or something into the template
+    return render_template("login.html", value ="New value being passed here", bolean= True)
 
 @auth.route('/logout')
 def logout():
