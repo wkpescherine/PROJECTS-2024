@@ -1,8 +1,10 @@
-import java.awt.*;
-import java.awt.event.*;
-import java.io.ObjectInputFilter.Config;
+package v1;
 
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
 
 public class Unchained implements ActionListener {
     JFrame window = new JFrame("Unchained v0.1.1");
@@ -11,7 +13,7 @@ public class Unchained implements ActionListener {
     Game game = new Game();
     CreateChar create = new CreateChar();
 
-    Unchained() {
+    Unchained(){
         renderScreen();
         // Can keep the sizes the same as it actually does go end to end
         // Can start to remove the different sections out

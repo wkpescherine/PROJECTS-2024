@@ -3,5 +3,6 @@
         "Zero/Zero",
         "Unchained/java/v0",
         "Unchained/java/v1"
-    ]
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }

@@ -3,7 +3,7 @@ package v7;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import java.lang.String;
+//import java.lang.String;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -17,7 +17,7 @@ public class Zero implements ActionListener {
 
     JFrame window = new JFrame("Zero v7.14.1");
 
-    Zero() {
+    Zero(){
         // All start screen actions
         start.createAcct.addActionListener(
                 new ActionListener() {
@@ -116,7 +116,7 @@ public class Zero implements ActionListener {
         window.setResizable(false);
     }
 
-    public static void main(String args[]) throws Exception {
+    public static void main(String args[]) {
         Zero zero = new Zero();
         // Attempting to read from file in:
         // C:\Users\wkpes\Desktop\PROJECTS-2024\accountDB.txt
